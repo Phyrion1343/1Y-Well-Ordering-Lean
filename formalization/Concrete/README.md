@@ -1,8 +1,10 @@
 # 具体良序模型
 
-1-Y 当前状态：`OneYTruth/ActualWellOrdering.lean` 已给出无参数的实际展开良基性、标准生成集良序、任一起点后继集良序及任意复制次数的轨迹终止定理。实际完整真值塔、初始表示和有限反射均由已证明的定理供应。公理审计仅含 Lean 标准的 `propext`、`Classical.choice`、`Quot.sound`。实际展开证明见 [1-Y 证明说明](../../research/1y-well-ordering-proof.md)。
+**1-Y 良序证明已完成 Lean 4 形式化，并通过其依赖类型论内核核验。** `OneYTruth/ActualWellOrdering.lean` 给出实际展开良基性、标准生成集良序、任一起点后代集良序及任意复制次数的轨迹终止定理。实际完整真值塔、初始表示和有限反射均由已证明的定理供应，最终出口没有这些未证前提。公理审计仅含 Lean 标准的 `propext`、`Classical.choice`、`Quot.sound`。实际展开证明见 [1-Y 证明说明](../../research/1y-well-ordering-proof.md)。
 
-2026-09-10：另已写出[通常数学意义的 ZFC 证明](../../research/1y-zfc-well-ordering-proof.md)，将类语义改写为集合满意度，并把全部标签统一界在可数序数以下。代码中的辅助 Separation 已改用固定集合满意度查询。ZFC 结论依靠这份独立的集合论论证，不由 Lean 公理打印自动推出；尚未生成一阶 ZFC 演算的推导对象，也未确定最弱理论或 Z₃ 上界。
+2026-09-10：另已写出[通常数学意义的 ZFC 证明](../../research/1y-zfc-well-ordering-proof.md)，将类语义改写为集合满意度，并把全部标签统一界在可数序数以下。代码中的辅助 Separation 已改用固定集合满意度查询。ZFC 结论依靠这份独立的集合论论证，不由 Lean 公理打印自动推出。
+
+**尚未完成的是将完整证明迁移到一阶 ZFC 的形式化与机器核验。** 这需要将目标及其推导在一阶 ZFC 演算中完整编码和验证；当前已经完成的是 Lean 4 中的良序证明及内核核验。最弱理论或 Z₃ 上界仍未确定。
 
 1-Y 的完整入口为 `OneYTruth.lean`；`./build.ps1 -Target OneYTruth` 同时运行其增量构建与公理白名单审计。脚本默认 `-Target All`，检查 0-Y 与 1-Y；下方最终定理表介绍 0-Y 部分，1-Y 四个出口见上方链接。
 

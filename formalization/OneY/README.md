@@ -1,6 +1,6 @@
 # 1-Y 数值展开与良序形式化
 
-2026-09-10。此目录是核心工程的 `OneY` 库，已完成实际数值展开、父图复制、规范重建及其到良基性的组合证明。具体语义层也已供应有限反射和初始表示；[ActualWellOrdering.lean](../Concrete/OneYTruth/ActualWellOrdering.lean) 给出不再要求反射、表示、真值集或重建前提的最终四个定理。
+2026-09-10。**1-Y 良序证明已完成 Lean 4 形式化，并通过其依赖类型论内核核验。** 此目录是核心工程的 `OneY` 库，已完成实际数值展开、父图复制、规范重建及其到良基性的组合证明。具体语义层也已供应有限反射和初始表示；[ActualWellOrdering.lean](../Concrete/OneYTruth/ActualWellOrdering.lean) 给出不再要求反射、表示、真值集或重建前提的最终四个定理。
 
 结论包括全部合法起点的展开良基性与任意展开链终止性，以及标准生成集、任意固定起点后代集的字典序良序性。合法状态为空序列，或首项为 1 的有限正整数序列；标准种子为 `(1,m)`、`m≥2`。全部合法状态的字典序并不良基。
 
@@ -71,4 +71,6 @@ mathlib 语义子库位于 [Concrete/OneYTruth](../Concrete/OneYTruth/README.md)
 & '../../.tools/lean-4.33.1-windows/bin/lake.exe' env lean OneYTruthAudit.lean
 ```
 
-已通过声明的公理审计仅使用 Lean 标准公理 `propext`、`Classical.choice`、`Quot.sound`（部分定理用得更少）。未使用 `sorry`、自定义公理或原生判定公理。通常数学意义的 ZFC 证明由上述集合论论证给出；这项判断不单独依赖 Lean 公理打印，也不声称已生成一阶 ZFC 演算的机器可检验推导对象。
+已通过声明的公理审计仅使用 Lean 标准公理 `propext`、`Classical.choice`、`Quot.sound`（部分定理用得更少）。未使用 `sorry`、自定义公理或原生判定公理。通常数学意义的 ZFC 证明由上述集合论论证给出，这项判断不单独依赖 Lean 公理打印。
+
+**尚未完成的是将完整证明迁移到一阶 ZFC 的形式化与机器核验。** 目标和整条推导在一阶 ZFC 演算中的编码与验证仍待完成；Lean 4 中的良序证明及内核核验已经完成。

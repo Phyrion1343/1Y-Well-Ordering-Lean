@@ -2,7 +2,7 @@
 
 **状态（2026 年 9 月 10 日）：下面的四个最终定理已经通过 Lean 内核检查。** 总入口构建成功（1814 项）；发布审计的 153 个不同声明均仅依赖 `[propext, Classical.choice, Quot.sound]`。四个最终出口均无有限反射、初始表示、真值集合、数值重建或良基性假设。
 
-本文按数学依赖顺序说明这份 Lean 证明，[proof-architecture](<1y-proof-architecture.md>) 提供补充结构概览。另行完成的[ZFC 论证](1y-zfc-well-ordering-proof.md)给出通常数学意义的 ZFC 上界，包括集合满意度替换与可数序数值的下降秩；该结论不由 Lean 公理打印自动推出。尚未生成一阶 ZFC 推导对象，也未确定 Z₃ 上界、最弱证明系统或精确序型。
+本文按数学依赖顺序说明这份已通过 Lean 4 内核核验的形式化证明，[proof-architecture](<1y-proof-architecture.md>) 提供补充结构概览。另行完成的[ZFC 论证](1y-zfc-well-ordering-proof.md)给出通常数学意义的 ZFC 上界，包括集合满意度替换与可数序数值的下降秩。相应证明向一阶 ZFC 演算的完整形式化迁移与机器核验尚未完成；Z₃ 上界、最弱证明系统与精确序型也仍未确定。
 
 ## 一、究竟证明了什么
 

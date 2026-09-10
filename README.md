@@ -8,7 +8,9 @@
 - 从标准种子 `(1,m)`、`m≥2` 生成的序列集合按字典序良序；任意固定起点的后代集也按字典序良序。
 - 提取保留祖先关系；形式化包括轮廓提升、参考填充及完整数值重建。
 
-最终四个无参数 Lean 定理位于 [ActualWellOrdering.lean](formalization/Concrete/OneYTruth/ActualWellOrdering.lean)。[实际展开证明](research/1y-well-ordering-proof.md)解释形式化结构，[ZFC 数学论证](research/1y-zfc-well-ordering-proof.md)给出集合论证明。ZFC 论证是一份通常数学证明，尚未输出一阶 ZFC 演算的推导对象。
+**1-Y 的实际展开良基性与标准生成集良序性已在 Lean 4 类型论中完成形式化证明，并通过内核核验。** 仓库另附通常数学意义的 ZFC 论证；相应证明向一阶 ZFC 演算的完整形式化迁移与机器核验尚未完成。
+
+最终四个无参数 Lean 定理位于 [ActualWellOrdering.lean](formalization/Concrete/OneYTruth/ActualWellOrdering.lean)。[实际展开证明](research/1y-well-ordering-proof.md)解释形式化结构，[ZFC 数学论证](research/1y-zfc-well-ordering-proof.md)给出集合论证明。
 
 1-Y 最新完整入口构建通过 1814 项，153 个不同声明的公理审计均通过，仅使用 `propext`、`Classical.choice`、`Quot.sound` 的子集。见[验证记录](formalization/VALIDATION.md)及[审计输出](formalization/Concrete/OneYTruth-audit-output.txt)。构建任务总数包括已编译依赖的复用。
 

@@ -4,7 +4,9 @@
 
 ## 当前 1-Y 与发布验证
 
-1-Y 的最终入口 [OneYTruth/ActualWellOrdering.lean](Concrete/OneYTruth/ActualWellOrdering.lean) 已通过内核检查，包含实际展开良基性、标准生成集字典序良序、固定起点后代集字典序良序及任意复制次数轨迹终止。最终定理不要求调用者另外提供有限反射、初始表示或数值重建假设。完整集合论论证见 [ZFC 数学证明](../research/1y-zfc-well-ordering-proof.md)；这里的 Lean 审计本身不等于一阶 ZFC 演算推导对象。
+**1-Y 良序证明已完成 Lean 4 形式化，并通过其依赖类型论内核核验。** 最终入口 [OneYTruth/ActualWellOrdering.lean](Concrete/OneYTruth/ActualWellOrdering.lean) 包含实际展开良基性、标准生成集字典序良序、固定起点后代集字典序良序及任意复制次数轨迹终止。最终定理不要求调用者另外提供有限反射、初始表示或数值重建假设。
+
+另已有[通常数学意义的 ZFC 证明](../research/1y-zfc-well-ordering-proof.md)。**尚未完成的是将完整证明迁移到一阶 ZFC 的形式化与机器核验**，包括目标及整条推导在一阶 ZFC 演算中的编码与验证。以下记录核验的是已经完成的 Lean 4 证明；ZFC 数学论证和后续形式化迁移的状态与之分别说明。
 
 集合满意度替换后的 `lake build OneYTruth` 通过 1814 项任务，记录见 [构建日志](../research/one-y-truth-zfc-build.log)。发布准备随后实际运行当前两个构建脚本：
 

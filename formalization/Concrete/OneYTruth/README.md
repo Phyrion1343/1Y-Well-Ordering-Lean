@@ -1,8 +1,10 @@
 # 1-Y 良序与展开终止：Lean 形式化
 
-2026-09-10 的集合论补充：[ZFC 证明](../../../research/1y-zfc-well-ordering-proof.md)给出通常数学意义的 ZFC 上界。`AuxiliarySeparation` 已用 `AuxiliarySetTranslation`、`AuxiliaryFormulaCompilation` 和 `PureSetSatisfaction` 将任意输入公式变为固定集合满意度查询的代码参数。本文下方保留各模块的说明；早先仅凭 Lean 公理审计不能判断 ZFC 上界的限制仍成立，现有上界依靠另行完成的集合论论证。没有一阶 ZFC 推导对象或最弱公理系统的认定。
+**1-Y 良序证明已完成 Lean 4 形式化，并通过其依赖类型论内核核验。** 这个目录已证明实际 1-Y 展开的良基性及标准生成序列的良序性。`ActualFiniteReflection.actual_finiteReflection`（命名空间 `RootSemantics`）已证明实际关系的有限反射，`ActualWellOrdering` 的最终四个出口没有反射、真值集、表示或重建方面的未证前提。所有最终定理的公理审计仅为 `propext`、`Classical.choice`、`Quot.sound`，没有 `sorry` 或自定义 `axiom`。
 
-这个目录已完成实际 1-Y 展开的良基性及标准生成序列良序性的 Lean 形式化。`ActualFiniteReflection.actual_finiteReflection`（命名空间 `RootSemantics`）已证明实际关系的有限反射，`ActualWellOrdering` 的最终四个出口无任何反射、真值集、表示或重建前提。所有最终定理的公理审计仅为 `propext`、`Classical.choice`、`Quot.sound`，没有 `sorry` 或自定义 `axiom`。
+2026-09-10 的集合论补充：[ZFC 证明](../../../research/1y-zfc-well-ordering-proof.md)给出通常数学意义的 ZFC 论证。`AuxiliarySeparation` 已用 `AuxiliarySetTranslation`、`AuxiliaryFormulaCompilation` 和 `PureSetSatisfaction` 将任意输入公式变为固定集合满意度查询的代码参数。ZFC 结论依靠这份独立的集合论论证，不由 Lean 公理打印自动推出。
+
+**尚未完成的是将完整证明迁移到一阶 ZFC 的形式化与机器核验。** 将目标及整条推导编码为一阶 ZFC 演算中的证明，仍是后续工作；Lean 4 中的良序定理已经完成。最弱公理系统尚未确定。下面保留各模块的说明。
 
 结论的范围是：每个合法有限序列（空序列，或首项为 1 且各项为正）的任意展开链最终到达空序列；从标准种子 `(1,m)`、`m≥2` 经实际 1-Y 展开得到的序列按字典序构成严格良序。任一固定起点的后代集也按字典序构成严格良序。这里没有声称全部首项为 1 的正序列在任意字典序下良序。
 

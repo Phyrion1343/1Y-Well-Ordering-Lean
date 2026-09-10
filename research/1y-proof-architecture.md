@@ -1,6 +1,6 @@
 # 1-Y 良基性形式化：证明结构与当前边界
 
-工作区现已完成实际 1-Y 展开良基性及标准生成集良序的 Lean 证明。最终无参数定理见 `formalization/Concrete/OneYTruth/ActualWellOrdering.lean`，可读证明见 [1y-well-ordering-proof.md](1y-well-ordering-proof.md)。2026-09-10 又独立完成[通常数学意义的 ZFC 论证](1y-zfc-well-ordering-proof.md)：统一集合满意度、集合范围内的实际反射，以及可数序数值的下降秩。该上界并非从 Lean 标准公理打印推断；尚未生成一阶 ZFC 推导对象，也未确定 Z₃ 上界。
+工作区现已完成实际 1-Y 展开良基性及标准生成集良序在 Lean 4 类型论中的形式化证明，并通过内核核验。最终无参数定理见 `formalization/Concrete/OneYTruth/ActualWellOrdering.lean`，可读证明见 [1y-well-ordering-proof.md](1y-well-ordering-proof.md)。2026-09-10 又独立完成[通常数学意义的 ZFC 论证](1y-zfc-well-ordering-proof.md)：统一集合满意度、集合范围内的实际反射，以及可数序数值的下降秩。ZFC 上界由这份数学论证支持；相应证明向一阶 ZFC 演算的完整形式化迁移与机器核验尚未完成，Z₃ 上界也仍未确定。
 
 ## 展开对象
 

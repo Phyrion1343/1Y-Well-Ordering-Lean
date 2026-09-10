@@ -2,7 +2,7 @@
 
 `Representation.lean` 只依赖 `Std`，采用任意标签类型 `α`、严格关系 `lt`、端点谓词 `D` 与根索引关系 `R k root parent child`。它不假定存在某种具体序数类型，也不把 1-Y 展开下降放进结构字段。
 
-核心接口的具体语义实例已经完成。[ActualFiniteReflection.lean](../../Concrete/OneYTruth/ActualFiniteReflection.lean) 证明实际关系的有限反射，[ActualWellOrdering.lean](../../Concrete/OneYTruth/ActualWellOrdering.lean) 给出实际展开良基、标准生成集和固定后代集字典序良序、任意展开链终止四个最终定理，不再要求调用者提供反射或初始表示。当前数学入口是[实际展开证明](../../../research/1y-well-ordering-proof.md)与[ZFC 论证](../../../research/1y-zfc-well-ordering-proof.md)。
+**1-Y 良序证明已完成 Lean 4 形式化，并通过其依赖类型论内核核验。** 核心接口的具体语义实例已经完成。[ActualFiniteReflection.lean](../../Concrete/OneYTruth/ActualFiniteReflection.lean) 证明实际关系的有限反射，[ActualWellOrdering.lean](../../Concrete/OneYTruth/ActualWellOrdering.lean) 给出实际展开良基、标准生成集和固定后代集字典序良序、任意展开链终止四个最终定理，不再要求调用者提供反射或初始表示。当前数学入口是[实际展开证明](../../../research/1y-well-ordering-proof.md)与[ZFC 论证](../../../research/1y-zfc-well-ordering-proof.md)。
 
 已经由 Lean 检查的内容：
 
@@ -41,4 +41,6 @@
 ../../.tools/lean-4.33.1-windows/bin/lake.exe env lean OneYTruthAudit.lean
 ```
 
-最终声明的公理审计只包含 Lean 标准的 `propext`、`Classical.choice`、`Quot.sound`。上面的 ZFC 论证另行说明集合论中的证明，不把公理打印本身当作一阶 ZFC 形式化证明。
+最终声明的公理审计只包含 Lean 标准的 `propext`、`Classical.choice`、`Quot.sound`。通常数学意义的 ZFC 证明由上面的独立集合论论证给出，不由公理打印自动推出。
+
+**尚未完成的是将完整证明迁移到一阶 ZFC 的形式化与机器核验。** 这项迁移需要完整编码并核验一阶 ZFC 目标及推导；当前 Lean 4 中的良序证明已经完成并通过内核检查。
