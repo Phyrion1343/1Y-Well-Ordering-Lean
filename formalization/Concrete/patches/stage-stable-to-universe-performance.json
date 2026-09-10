@@ -1,0 +1,24 @@
+{
+  "baselineCommit": "bae7e3d741f24a56d80da9b99c1345562cd10c2d",
+  "file": "ConstructibleBridge/BMSConstructibleBridge/StageStableToUniverseFormula.lean",
+  "originalSha256": "cd5dcb67d3789c371fda371b7a23587808bbdde61a1b53cd01eb1d5651413c90",
+  "patchedSha256": "a024dfd07978088d8e0ae3ad2c8ef17c97ba1f47408103092907b678c311d6e5",
+  "patchSha256": "7dab6602175a3bf5a4ccb47a3da1b6a83648f2a058483426119b4a6f1de4061e",
+  "change": "Proof-script optimization only: synchronous checked declarations; split the two original proof directions into private opaque theorems without changing their bodies; prove the carrier/two-existential-closure semantic conversion for a variable three-argument formula and assemble the original public iff by transitivity. Original formula definitions, public theorem statement and assumptions are unchanged. No diagnostic commands remain.",
+  "diagnosticResult": "Complete source file exited 0 under Lean 4.33.1 with synchronous kernel checks; final Lake build and 14-item axioms audit are recorded separately.",
+  "validation": {
+    "date": "2026-09-10",
+    "leanVersion": "4.33.1",
+    "buildExitCode": 0,
+    "buildJobs": 1576,
+    "auditExitCode": 0,
+    "auditItems": 14,
+    "axiomsInEveryItem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "auditOutputSha256": "5f0b7cd4a11bb47037df253aa0fd7d22ded1b3f05c22454180d3b0fb2106c889",
+    "finalPeakMemoryMeasured": false
+  }
+}

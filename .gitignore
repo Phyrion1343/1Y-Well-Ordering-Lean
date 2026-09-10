@@ -1,0 +1,38 @@
+.tools/
+**/.lake/
+*.olean
+*.ilean
+*.olean.private
+*.olean.server
+
+# 本机参考材料、上游 checkout 和诊断产物；依赖由准备脚本恢复。
+research/*
+!research/formalization-bms-interface-audit.md
+!research/1y-well-ordering-proof.md
+!research/1y-zfc-well-ordering-proof.md
+!research/1y-proof-architecture.md
+!research/1y-zfc-initial-supply-audit.md
+!research/1y-zfc-reflection-audit.md
+!research/1y-zfc-class-truth-call-audit.md
+!research/1y-lean-semantic-dependency-audit.md
+!research/1y-object-theory-strength-check.md
+!research/one-y-truth-zfc-build.log
+!research/one-y-truth-zfc-audit.log
+!research/one-y-truth-final-build.log
+!research/one-y-truth-final-audit.log
+!research/one-y-release-build.log
+formalization/Concrete/patches/*.original
+formalization/Concrete/patches/identified-hotspot.json
+formalization/Concrete/patches/record_stage_patch.py
+
+# 早期草稿保留在本机；发布入口指向 research 中的完成版。
+/1Y-well-foundedness-proof.md
+/1Y-well-ordering-research.md
+
+# 临时诊断输出与可重新生成的浏览器测试产物。
+formalization/Concrete/OneYTruth/*.txt
+y1/before.jpg
+y1/after.jpg
+y1/merged.jpg
+y1/debug.cjs
+release/

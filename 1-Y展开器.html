@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-Y 展开器</title>
+    <style>
+        body { 
+            font-family: "Microsoft YaHei", "DengXian", "PingFang SC", "Noto Sans SC", sans-serif;
+            max-width: 1200px; margin: 20px auto; padding: 20px; background-color: #f5f5f5;
+        }
+        h1, h2, h3 {
+            font-family: "Microsoft YaHei", "微软雅黑", "DengXian", "等线", "PingFang SC", "Noto Sans SC", sans-serif;
+            color: #333;
+            font-weight: 550;
+        }
+        h3 { font-size: 16px; margin-bottom: 8px; margin-top: 12px; }
+        .container { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: visible;
+        }
+        .input-group { margin-bottom: 15px; }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            color: #333;
+        }
+        input[type="text"], input[type="number"] { font-size: 16px;width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #007BFF; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { background-color: #0056b3; }
+        button:disabled { opacity: 0.5; cursor: default; }
+        
+        
+        .result-section { margin-top: 15px; border-top: 1px solid #eee; padding-top: 12px; }
+        .result-box { 
+            background-color: #fff; 
+            border: 2px solid #ddd; 
+            padding: 15px; 
+            border-radius: 4px; 
+            font-family: "DengXian", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif; 
+            font-size: 20px; 
+            font-weight: bold; 
+            margin-bottom: 15px;
+            word-wrap: break-word;
+            white-space: normal;
+            line-height: 1.8;
+        }
+        .result-box .num { 
+            cursor: pointer; 
+            transition: background-color 0.2s;
+        }
+        .result-box .num:hover { 
+            background-color: rgba(0, 123, 255, 0.1); 
+        }
+        
+        .mountain-title { font-size: 18px; font-weight: bold; margin-bottom: 10px; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .mountain-scroll { 
+            overflow-x: auto; 
+            margin-bottom: 10px;
+            position: relative;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .scale-control { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: normal; }
+        .scale-control input[type="range"] { width: 150px; }
+        .scale-control span { min-width: 40px; }
+        
+        .save-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+        .save-buttons button { padding: 5px 10px; font-size: 14px; margin: 0; }
+        
+        .arrow-down { text-align: center; font-size: 24px; margin: 10px 0; color: #666; }
+        
+        .error { color: red; font-weight: bold; }
+        
+        .standard-check { 
+            background-color: #fff3cd; 
+            border: 1px solid #ffc107; 
+            padding: 15px; 
+            border-radius: 4px; 
+            margin-bottom: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .standard-process { 
+            font-family: "Microsoft YaHei", "DengXian", "PingFang SC", "Noto Sans SC", sans-serif;
+            font-size: 15px; line-height: 1.8; 
+        }
+        .success { color: green; font-weight: bold; }
+        .mountain-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 10px;
+            margin-bottom: 15px;
+        }
+        .mountain-buttons button {
+            padding: 5px 10px;
+            font-size: 14px;
+            margin: 0;
+        }
+        .input-group button {
+            padding: 5px 10px;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>1-Y 展开器</h1>
+    
+    <div class="input-group">
+        <label for="sequence">原序列 (用逗号或空格分隔)</label>
+        <input type="text" id="sequence" value="1,4,6,4" placeholder="例如: 1,4,6,4">
+        <button onclick="checkStandard()">标准式判断</button>
+    </div>
+
+    <div class="input-group">
+        <label for="repetitions">复制次数 (N)</label>
+        <input type="number" id="repetitions" value="3" min="0" step="1">
+    </div>
+
+    <div id="output" class="result-section" style="display:none;">
+        <h3>最终结果（点击数字可截取）</h3>
+        <div id="final-result" class="result-box" aria-live="polite"></div>
+        <p id="error-message" class="error" role="alert" hidden></p>
+        <p id="expansion-info" style="font-size:14px;color:#666;"></p>
+        
+        <div id="standard-result" class="standard-check" style="display:none;"></div>
+
+        <div class="mountain-title">
+            <span>山脉图（点击底行数字可截取）</span>
+        </div>
+        <div class="mountain-buttons">
+            <button onclick="saveImage('mountain-before', '展开前山脉图')">保存展开前(.JPG)</button>
+            <button onclick="saveImage('mountain-after', '展开后山脉图')">保存展开后(.JPG)</button>
+            <button onclick="saveMergedImage()">合并保存(.JPG)</button>
+        </div>        
+        <div class="scale-control">
+            <label for="scale-slider">缩放:</label>
+            <input type="range" id="scale-slider" min="30" max="150" value="100" step="10">
+            <span id="scale-value">100%</span>
+        </div>
+        
+        <div class="mountain-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="展开前山脉图" id="mountain-before" style="display: block;"></svg>
+        </div>
+
+        <div class="arrow-down">↓</div>
+
+        <div class="mountain-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="展开后山脉图" id="mountain-after" style="display: block;"></svg>
+        </div>
+
+    </div>
+</div>
+
+<script>
+/* Y1_ENGINE_START */
+/* 1-Y: finite rows carry their own immutable parent relation.
+ * A pair of mountain legs is represented by parents[row][column].
+ * Values are BigInt; column and finite row indices are ordinary integers.
+ */
+'use strict';
+const Y1 = (() => {
+    const LIMITS = {columns: 3000, cells: 250000, layers: 256, rows: 3000, operations: 8000000};
+    class Budget {
+        constructor() { this.operations = 0; this.cells = 0; }
+        work(n = 1) {
+            this.operations += n;
+            if (this.operations > LIMITS.operations) throw new Error('计算量超过当前上限，请缩短序列或减少复制次数。');
+        }
+        row(n) {
+            this.cells += n;
+            if (this.cells > LIMITS.cells) throw new Error('山脉图过大，请缩短序列或减少复制次数。');
+        }
+    }
+    function parseSequence(text) {
+        if (!text.trim() || text.trim() === '∅') return [];
+        const tokens = text.trim().split(/[,，\s]+/);
+        if (tokens.length > LIMITS.columns) throw new Error(`序列最多支持 ${LIMITS.columns} 项。`);
+        return tokens.map(t => {
+            if (!/^\d+$/.test(t) || BigInt(t) < 1n) throw new Error('每一项必须是正整数，请用逗号或空格分隔。');
+            if (t.length > 1000) throw new Error('单项数字过长（最多 1000 位）。');
+            return BigInt(t);
+        });
+    }
+    function normalParents(seq) {
+        const parents = [], stack = [];
+        for (let c = 0; c < seq.length; c++) {
+            while (stack.length && seq[stack[stack.length - 1]] >= seq[c]) stack.pop();
+            parents.push(stack.length ? stack[stack.length - 1] : -1);
+            stack.push(c);
+        }
+        return parents;
+    }
+    function restrictedParents(row, previous, budget) {
+        return row.map((value, c) => {
+            if (value === null) return -1;
+            for (let p = previous[c]; p !== -1; p = previous[p]) {
+                budget.work();
+                if (row[p] !== null && row[p] < value) return p;
+            }
+            return -1;
+        });
+    }
+    function finishLayer(layer) {
+        const n = layer.rows[0].length;
+        layer.heights = Array(n).fill(0);
+        for (let r = 0; r < layer.rows.length; r++) {
+            for (let c = 0; c < n; c++) if (layer.rows[r][c] !== null) layer.heights[c] = r;
+        }
+        return layer;
+    }
+    function pseudoParents(layer, budget) {
+        // Walk down a left leg, then up its matching right leg until a
+        // principal (top-of-column) node is reached. Do not use base parents.
+        return layer.heights.map((h, c) => {
+            if (h === 0) return -1;
+            let p = layer.parents[h - 1][c];
+            while (p !== -1) {
+                budget.work();
+                if (layer.heights[p] === h - 1 || layer.heights[p] === h) return p;
+                p = layer.parents[h - 1][p];
+            }
+            return -1;
+        });
+    }
+    function buildLayer(seq, baseParents, budget) {
+        const layer = {rows: [seq.slice()], parents: [baseParents.slice()], kinds: []};
+        budget.row(seq.length);
+        for (let r = 0; ; r++) {
+            budget.work(seq.length);
+            const row = layer.rows[r], parents = layer.parents[r];
+            const next = row.map((v, c) => parents[c] === -1 ? null : v - row[parents[c]]);
+            if (next.every(v => v === null)) break;
+            if (r + 1 >= LIMITS.rows) throw new Error('有限阶差行数超过上限，请缩小输入。');
+            budget.row(seq.length);
+            layer.rows.push(next);
+            layer.parents.push(restrictedParents(next, parents, budget));
+        }
+        finishLayer(layer);
+        layer.pseudoParents = pseudoParents(layer, budget);
+        return layer;
+    }
+    function build(seq, budget = new Budget()) {
+        if (!seq.length) return {layers: [], root: null};
+        const layers = [], x = seq.length - 1;
+        let values = seq.slice(), parents = normalParents(seq), root = null;
+        const successor = parents[x] === -1;
+        for (let l = 0; l < LIMITS.layers; l++) {
+            const layer = buildLayer(values, parents, budget);
+            layers.push(layer);
+            for (let r = 0; !root && !successor && r < layer.rows.length; r++) {
+                const p = layer.parents[r][x];
+                if (p !== -1 && layer.rows[r][x] - layer.rows[r][p] === 1n) {
+                    root = {column: p, row: r, layer: l};
+                    break;
+                }
+            }
+            values = layer.heights.map((h, c) => layer.rows[h][c]);
+            if (values.every(v => v === 1n)) return {layers, root};
+            parents = restrictedParents(values, layer.pseudoParents, budget);
+            if (parents.every(p => p === -1)) {
+                if (root || successor) return {layers, root};
+                throw new Error('末项在提取后仍无可用祖先，无法按这些规则确定坏根。');
+            }
+        }
+        throw new Error('提取层数超过上限，请缩小输入。');
+    }
+    function completeLayers(layers, budget) {
+        while (layers.length && layers.length < LIMITS.layers) {
+            const last = layers[layers.length - 1];
+            if (!last.rows.length) return layers;
+            const tops = last.heights.map((h, c) => last.rows[h][c]);
+            if (tops.every(v => v === 1n)) return layers;
+            const parents = restrictedParents(tops, last.pseudoParents, budget);
+            if (parents.every(p => p === -1)) return layers;
+            layers.push(buildLayer(tops, parents, budget));
+        }
+        if (layers.length >= LIMITS.layers) throw new Error('提取层数超过上限，请缩小输入。');
+        return layers;
+    }
+    function classify(layer, y, budget) {
+        // Follow actual legs. A pseudo-parent shortcut through a lower row
+        // is not a permitted contour path: no visit may go below the root top.
+        const vertex = layer.heights.map(() => false);
+        const floor = layer.heights[y];
+        const children = layer.parents.map(row => row.map(() => []));
+        layer.parents.forEach((row, r) => row.forEach((p, c) => {
+            if (p !== -1) children[r][p].push(c);
+        }));
+        const seen = new Set(), queue = [[floor, y]];
+        for (let i = 0; i < queue.length; i++) {
+            const [r, c] = queue[i], key = r * vertex.length + c;
+            if (seen.has(key)) continue;
+            seen.add(key);
+            budget.work();
+            if (r === layer.heights[c]) vertex[c] = true;
+            if (r > floor) queue.push([r - 1, c]);
+            for (const child of children[r][c]) queue.push([r + 1, child]);
+        }
+        const contour = layer.parents.map(row => row.map(() => false));
+        const reference = layer.parents.map(row => row.map(() => false));
+        function horizontalReach(start, r, marks) {
+            const reachable = new Set([start]);
+            const pars = layer.parents[r];
+            for (let c = start + 1; c < pars.length; c++) {
+                budget.work();
+                if (reachable.has(pars[c])) { marks[r][c] = true; reachable.add(c); }
+            }
+        }
+        for (let c = y; c < vertex.length; c++) if (vertex[c]) horizontalReach(c, layer.heights[c], contour);
+        horizontalReach(y, layer.heights[y], reference);
+        layer.kinds = layer.parents.map((row, r) => row.map((p, c) => {
+            if (p === -1) return '';
+            if (reference[r][c]) return 'reference';
+            if (contour[r][c]) return 'contour';
+            return c > y && p < y ? 'fixed' : 'translation';
+        }));
+        return {vertex, contour, reference};
+    }
+    function graphFrom(layer, length) {
+        const columns = Array.from({length}, () => ({parents: [], kinds: [], top: null}));
+        for (let c = 0; c < Math.min(length, layer.heights.length); c++) {
+            const h = layer.heights[c];
+            columns[c] = {
+                parents: Array.from({length: h}, (_, r) => layer.parents[r][c]),
+                kinds: Array.from({length: h}, (_, r) => layer.kinds[r]?.[c] || ''),
+                top: layer.rows[h][c]
+            };
+        }
+        return columns;
+    }
+    function reconstruct(columns, budget) {
+        if (!columns.length) return {rows: [], parents: [], heights: [], pseudoParents: [], kinds: []};
+        const maxHeight = Math.max(...columns.map(c => c.parents.length));
+        if (maxHeight >= LIMITS.rows) throw new Error('展开后的有限阶差行数超过上限，请减少复制次数。');
+        const rows = [], parents = [], kinds = [];
+        for (let r = 0; r <= maxHeight; r++) {
+            budget.row(columns.length);
+            rows.push(Array(columns.length).fill(null));
+            parents.push(Array(columns.length).fill(-1));
+            kinds.push(Array(columns.length).fill(''));
+        }
+        for (let c = 0; c < columns.length; c++) {
+            const col = columns[c], h = col.parents.length;
+            if (col.top === null) throw new Error(`第 ${c + 1} 列缺少提取值。`);
+            rows[h][c] = col.top;
+            for (let r = 0; r < h; r++) {
+                const p = col.parents[r];
+                if (!Number.isInteger(p) || p < 0 || p >= c) throw new Error(`第 ${c + 1} 列第 ${r} 行的父项未被填充。`);
+                parents[r][c] = p;
+                kinds[r][c] = col.kinds[r];
+            }
+        }
+        for (let r = maxHeight - 1; r >= 0; r--) {
+            for (let c = 0; c < columns.length; c++) {
+                budget.work();
+                if (r >= columns[c].parents.length) continue;
+                const p = parents[r][c];
+                if (rows[r][p] === null) throw new Error(`第 ${c + 1} 列第 ${r} 行的父项指向空项。`);
+                rows[r][c] = rows[r + 1][c] + rows[r][p];
+            }
+        }
+        const layer = {rows, parents, kinds, heights: columns.map(c => c.parents.length)};
+        layer.pseudoParents = pseudoParents(layer, budget);
+        return layer;
+    }
+    function terminalExpand(layer, root, x, n, budget) {
+        const y = root.column, L = x - y, length = x + n * L;
+        const columns = graphFrom(layer, Math.max(length, x + 1));
+        // Keep the deleted last column's parents below the root row. At and
+        // above that row its value/shape is the copied root column instead.
+        const seam = columns[x], rootCol = columns[y];
+        seam.parents = seam.parents.slice(0, root.row);
+        seam.kinds = seam.kinds.slice(0, root.row);
+        for (let r = root.row; r < rootCol.parents.length; r++) {
+            seam.parents[r] = rootCol.parents[r] < y ? rootCol.parents[r] : rootCol.parents[r] + L;
+            seam.kinds[r] = rootCol.kinds[r];
+        }
+        seam.top = rootCol.top;
+        for (let c = x + 1; c < length; c++) {
+            const block = Math.floor((c - y - 1) / L), source = c - block * L;
+            const src = columns[source];
+            columns[c] = {
+                parents: src.parents.map(p => p < y ? p : p + block * L),
+                kinds: src.parents.map((p, r) => p < y ? 'fixed' : src.kinds[r]), top: src.top
+            };
+        }
+        return reconstruct(columns.slice(0, length), budget);
+    }
+    function lowerExpand(layer, upper, y, x, n, budget) {
+        const L = x - y, length = x + n * L;
+        const {contour, reference} = classify(layer, y, budget);
+        const columns = graphFrom(layer, Math.max(length, x + 1));
+        for (let block = 1; x + (block - 1) * L < length; block++) {
+            const seam = x + (block - 1) * L;
+            // The seam keeps its old parent relation even though its value
+            // is replaced. Read its actual height anew for every copy.
+            const rise = columns[seam].parents.length - layer.heights[y];
+            if (rise < 0) throw new Error('轮廓提升高度为负，输入不满足当前展开规则。');
+            for (let c = y + 1; c <= x; c++) {
+                const dest = c + block * L;
+                if (dest >= length) break;
+                const target = {parents: [], kinds: [], top: null};
+                for (let r = 0; r < layer.heights[c]; r++) {
+                    budget.work();
+                    const p = layer.parents[r][c];
+                    const moving = contour[r][c];
+                    const rr = moving ? r + rise : r;
+                    target.parents[rr] = !moving && p < y ? p : p + block * L;
+                    target.kinds[rr] = !moving && p < y ? 'fixed' : layer.kinds[r][c];
+                    if (reference[r][c]) {
+                        for (let offset = 0; offset < rise; offset++) {
+                            budget.work();
+                            target.parents[r + offset] = p + block * L;
+                            target.kinds[r + offset] = 'reference';
+                        }
+                    }
+                }
+                columns[dest] = target;
+            }
+        }
+        columns.length = length;
+        for (let c = 0; c < length; c++) columns[c].top = upper.rows[0][c];
+        return reconstruct(columns, budget);
+    }
+    function expand(seq, n) {
+        seq = seq.map(v => BigInt(v));
+        if (seq.some(v => v <= 0n)) throw new Error('每一项必须是正整数。');
+        if (!Number.isSafeInteger(n) || n < 0) throw new Error('复制次数必须是非负整数。');
+        const budget = new Budget(), before = build(seq, budget), root = before.root;
+        const x = seq.length - 1;
+        if (!root) {
+            const result = seq.slice(0, -1);
+            return {result, before, after: build(result, budget), root: null, originalLastIndex: x, badPartLength: 0};
+        }
+        const y = root.column, L = x - y, length = x + n * L;
+        if (length > LIMITS.columns) throw new Error(`展开结果超过 ${LIMITS.columns} 项，请减少复制次数。`);
+        const layers = Array(root.layer + 1);
+        for (let l = 0; l < before.layers.length; l++) classify(before.layers[l], y, budget);
+        layers[root.layer] = terminalExpand(before.layers[root.layer], root, x, n, budget);
+        for (let l = root.layer - 1; l >= 0; l--) layers[l] = lowerExpand(before.layers[l], layers[l + 1], y, x, n, budget);
+        completeLayers(layers, budget);
+        return {result: layers[0].rows[0], before, after: {layers}, root, originalLastIndex: x, badPartLength: L};
+    }
+    function checkStandard(seq) {
+        const steps = [];
+        if (!seq.length || seq.length === 1 && seq[0] === 1n) return {status: 'standard', steps: ['空序列与单项 1 是标准式。']};
+        if (seq[0] !== 1n) return {status: 'nonstandard', steps: ['标准式必须以 1 开头。']};
+        let current = [1n, seq[1] + 1n], index = 2;
+        try {
+            for (let step = 0; step < 500; step++) {
+                const output = expand(current, Math.max(1, index)).result.slice(0, index);
+                steps.push(`[${current.join(',')}] → [${output.join(',')}]`);
+                if (output.length < index || output[index - 1] < seq[index - 1]) return {status: 'nonstandard', steps};
+                if (output[index - 1] === seq[index - 1]) {
+                    if (index === seq.length) return {status: 'standard', steps};
+                    index++;
+                } else current = [...seq.slice(0, index - 1), seq[index - 1] + 1n];
+            }
+            return {status: 'unknown', steps, reason: '达到标准式检查步数上限，尚不能判定。'};
+        } catch (e) { return {status: 'unknown', steps, reason: e.message}; }
+    }
+    return {parseSequence, normalParents, build, expand, checkStandard, LIMITS};
+})();
+if (typeof module !== 'undefined' && module.exports) module.exports = Y1;
+
+/* Y1_ENGINE_END */
+    'use strict';
+
+    let currentScale = 1;
+    let currentData = null;
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    const COLORS = {
+        normal: '#333', good: '#22c55e', root: '#ef4444',
+        firstCopy: '#00BFFF', secondCopy: '#EEB422', fixed: '#a855f7'
+    };
+
+    document.getElementById('sequence').addEventListener('input', calculateExpansion);
+    document.getElementById('repetitions').addEventListener('input', calculateExpansion);
+    document.getElementById('scale-slider').addEventListener('input', function(event) {
+        currentScale = Number(event.target.value) / 100;
+        document.getElementById('scale-value').textContent = event.target.value + '%';
+        if (currentData) renderMountains();
+    });
+
+    function ordinalLabel(layer, row) {
+        if (layer === 0) return `R ${row}`;
+        return `R ${layer === 1 ? 'ω' : `ω·${layer}`}${row === 0 ? '' : `+${row}`}`;
+    }
+
+    function present(value) {
+        return value !== null && value !== undefined;
+    }
+
+    function itemColor(data, layer, row, column, keepTopBlack = true) {
+        if (!data.root) return COLORS.normal;
+        if (keepTopBlack && row === layer.rows.length - 1) return COLORS.normal;
+        const root = data.root.column;
+        const length = data.badPartLength;
+        const firstCopy = data.originalLastIndex;
+        if (column < root) return COLORS.good;
+        if (column === root) return COLORS.root;
+        const isCopyStart = length > 0 && column >= firstCopy && (column - firstCopy) % length === 0;
+        const parent = layer.parents[row]?.[column] ?? -1;
+        const kind = layer.kinds?.[row]?.[column];
+        if (!isCopyStart && (kind === 'fixed' || (parent >= 0 && parent < root))) return COLORS.fixed;
+        if (column < firstCopy || length <= 0) return COLORS.normal;
+        const block = Math.floor((column - firstCopy) / length) + 1;
+        return block % 2 === 1 ? COLORS.firstCopy : COLORS.secondCopy;
+    }
+
+    function svgNode(tag, attrs, text) {
+        const node = document.createElementNS(SVG_NS, tag);
+        for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
+        if (text !== undefined) node.textContent = String(text);
+        return node;
+    }
+
+    function drawMountain(svgId, mountain, data, scale = 1) {
+        const svg = document.getElementById(svgId);
+        svg.replaceChildren();
+        const layers = mountain?.layers ?? [];
+        const cols = layers[0]?.rows[0]?.length ?? 0;
+        if (cols === 0) {
+            svg.setAttribute('width', 240 * scale);
+            svg.setAttribute('height', 60 * scale);
+            svg.appendChild(svgNode('text', {
+                x: 30 * scale, y: 30 * scale, 'dominant-baseline': 'middle',
+                'font-size': 16 * scale, fill: COLORS.normal
+            }, '∅'));
+            return;
+        }
+
+        let maxDigits = 1;
+        let maxLabelLength = 3;
+        let rowCount = 0;
+        for (let l = 0; l < layers.length; l++) {
+            rowCount += Math.max(0, layers[l].rows.length - 1);
+            for (let r = 0; r < layers[l].rows.length; r++) {
+                maxLabelLength = Math.max(maxLabelLength, ordinalLabel(l, r).length);
+                for (const value of layers[l].rows[r]) {
+                    if (present(value)) maxDigits = Math.max(maxDigits, String(value).length);
+                }
+            }
+        }
+        const cellWidth = Math.max(50, maxDigits * 9 + 24) * scale;
+        const rowHeight = 60 * scale;
+        const leftPadding = Math.max(90, maxLabelLength * 8 + 32) * scale;
+        const verticalMargin = 30 * scale;
+        const layerGap = 75 * scale;
+        const width = leftPadding + (cols - 1) * cellWidth + cellWidth / 2 + 30 * scale;
+        const height = verticalMargin * 2 + rowCount * rowHeight + (layers.length - 1) * layerGap;
+        svg.setAttribute('width', width);
+        svg.setAttribute('height', height);
+
+        const edges = svgNode('g', { 'stroke-width': 1.5 * scale, fill: 'none' });
+        const labels = svgNode('g', {});
+        const nodes = svgNode('g', {});
+        svg.append(edges, labels, nodes);
+        const coords = [];
+        let y = height - verticalMargin;
+        for (let l = 0; l < layers.length; l++) {
+            const layerCoords = [];
+            for (let r = 0; r < layers[l].rows.length; r++) {
+                layerCoords.push(layers[l].rows[r].map((value, c) => present(value)
+                    ? { x: leftPadding + c * cellWidth, y } : null));
+                labels.appendChild(svgNode('text', {
+                    x: 10 * scale, y, 'dominant-baseline': 'middle',
+                    'font-size': 12 * scale, fill: '#999'
+                }, ordinalLabel(l, r)));
+                if (r < layers[l].rows.length - 1) y -= rowHeight;
+            }
+            coords.push(layerCoords);
+            if (l < layers.length - 1) {
+                edges.appendChild(svgNode('line', {
+                    x1: leftPadding / 2, y1: y - layerGap / 2,
+                    x2: width - 20 * scale, y2: y - layerGap / 2,
+                    stroke: '#007BFF', 'stroke-dasharray': `${8 * scale} ${5 * scale}`
+                }));
+                y -= layerGap;
+            }
+        }
+
+        // parents[r][c] is the parent in row r of column c. Both legs meet at (r+1,c).
+        for (let l = 0; l < layers.length; l++) {
+            const layer = layers[l];
+            for (let r = 0; r < layer.rows.length; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const lower = coords[l][r][c];
+                    if (!lower) continue;
+                    const upper = coords[l][r + 1]?.[c];
+                    const color = itemColor(data, layer, r, c);
+                    if (upper) {
+                        const offset = 11 * scale;
+                        edges.appendChild(svgNode('line', {
+                            x1: lower.x, y1: lower.y - offset,
+                            x2: upper.x, y2: upper.y + offset, stroke: color,
+                            'data-kind': layer.kinds?.[r]?.[c] ?? ''
+                        }));
+                        const parentColumn = layer.parents[r]?.[c] ?? -1;
+                        const parent = parentColumn >= 0 ? coords[l][r][parentColumn] : null;
+                        if (parent) edges.appendChild(svgNode('line', {
+                            x1: upper.x, y1: upper.y + offset,
+                            x2: parent.x, y2: parent.y - offset, stroke: color,
+                            'data-kind': layer.kinds?.[r]?.[c] ?? ''
+                        }));
+                    }
+                    const text = svgNode('text', {
+                        x: lower.x, y: lower.y, 'text-anchor': 'middle',
+                        'dominant-baseline': 'middle', 'font-size': 14 * scale,
+                        'font-weight': 'bold', fill: color,
+                        'data-layer': l, 'data-row': r, 'data-column': c
+                    }, layer.rows[r][c]);
+                    if (l === 0 && r === 0) {
+                        text.setAttribute('class', 'num');
+                        text.setAttribute('style', 'cursor:pointer');
+                        text.setAttribute('tabindex', '0');
+                        text.setAttribute('role', 'button');
+                        text.setAttribute('aria-label', `截取到第 ${c + 1} 项：${String(layer.rows[r][c])}`);
+                        text.appendChild(svgNode('title', {}, '点击截取序列到此处'));
+                        text.addEventListener('click', () => truncateMountain(svgId, c));
+                        text.addEventListener('keydown', event => {
+                            if (event.key === 'Enter' || event.key === ' ') {
+                                event.preventDefault();
+                                truncateMountain(svgId, c);
+                            }
+                        });
+                    }
+                    nodes.appendChild(text);
+                }
+            }
+        }
+
+        // Extraction takes the highest existing node of every column into the next layer's row 0.
+        for (let l = 0; l < layers.length - 1; l++) {
+            for (let c = 0; c < cols; c++) {
+                let top = null;
+                for (let r = coords[l].length - 1; r >= 0; r--) {
+                    if (coords[l][r][c]) { top = coords[l][r][c]; break; }
+                }
+                const extracted = coords[l + 1][0]?.[c];
+                if (!top || !extracted) continue;
+                edges.appendChild(svgNode('line', {
+                    x1: top.x, y1: top.y - 11 * scale,
+                    x2: extracted.x, y2: extracted.y + 11 * scale,
+                    stroke: COLORS.normal, 'stroke-width': scale,
+                    'stroke-dasharray': `${4 * scale} ${5 * scale}`,
+                    'data-kind': 'extraction'
+                }));
+            }
+        }
+    }
+
+    function renderMountains() {
+        drawMountain('mountain-before', currentData.before, currentData, currentScale);
+        drawMountain('mountain-after', currentData.after, currentData, currentScale);
+    }
+
+    function truncateSequence(index) {
+        if (!currentData) return;
+        document.getElementById('sequence').value = currentData.result.slice(0, index + 1).map(String).join(',');
+        calculateExpansion();
+    }
+
+    function truncateMountain(svgId, index) {
+        if (!currentData) return;
+        const mountain = svgId === 'mountain-before' ? currentData.before : currentData.after;
+        const sequence = mountain?.layers[0]?.rows[0];
+        if (!sequence) return;
+        document.getElementById('sequence').value = sequence.slice(0, index + 1).map(String).join(',');
+        calculateExpansion();
+    }
+
+    function displayError(error) {
+        const message = document.getElementById('error-message');
+        message.hidden = false;
+        message.textContent = `错误：${error instanceof Error ? error.message : String(error)}`;
+    }
+
+    function clearExpansion() {
+        currentData = null;
+        document.getElementById('final-result').textContent = '∅';
+        document.getElementById('expansion-info').textContent = '';
+        for (const id of ['mountain-before', 'mountain-after']) {
+            const svg = document.getElementById(id);
+            svg.replaceChildren();
+            svg.setAttribute('width', '0');
+            svg.setAttribute('height', '0');
+        }
+        document.querySelectorAll('.mountain-buttons button').forEach(button => { button.disabled = true; });
+    }
+
+    function calculateExpansion() {
+        document.getElementById('output').style.display = 'block';
+        document.getElementById('error-message').hidden = true;
+        const standard = document.getElementById('standard-result');
+        standard.replaceChildren();
+        standard.style.display = 'none';
+        clearExpansion();
+        try {
+            const sequence = Y1.parseSequence(document.getElementById('sequence').value);
+            const nText = document.getElementById('repetitions').value.trim();
+            if (!/^\d+$/.test(nText) || !Number.isSafeInteger(Number(nText))) {
+                throw new Error('复制次数 N 必须是非负整数。');
+            }
+            const data = Y1.expand(sequence, Number(nText));
+            currentData = data;
+            const resultBox = document.getElementById('final-result');
+            resultBox.replaceChildren();
+            if (data.result.length === 0) resultBox.textContent = '∅';
+            const layer = data.after?.layers[0];
+            data.result.forEach((value, index) => {
+                if (index > 0) resultBox.appendChild(document.createTextNode(','));
+                const span = document.createElement('span');
+                span.className = 'num';
+                span.style.color = layer ? itemColor(data, layer, 0, index, false) : COLORS.normal;
+                span.textContent = String(value);
+                span.title = '点击截取到此处';
+                span.tabIndex = 0;
+                span.setAttribute('role', 'button');
+                span.addEventListener('click', () => truncateSequence(index));
+                span.addEventListener('keydown', event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        truncateSequence(index);
+                    }
+                });
+                resultBox.appendChild(span);
+            });
+            const extractionCount = data.root?.layer ?? 0;
+            const mountainLayers = data.before?.layers.length ?? 0;
+            document.getElementById('expansion-info').textContent = data.root
+                ? `本次展开提取 ${extractionCount} 次 · 完整山脉 ${mountainLayers} 层 · 坏根：第 ${data.root.column + 1} 列，${ordinalLabel(data.root.layer, data.root.row)} · 坏部长度 ${data.badPartLength} · 结果 ${data.result.length} 项`
+                : `末项没有父项，删除末项 · 完整山脉 ${mountainLayers} 层 · 结果 ${data.result.length} 项`;
+            renderMountains();
+            document.querySelectorAll('.mountain-buttons button').forEach(button => { button.disabled = false; });
+        } catch (error) {
+            clearExpansion();
+            displayError(error);
+        }
+    }
+
+    function checkStandard() {
+        const container = document.getElementById('standard-result');
+        document.getElementById('output').style.display = 'block';
+        container.style.display = 'block';
+        container.replaceChildren();
+        try {
+            const result = Y1.checkStandard(Y1.parseSequence(document.getElementById('sequence').value));
+            for (const step of result.steps ?? []) {
+                const line = document.createElement('div');
+                line.className = 'standard-process';
+                line.textContent = String(step);
+                container.appendChild(line);
+            }
+            const summary = document.createElement('div');
+            summary.className = result.status === 'standard' ? 'success' : result.status === 'nonstandard' ? 'error' : 'standard-process';
+            summary.textContent = result.status === 'standard' ? '✓ 是标准式'
+                : result.status === 'nonstandard' ? '✗ 不是标准式' : '暂未确定是否为标准式';
+            container.appendChild(summary);
+            if (result.reason) {
+                const reason = document.createElement('div');
+                reason.className = 'standard-process';
+                reason.textContent = String(result.reason);
+                container.appendChild(reason);
+            }
+        } catch (error) {
+            const line = document.createElement('span');
+            line.className = 'error';
+            line.textContent = `错误：${error.message}`;
+            container.appendChild(line);
+        }
+    }
+
+    function exportScale(width, height) {
+        // Keep large mountains within browser canvas limits while retaining 3× output for normal diagrams.
+        return Math.min(3, 16384 / width, 16384 / height, Math.sqrt(64000000 / (width * height)));
+    }
+
+    async function svgToHighQualityJpg(svg, scaleFactor) {
+        const width = Number(svg.getAttribute('width'));
+        const height = Number(svg.getAttribute('height'));
+        if (!(width > 0 && height > 0)) throw new Error('当前没有可以保存的山脉图。');
+        const factor = scaleFactor ?? exportScale(width, height);
+        const source = new Blob([new XMLSerializer().serializeToString(svg)], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(source);
+        try {
+            const img = new Image();
+            await new Promise((resolve, reject) => {
+                img.onload = resolve;
+                img.onerror = () => reject(new Error('山脉图转为图片失败。'));
+                img.src = url;
+            });
+            const canvas = document.createElement('canvas');
+            canvas.width = Math.max(1, Math.ceil(width * factor));
+            canvas.height = Math.max(1, Math.ceil(height * factor));
+            const context = canvas.getContext('2d');
+            if (!context) throw new Error('浏览器无法创建图片画布。');
+            context.fillStyle = '#fff';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            context.imageSmoothingEnabled = true;
+            context.imageSmoothingQuality = 'high';
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+            return canvas;
+        } finally {
+            URL.revokeObjectURL(url);
+        }
+    }
+
+    async function downloadJpg(canvas, filename) {
+        const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.95));
+        if (!blob) throw new Error('图片尺寸过大，无法生成 JPG。请缩小山脉图后重试。');
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename + '.jpg';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    async function saveImage(svgId, filename) {
+        if (!currentData) return;
+        try {
+            const canvas = await svgToHighQualityJpg(document.getElementById(svgId));
+            await downloadJpg(canvas, filename);
+        } catch (error) { displayError(error); }
+    }
+
+    async function saveMergedImage() {
+        if (!currentData) return;
+        try {
+            const before = document.getElementById('mountain-before');
+            const after = document.getElementById('mountain-after');
+            const width = Math.max(Number(before.getAttribute('width')), Number(after.getAttribute('width')));
+            const beforeHeight = Number(before.getAttribute('height'));
+            const afterHeight = Number(after.getAttribute('height'));
+            const gap = 40 * currentScale;
+            const height = beforeHeight + gap + afterHeight;
+            const factor = exportScale(width, height);
+            const canvas = document.createElement('canvas');
+            canvas.width = Math.max(1, Math.ceil(width * factor));
+            canvas.height = Math.max(1, Math.ceil(height * factor));
+            const context = canvas.getContext('2d');
+            if (!context) throw new Error('浏览器无法创建图片画布。');
+            context.fillStyle = '#fff';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            const first = await svgToHighQualityJpg(before, factor);
+            context.drawImage(first, 0, 0);
+            const second = await svgToHighQualityJpg(after, factor);
+            context.drawImage(second, 0, (beforeHeight + gap) * factor);
+            context.font = `${24 * currentScale * factor}px Arial`;
+            context.fillStyle = '#666';
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            context.fillText('↓', width * factor / 2, (beforeHeight + gap / 2) * factor);
+            await downloadJpg(canvas, '1-Y山脉图_合并');
+        } catch (error) { displayError(error); }
+    }
+
+    calculateExpansion();
+</script>
+</body>
+</html>

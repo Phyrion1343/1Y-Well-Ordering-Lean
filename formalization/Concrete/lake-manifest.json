@@ -1,0 +1,126 @@
+{
+  "lakeDir": ".lake",
+  "version": "1.2.0",
+  "name": "«zero-y-concrete»",
+  "fixedToolchain": false,
+  "packagesDir": ".lake/packages",
+  "packages": [
+    {
+      "type": "path",
+      "scope": "leanprover-community",
+      "name": "plausible",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "configFile": "lakefile.toml",
+      "dir": ".lake/packages/plausible"
+    },
+    {
+      "type": "path",
+      "scope": "leanprover-community",
+      "name": "LeanSearchClient",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "configFile": "lakefile.toml",
+      "dir": ".lake/packages/LeanSearchClient"
+    },
+    {
+      "type": "path",
+      "scope": "leanprover-community",
+      "name": "importGraph",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "configFile": "lakefile.toml",
+      "dir": ".lake/packages/importGraph"
+    },
+    {
+      "type": "path",
+      "scope": "leanprover-community",
+      "name": "proofwidgets",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "dir": ".lake/packages/proofwidgets"
+    },
+    {
+      "type": "path",
+      "scope": "leanprover-community",
+      "name": "aesop",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "configFile": "lakefile.toml",
+      "dir": ".lake/packages/aesop"
+    },
+    {
+      "type": "path",
+      "scope": "leanprover-community",
+      "name": "Qq",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "configFile": "lakefile.toml",
+      "dir": ".lake/packages/Qq"
+    },
+    {
+      "type": "path",
+      "scope": "leanprover-community",
+      "name": "batteries",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "configFile": "lakefile.toml",
+      "dir": ".lake/packages/batteries"
+    },
+    {
+      "type": "path",
+      "scope": "leanprover",
+      "name": "Cli",
+      "manifestFile": "lake-manifest.json",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "dir": ".lake/packages/Cli"
+    },
+    {
+      "dir": "..",
+      "scope": "",
+      "configFile": "lakefile.toml",
+      "inherited": false,
+      "type": "path",
+      "manifestFile": "lake-manifest.json",
+      "name": "ZeroYBMS"
+    },
+    {
+      "dir": "../../research/BMS-Well-Ordering-Lean",
+      "scope": "",
+      "configFile": "lakefile.toml",
+      "inherited": false,
+      "type": "path",
+      "manifestFile": "lake-manifest.json",
+      "name": "YesMetaZFC"
+    },
+    {
+      "dir": "../../.tools/mathlib4-eba3d887fc52c98627f4b81507c0efc3096e91b9",
+      "scope": "",
+      "configFile": "lakefile.lean",
+      "inherited": false,
+      "type": "path",
+      "manifestFile": "lake-manifest.json",
+      "name": "mathlib"
+    },
+    {
+      "dir": "../../.tools/cu-7f5a7d03",
+      "scope": "",
+      "configFile": "lakefile.lean",
+      "inherited": false,
+      "type": "path",
+      "manifestFile": "lake-manifest.json",
+      "name": "«lean-constructible-universe»"
+    },
+    {
+      "dir": "../../research/BMS-Well-Ordering-Lean/ConstructibleBridge",
+      "scope": "",
+      "configFile": "lakefile.lean",
+      "inherited": false,
+      "type": "path",
+      "manifestFile": "lake-manifest.json",
+      "name": "«bms-constructible-bridge»"
+    }
+  ]
+}

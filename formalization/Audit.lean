@@ -1,0 +1,46 @@
+import ZeroY
+
+-- 单独检查实际公理依赖；结论范围以各声明显式参数为准。
+#print axioms ZeroY.exprLt_not_wellFounded
+#print axioms ZeroY.encodeRaw_length
+#print axioms ZeroY.exprLt_trichotomy
+#print axioms ZeroY.MatrixLt.trans
+#print axioms ZeroY.legal_layerAfter_all_ones
+#print axioms ZeroY.legal_mountainRows_maxValue_sufficient
+#print axioms ZeroY.encodeRaw_rectangular
+#print axioms ZeroY.encode
+#print axioms ZeroY.encodeRaw_replicate_one
+#print axioms ZeroY.decodeRaw_legal
+#print axioms ZeroY.decodeRaw_nil_columns
+#print axioms ZeroY.decode
+#print axioms ZeroY.nonreversible_matrix
+#print axioms ZeroY.StrictRelationIso.wellFounded_iff
+#print axioms ZeroY.expansionWellFounded_of_injective_conjugacy
+#print axioms ZeroY.BMS.exists_bounded_any
+#print axioms ZeroY.BMS.step_wellFounded_any
+#print axioms ZeroY.BMS.descendants_comparable_any
+#print axioms ZeroY.decode_encode
+#print axioms ZeroY.encode_lt_iff
+#print axioms ZeroY.roundTrip_iff_structural
+#print axioms ZeroY.roundTrip_iff_structural_of_rectangular
+#print axioms ZeroY.reversibleOrderIso
+#print axioms ZeroY.reversibleLt_not_wellFounded
+#print axioms ZeroY.BMS.parent_expand_eq_copiedMountainParent
+#print axioms ZeroY.BMS.depthRegular_expand
+#print axioms ZeroY.BMS.structural_expand
+#print axioms ZeroY.encode_expandY
+#print axioms ZeroY.decode_expand
+#print axioms ZeroY.encode_seed
+#print axioms ZeroY.generatedOrderIso
+#print axioms ZeroY.descendantOrderIso
+#print axioms ZeroY.yStep_wellFounded
+#print axioms ZeroY.no_infinite_yStep_chain
+#print axioms ZeroY.yGenerated_strictWellOrder
+#print axioms ZeroY.yDescendants_strictWellOrder
+#print axioms ZeroY.yTrajectory_terminates
+#print axioms ZeroY.wikiGenerated_iff_yGenerated
+#print axioms ZeroY.wikiPath_iff_yPath
+#print axioms ZeroY.wikiStep_wellFounded
+#print axioms ZeroY.wikiGenerated_strictWellOrder
+#print axioms ZeroY.wikiDescendants_strictWellOrder
+#print axioms ZeroY.wikiTrajectory_terminates

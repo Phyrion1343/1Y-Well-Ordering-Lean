@@ -1,0 +1,1072 @@
+ℹ [1153/1308] Replayed OneY.RootIndexed.Representation
+info: OneY/RootIndexed/Representation.lean:527:0: 'OneY.RootIndexed.representation_splice' depends on axioms: [propext, Quot.sound]
+info: OneY/RootIndexed/Representation.lean:528:0: 'OneY.RootIndexed.virtual_demands_from_templates' depends on axioms: [propext, Quot.sound]
+info: OneY/RootIndexed/Representation.lean:529:0: 'OneY.RootIndexed.exists_bounded_representation_splice' depends on axioms: [propext, Quot.sound]
+info: OneY/RootIndexed/Representation.lean:530:0: 'OneY.RootIndexed.blockScheme_bounded_representations' depends on axioms: [propext, Quot.sound]
+info: OneY/RootIndexed/Representation.lean:531:0: 'OneY.RootIndexed.wellFounded_of_lowerable_labels' does not depend on any axioms
+⚠ [1154/1308] Replayed OneYTruth.ComplexityRelabel
+warning: OneYTruth/ComplexityRelabel.lean:22:92: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [1198/1390] Replayed OneYTruth.SigmaComparison
+info: OneYTruth/SigmaComparison.lean:116:0: 'OneYTruth.SigmaComparison.mem_sigmaNodes_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaComparison.lean:117:0: 'OneYTruth.SigmaComparison.mixedComparisonFormula_isDeltaZero' depends on axioms: [propext]
+info: OneYTruth/SigmaComparison.lean:118:0: 'OneYTruth.SigmaComparison.realize_comparison_iff_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1353/1601] Replayed OneY.Forest
+info: OneY/Forest.lean:193:0: 'OneY.ParentForest.root_le' depends on axioms: [propext, Quot.sound]
+info: OneY/Forest.lean:194:0: 'OneY.ParentForest.parent_root' depends on axioms: [propext, Quot.sound]
+info: OneY/Forest.lean:195:0: 'OneY.ParentForest.root_unique' depends on axioms: [propext, Quot.sound]
+info: OneY/Forest.lean:196:0: 'OneY.ParentForest.Refines.root_root' depends on axioms: [propext, Quot.sound]
+info: OneY/Forest.lean:197:0: 'OneY.ParentForest.depth_le' depends on axioms: [propext, Quot.sound]
+ℹ [1363/1601] Replayed OneY.ForestBridge
+info: OneY/ForestBridge.lean:47:0: 'OneY.ParentForest.ancestor_iff_zeroY' does not depend on any axioms
+info: OneY/ForestBridge.lean:48:0: 'OneY.ParentForest.nearestSmaller_refines' depends on axioms: [propext, Quot.sound]
+info: OneY/ForestBridge.lean:49:0: 'OneY.ParentForest.root_nearestSmaller_root' depends on axioms: [propext, Quot.sound]
+ℹ [1383/1601] Replayed OneY.ForestFrame
+info: OneY/ForestFrame.lean:154:0: 'OneY.ForestFrame.cutoff_step_nearestSmaller' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ForestFrame.lean:155:0: 'OneY.ForestFrame.rowForest_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1397/1601] Replayed OneY.ForestFrameMatrix
+info: OneY/ForestFrameMatrix.lean:129:0: 'OneY.ForestFrame.raw_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ForestFrameMatrix.lean:130:0: 'OneY.ForestFrame.matrix_depthRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ForestFrameMatrix.lean:131:0: 'OneY.ForestFrame.matrix_terminal_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1398/1601] Replayed OneY.DepthMatrix
+info: OneY/DepthMatrix.lean:140:0: 'OneY.DepthMatrix.matrix_depthRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/DepthMatrix.lean:141:0: 'OneY.DepthMatrix.matrix_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1399/1601] Replayed OneY.Numeric
+info: OneY/Numeric.lean:234:0: 'OneY.Numeric.restrictedParent_some_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/Numeric.lean:235:0: 'OneY.Numeric.rows_zero_of_bound' depends on axioms: [propext, Quot.sound]
+info: OneY/Numeric.lean:236:0: 'OneY.Numeric.live_iff_le_height' depends on axioms: [propext, Quot.sound]
+info: OneY/Numeric.lean:237:0: 'OneY.Numeric.topValue_lt_of_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1400/1601] Replayed OneY.SparseComparison
+info: OneY/SparseComparison.lean:114:0: 'OneY.Numeric.restrictedParent_eq_filled_nearestSmaller' depends on axioms: [propext, Quot.sound]
+info: OneY/SparseComparison.lean:115:0: 'OneY.Numeric.select_depth_eq_filled_depth' depends on axioms: [propext, Quot.sound]
+info: OneY/SparseComparison.lean:116:0: 'OneY.Numeric.select_common_chain_depth_compare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/SparseComparison.lean:117:0: 'OneY.Numeric.select_parent_eq_of_common_chain_depth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1401/1601] Replayed OneY.SparseBlocker
+info: OneY/SparseBlocker.lean:179:0: 'OneY.Numeric.restrictedParent_eq_of_blocker' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/SparseBlocker.lean:180:0: 'OneY.Numeric.restrictedParent_exists_blocker' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1402/1601] Replayed OneY.Geometry
+info: OneY/Geometry.lean:176:0: 'OneY.Geometry.vertex_iff_cone' depends on axioms: [propext, Quot.sound]
+info: OneY/Geometry.lean:177:0: 'OneY.Geometry.contour_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/Geometry.lean:178:0: 'OneY.Geometry.reference_iff' depends on axioms: [propext, Quot.sound]
+ℹ [1403/1601] Replayed OneY.RootGeometry
+info: OneY/RootGeometry.lean:199:0: 'OneY.RootGeometry.RowMountain.root_height' depends on axioms: [propext, Quot.sound]
+info: OneY/RootGeometry.lean:200:0: 'OneY.RootGeometry.RowMountain.nested_roots' depends on axioms: [propext, Quot.sound]
+info: OneY/RootGeometry.lean:201:0: 'OneY.RootGeometry.RowMountain.vertex_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/RootGeometry.lean:202:0: 'OneY.RootGeometry.RowMountain.contour_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/RootGeometry.lean:203:0: 'OneY.RootGeometry.RowMountain.rootAt_strict_mono' depends on axioms: [propext, Quot.sound]
+info: OneY/RootGeometry.lean:204:0: 'OneY.RootGeometry.RowMountain.topForest_depth' depends on axioms: [propext, Quot.sound]
+ℹ [1404/1601] Replayed OneY.NumericGeometry
+info: OneY/NumericGeometry.lean:102:0: 'OneY.Numeric.mountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/NumericGeometry.lean:103:0: 'OneY.Numeric.contour_iff_computed_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/NumericGeometry.lean:104:0: 'OneY.Numeric.reference_iff_computed_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1405/1601] Replayed OneY.NumericRoots
+info: OneY/NumericRoots.lean:104:0: 'OneY.Numeric.select_rootsOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/NumericRoots.lean:105:0: 'OneY.Numeric.ofSequence_rootsOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1406/1601] Replayed OneY.SparseDepth
+info: OneY/SparseDepth.lean:76:0: 'OneY.Numeric.select_depth_nearestSmaller' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/SparseDepth.lean:77:0: 'OneY.Numeric.Row.next_depth_nearestSmaller' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1407/1601] Replayed OneY.TopComparison
+info: OneY/TopComparison.lean:298:0: 'OneY.Numeric.height_next_of_parent' depends on axioms: [propext, Quot.sound]
+info: OneY/TopComparison.lean:299:0: 'OneY.Numeric.keyLT_of_next' depends on axioms: [propext, Quot.sound]
+info: OneY/TopComparison.lean:300:0: 'OneY.Numeric.keyLT_of_common_chain_value_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopComparison.lean:301:0: 'OneY.Numeric.keyEQ_of_common_chain_value_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopComparison.lean:302:0: 'OneY.Numeric.keyLT_iff_of_common_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopComparison.lean:303:0: 'OneY.Numeric.keyEQ_iff_of_common_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopComparison.lean:304:0: 'OneY.Numeric.keyLE_iff_of_common_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopComparison.lean:305:0: 'OneY.Numeric.height_eq_of_depthsEqual' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1417/1601] Replayed OneY.RelativeBlocker
+info: OneY/RelativeBlocker.lean:585:0: 'OneY.RelativeBlocker.relative_blockerCondition_expand_of_context' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/RelativeBlocker.lean:586:0: 'OneY.RelativeBlocker.relative_structural_expand_of_context' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RelativeBlocker.lean:587:0: 'OneY.RelativeBlocker.relative_decodeTower_reconstruct' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RelativeBlocker.lean:588:0: 'OneY.RelativeBlocker.relative_structural_expand' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RelativeBlocker.lean:589:0: 'OneY.RelativeBlocker.candidate_transport_and_decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RelativeBlocker.lean:590:0: 'OneY.RelativeBlocker.framedStep_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1418/1601] Replayed OneY.Pseudo
+info: OneY/Pseudo.lean:125:0: 'OneY.Pseudo.parent_none_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Pseudo.lean:126:0: 'OneY.Pseudo.parent_height' depends on axioms: [propext, Quot.sound]
+info: OneY/Pseudo.lean:127:0: 'OneY.Pseudo.root_height_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Pseudo.lean:128:0: 'OneY.Pseudo.same_height_ancestor' depends on axioms: [propext, Quot.sound]
+ℹ [1419/1601] Replayed OneY.ExtractionGeometry
+info: OneY/ExtractionGeometry.lean:80:0: 'OneY.Numeric.topValue_le_of_same_height_pseudo_ancestor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExtractionGeometry.lean:81:0: 'OneY.Numeric.rawExtract_parent_height_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExtractionGeometry.lean:82:0: 'OneY.Numeric.rawExtract_ancestor_height_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1420/1601] Replayed OneY.Extraction
+info: OneY/Extraction.lean:116:0: 'OneY.Numeric.extract_rootsOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Extraction.lean:117:0: 'OneY.Numeric.layers_one_of_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Extraction.lean:118:0: 'OneY.Numeric.sequence_layers_no_parents' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1421/1601] Replayed OneY.BadRoot
+info: OneY/BadRoot.lean:140:0: 'OneY.Numeric.exists_badAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/BadRoot.lean:141:0: 'OneY.Numeric.sequence_badRoot_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1422/1601] Replayed OneY.CopyCoordinates
+info: OneY/CopyCoordinates.lean:163:0: 'OneY.CopyCoordinates.Context.coordinates_unique' depends on axioms: [propext, Quot.sound]
+info: OneY/CopyCoordinates.lean:164:0: 'OneY.CopyCoordinates.Context.encoded_lt_width_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/CopyCoordinates.lean:165:0: 'OneY.CopyCoordinates.Context.parentCopy_lt_column' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1423/1601] Replayed OneY.TerminalCopy
+info: OneY/TerminalCopy.lean:225:0: 'OneY.TerminalCopy.Context.height_parentCopy' depends on axioms: [propext, Quot.sound]
+info: OneY/TerminalCopy.lean:226:0: 'OneY.TerminalCopy.Context.parent_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopy.lean:227:0: 'OneY.TerminalCopy.Context.parent_source' depends on axioms: [propext, Quot.sound]
+info: OneY/TerminalCopy.lean:228:0: 'OneY.TerminalCopy.Context.parent_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopy.lean:229:0: 'OneY.TerminalCopy.Context.parent_none_iff' depends on axioms: [propext, Quot.sound]
+ℹ [1424/1601] Replayed OneY.TerminalCopyNesting
+info: OneY/TerminalCopyNesting.lean:204:0: 'OneY.TerminalCopy.Context.root_good_ancestor_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyNesting.lean:205:0: 'OneY.TerminalCopy.Context.nested_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyNesting.lean:206:0: 'OneY.TerminalCopy.Context.toRowMountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1426/1601] Replayed OneY.OrdinaryCopy
+info: OneY/OrdinaryCopy.lean:240:0: 'OneY.OrdinaryCopy.Context.encode_coordinates' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopy.lean:241:0: 'OneY.OrdinaryCopy.Context.parent_left' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopy.lean:242:0: 'OneY.OrdinaryCopy.Context.parent_endpoint' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopy.lean:243:0: 'OneY.OrdinaryCopy.Context.nested_succ' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopy.lean:244:0: 'OneY.OrdinaryCopy.Context.toRowMountain' depends on axioms: [propext, Quot.sound]
+ℹ [1427/1601] Replayed OneY.OrdinaryCopyRoots
+info: OneY/OrdinaryCopyRoots.lean:65:0: 'OneY.OrdinaryCopy.Context.root_formula' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopyRoots.lean:66:0: 'OneY.OrdinaryCopy.Context.topForest_parent_formula' depends on axioms: [propext, Quot.sound]
+ℹ [1428/1601] Replayed OneY.Reconstruction
+info: OneY/Reconstruction.lean:198:0: 'OneY.Reconstruction.value_reconstructs' depends on axioms: [propext, Quot.sound]
+info: OneY/Reconstruction.lean:199:0: 'OneY.Reconstruction.parent_value_lt' depends on axioms: [propext, Quot.sound]
+info: OneY/Reconstruction.lean:200:0: 'OneY.Reconstruction.reconstructs_unique' depends on axioms: [propext, Quot.sound]
+info: OneY/Reconstruction.lean:201:0: 'OneY.Reconstruction.exists_unique_reconstruction' depends on axioms: [propext, Quot.sound]
+info: OneY/Reconstruction.lean:202:0: 'OneY.Reconstruction.value_prefix_congr' depends on axioms: [propext, Quot.sound]
+ℹ [1429/1601] Replayed OneY.DecoratedColumn
+info: OneY/DecoratedColumn.lean:73:0: 'OneY.DecoratedColumn.copied_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1430/1601] Replayed OneY.LowerCopy
+info: OneY/LowerCopy.lean:313:0: 'OneY.LowerCopy.Context.height_parentCopy' depends on axioms: [propext, Quot.sound]
+info: OneY/LowerCopy.lean:314:0: 'OneY.LowerCopy.Context.parent_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopy.lean:315:0: 'OneY.LowerCopy.Context.parent_source' depends on axioms: [propext, Quot.sound]
+info: OneY/LowerCopy.lean:316:0: 'OneY.LowerCopy.Context.parent_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopy.lean:317:0: 'OneY.LowerCopy.Context.parent_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1463/1810] Replayed OneY.NumericFrame
+info: OneY/NumericFrame.lean:117:0: 'OneY.NumericFrame.matrix_depthRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/NumericFrame.lean:118:0: 'OneY.NumericFrame.matrix_numeric_parent_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/NumericFrame.lean:119:0: 'OneY.NumericFrame.matrix_numeric_entry_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1464/1810] Replayed OneY.NumericFrameBlocker
+info: OneY/NumericFrameBlocker.lean:141:0: 'OneY.Numeric.Row.next_exists_key_blocker' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/NumericFrameBlocker.lean:142:0: 'OneY.NumericFrame.matrix_aboveS' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1465/1810] Replayed OneY.TerminalCopyNumeric
+info: OneY/TerminalCopyNumeric.lean:47:0: 'OneY.Numeric.badAtTerminalContext' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyNumeric.lean:48:0: 'OneY.Numeric.badAtTerminalMountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyNumeric.lean:49:0: 'OneY.Numeric.badAtTerminal_seam_parent_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1466/1810] Replayed OneY.TerminalFrame
+info: OneY/TerminalFrame.lean:74:0: 'OneY.NumericFrame.maximalParentRow_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalFrame.lean:75:0: 'OneY.NumericFrame.badAtContext' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalFrame.lean:76:0: 'OneY.NumericFrame.expanded_relative_structure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1467/1810] Replayed OneY.ReconstructionNumeric
+info: OneY/ReconstructionNumeric.lean:69:0: 'OneY.Reconstruction.numeric_rows_reconstruct' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ReconstructionNumeric.lean:70:0: 'OneY.Reconstruction.value_numeric_mountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ReconstructionNumeric.lean:71:0: 'OneY.Reconstruction.value_sequence_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ReconstructionNumeric.lean:72:0: 'OneY.Reconstruction.restrictedParent_numeric_reconstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1468/1810] Replayed OneY.OrdinaryCopyReconstruction
+info: OneY/OrdinaryCopyReconstruction.lean:68:0: 'OneY.OrdinaryCopy.Context.value_eq_source' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopyReconstruction.lean:69:0: 'OneY.OrdinaryCopy.Context.value_parentCopy' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopyReconstruction.lean:70:0: 'OneY.Numeric.ordinaryCopy_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1469/1810] Replayed OneY.TerminalCopyReconstruction
+info: OneY/TerminalCopyReconstruction.lean:218:0: 'OneY.Reconstruction.value_upper_congr' depends on axioms: [propext, Quot.sound]
+info: OneY/TerminalCopyReconstruction.lean:219:0: 'OneY.TerminalCopy.Context.height_eq_ordinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyReconstruction.lean:220:0: 'OneY.TerminalCopy.Context.value_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyReconstruction.lean:221:0: 'OneY.Numeric.badAtTerminal_value_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyReconstruction.lean:222:0: 'OneY.Numeric.badAtTerminal_first_seam_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1470/1810] Replayed OneY.TerminalFrameParents
+info: OneY/TerminalFrameParents.lean:125:0: 'OneY.NumericFrame.expanded_parent_parentCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalFrameParents.lean:126:0: 'OneY.NumericFrame.expanded_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1471/1810] Replayed OneY.TerminalFrameDepths
+info: OneY/TerminalFrameDepths.lean:46:0: 'OneY.ParentForest.depth_eq_parentDepth' depends on axioms: [propext, Quot.sound]
+info: OneY/TerminalFrameDepths.lean:47:0: 'OneY.NumericFrame.expanded_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1472/1810] Replayed OneY.LowerCopyNesting
+info: OneY/LowerCopyNesting.lean:302:0: 'OneY.LowerCopy.Context.root_good_ancestor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyNesting.lean:303:0: 'OneY.LowerCopy.Context.low_ancestor_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyNesting.lean:304:0: 'OneY.LowerCopy.Context.outside_ancestor_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyNesting.lean:305:0: 'OneY.LowerCopy.Context.lifted_ancestor_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyNesting.lean:306:0: 'OneY.LowerCopy.Context.nested_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyNesting.lean:307:0: 'OneY.LowerCopy.Context.toRowMountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1473/1810] Replayed OneY.LowerCopyDominance
+info: OneY/LowerCopyDominance.lean:451:0: 'OneY.LowerCopy.Context.parent_rowCopy' depends on axioms: [propext, Quot.sound]
+info: OneY/LowerCopyDominance.lean:452:0: 'OneY.LowerCopy.Context.value_row_antitone' depends on axioms: [propext, Quot.sound]
+info: OneY/LowerCopyDominance.lean:453:0: 'OneY.LowerCopy.Context.value_copy_dominance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDominance.lean:454:0: 'OneY.LowerCopy.Context.value_copy_dominance_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDominance.lean:455:0: 'OneY.LowerCopy.Context.value_good_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDominance.lean:456:0: 'OneY.LowerCopy.Context.value_tail_eq_of_good_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDominance.lean:457:0: 'OneY.LowerCopy.Context.old_top_strictly_increases_in_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDominance.lean:458:0: 'OneY.LowerCopy.Context.value_top_tail_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDominance.lean:459:0: 'OneY.LowerCopy.Context.value_tail_eq_of_no_parent_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDominance.lean:460:0: 'OneY.LowerCopy.Context.extracted_parent_good_of_row_parent_good' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyDominance.lean:461:0: 'OneY.LowerCopy.Context.zero_root_path_copy_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1474/1810] Replayed OneY.LowerCopyDepths
+info: OneY/LowerCopyDepths.lean:284:0: 'OneY.LowerCopy.Context.depth_lifted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDepths.lean:285:0: 'OneY.LowerCopy.Context.depth_reference_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDepths.lean:286:0: 'OneY.LowerCopy.Context.depth_fill' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDepths.lean:287:0: 'OneY.LowerCopy.Context.depth_low_of_root_ancestor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDepths.lean:288:0: 'OneY.LowerCopy.Context.depth_low_of_no_root_ancestor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyDepths.lean:289:0: 'OneY.LowerCopy.Context.depth_outside_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1475/1810] Replayed OneY.LowerCopyComparison
+info: OneY/LowerCopyComparison.lean:564:0: 'OneY.LowerCopy.Context.depthRegular_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:565:0: 'OneY.LowerCopy.Context.ancestor_mono_of_previous_depth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:566:0: 'OneY.LowerCopy.Context.depth_low_lt_of_previous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:567:0: 'OneY.LowerCopy.Context.depth_low_eq_of_previous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:568:0: 'OneY.LowerCopy.Context.depthsEqual_low_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:569:0: 'OneY.LowerCopy.Context.depthsLT_low_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:570:0: 'OneY.LowerCopy.Context.pseudo_eq_of_depthsEqualFrom' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:571:0: 'OneY.LowerCopy.Context.keyLE_low_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:572:0: 'OneY.LowerCopy.Context.keyLE_floor_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:573:0: 'OneY.LowerCopy.Context.keyLE_lifted_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyComparison.lean:574:0: 'OneY.LowerCopy.Context.keyLE_outside_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1476/1810] Replayed OneY.TerminalCopyComparison
+info: OneY/TerminalCopyComparison.lean:112:0: 'OneY.DecoratedColumn.keyLEFrom_iff_columns' depends on axioms: [propext, Quot.sound]
+info: OneY/TerminalCopyComparison.lean:113:0: 'OneY.NumericFrame.copied_keyLE' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1477/1810] Replayed OneY.ReconstructionComparison
+info: OneY/ReconstructionComparison.lean:161:0: 'OneY.Reconstruction.numericRow_rows' depends on axioms: [propext, Quot.sound]
+info: OneY/ReconstructionComparison.lean:162:0: 'OneY.Reconstruction.numericRow_topValue' depends on axioms: [propext, Quot.sound]
+info: OneY/ReconstructionComparison.lean:163:0: 'OneY.Reconstruction.keyLEFrom_iff_value_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1478/1810] Replayed OneY.DecoratedBlocker
+info: OneY/DecoratedBlocker.lean:193:0: 'OneY.DecoratedColumn.blocker_nonroot_bad' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/DecoratedBlocker.lean:194:0: 'OneY.DecoratedColumn.blocker_nonroot_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/DecoratedBlocker.lean:195:0: 'OneY.DecoratedColumn.blocker_root_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1479/1810] Replayed OneY.DecoratedBlockerExpansion
+info: OneY/DecoratedBlockerExpansion.lean:138:0: 'OneY.DecoratedColumn.blocker_root_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/DecoratedBlockerExpansion.lean:139:0: 'OneY.DecoratedColumn.rowS_expand_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1480/1810] Replayed OneY.NumericDecoratedFrame
+info: OneY/NumericDecoratedFrame.lean:88:0: 'OneY.NumericFrame.matrix_decorated_rowS' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/NumericDecoratedFrame.lean:89:0: 'OneY.NumericFrame.badAt_expanded_decorated_rowS' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1481/1810] Replayed OneY.OrdinaryCopySelection
+info: OneY/OrdinaryCopySelection.lean:112:0: 'OneY.OrdinaryCopy.Context.ancestor_parentCopy_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopySelection.lean:113:0: 'OneY.OrdinaryCopy.Context.restrictedParent_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/OrdinaryCopySelection.lean:114:0: 'OneY.Numeric.ordinaryCopy_restrictedParent_reconstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1482/1810] Replayed OneY.OrdinaryCopyForest
+info: OneY/OrdinaryCopyForest.lean:121:0: 'OneY.OrdinaryCopy.Context.forest_ancestor_parentCopy_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopyForest.lean:122:0: 'OneY.OrdinaryCopy.Context.restrictedParent_of_forest_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1483/1810] Replayed OneY.OrdinaryCopyNumeric
+info: OneY/OrdinaryCopyNumeric.lean:140:0: 'OneY.Numeric.ordinaryCopy_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/OrdinaryCopyNumeric.lean:141:0: 'OneY.Numeric.ordinaryCopy_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/OrdinaryCopyNumeric.lean:142:0: 'OneY.Numeric.ordinaryCopy_topValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1484/1810] Replayed OneY.OrdinaryCopyPseudo
+info: OneY/OrdinaryCopyPseudo.lean:72:0: 'OneY.OrdinaryCopy.Context.pseudoCandidate_parentCopy_iff' depends on axioms: [propext, Quot.sound]
+info: OneY/OrdinaryCopyPseudo.lean:73:0: 'OneY.OrdinaryCopy.Context.pseudo_parent_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1485/1810] Replayed OneY.OrdinaryCopyExtraction
+info: OneY/OrdinaryCopyExtraction.lean:97:0: 'OneY.Numeric.ordinaryCopy_mountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/OrdinaryCopyExtraction.lean:98:0: 'OneY.Numeric.ordinaryCopy_rawExtract' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/OrdinaryCopyExtraction.lean:99:0: 'OneY.Numeric.ordinaryCopy_extract' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1486/1810] Replayed OneY.TerminalCopyCanonical
+info: OneY/TerminalCopyCanonical.lean:100:0: 'OneY.Numeric.restrictedParent_prefix_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyCanonical.lean:101:0: 'OneY.Numeric.badAtTerminal_restrictedParent_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyCanonical.lean:102:0: 'OneY.Numeric.badAtTerminal_restrictedParent_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1487/1810] Replayed OneY.TerminalDecoratedRecovery
+info: OneY/TerminalDecoratedRecovery.lean:128:0: 'OneY.NumericFrame.badAtTerminal_restrictedParent_some_bounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/TerminalDecoratedRecovery.lean:129:0: 'OneY.NumericFrame.badAtTerminal_restrictedParent_some' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1488/1810] Replayed OneY.ReconstructionTop
+info: OneY/ReconstructionTop.lean:117:0: 'OneY.Reconstruction.pseudoTopBound_of_extractedHeightDecrease' depends on axioms: [propext, Quot.sound]
+info: OneY/ReconstructionTop.lean:118:0: 'OneY.Reconstruction.restrictedParent_top_none' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ReconstructionTop.lean:119:0: 'OneY.Reconstruction.restrictedParent_top_none_of_extracted' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1489/1810] Replayed OneY.TerminalCopyTopBound
+info: OneY/TerminalCopyTopBound.lean:232:0: 'OneY.TerminalCopy.Context.positiveBound_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyTopBound.lean:233:0: 'OneY.Numeric.positiveBound_splice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyTopBound.lean:234:0: 'OneY.Numeric.badAtTerminal_pseudoTopBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1490/1810] Replayed OneY.TerminalCopyComplete
+info: OneY/TerminalCopyComplete.lean:60:0: 'OneY.Numeric.badAtTerminal_restrictedParent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1491/1810] Replayed OneY.TerminalCopyRoots
+info: OneY/TerminalCopyRoots.lean:84:0: 'OneY.TerminalCopy.Context.root_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyRoots.lean:85:0: 'OneY.TerminalCopy.Context.topForest_eq_ordinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1492/1810] Replayed OneY.PseudoCollapse
+info: OneY/PseudoCollapse.lean:88:0: 'OneY.Pseudo.lowerParent_eq_topForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/PseudoCollapse.lean:89:0: 'OneY.Pseudo.lowerParent_some_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1493/1810] Replayed OneY.PseudoSelection
+info: OneY/PseudoSelection.lean:174:0: 'OneY.Pseudo.nearestSmaller_height_eq_topForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/PseudoSelection.lean:175:0: 'OneY.Pseudo.topForest_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/PseudoSelection.lean:176:0: 'OneY.Numeric.pseudo_select_parent_eq_topForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/PseudoSelection.lean:177:0: 'OneY.Numeric.rawExtract_refines_topForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/PseudoSelection.lean:178:0: 'OneY.Numeric.rawExtract_parent_eq_topForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1494/1810] Replayed OneY.TerminalCopyExtraction
+info: OneY/TerminalCopyExtraction.lean:55:0: 'OneY.TerminalCopy.Context.restrictedParent_topForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyExtraction.lean:56:0: 'OneY.Numeric.badAtTerminal_topForest_select' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1495/1810] Replayed OneY.TerminalCopyRebuild
+info: OneY/TerminalCopyRebuild.lean:89:0: 'OneY.Numeric.badAtTerminalBase_mountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyRebuild.lean:90:0: 'OneY.Numeric.badAtTerminalBase_rawExtract' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1496/1810] Replayed OneY.TopForestGeometry
+info: OneY/TopForestGeometry.lean:101:0: 'OneY.RootGeometry.RowMountain.topForest_ancestor_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopForestGeometry.lean:102:0: 'OneY.RootGeometry.RowMountain.vertex_iff_topForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopForestGeometry.lean:103:0: 'OneY.Numeric.rawExtract_ancestor_rootAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TopForestGeometry.lean:104:0: 'OneY.Numeric.rawExtract_ancestor_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1497/1810] Replayed OneY.ActiveGeometry
+info: OneY/ActiveGeometry.lean:101:0: 'OneY.Numeric.rawExtract_refines_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ActiveGeometry.lean:102:0: 'OneY.Numeric.active_parent_lower_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ActiveGeometry.lean:103:0: 'OneY.Numeric.activeLowerContext' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ActiveGeometry.lean:104:0: 'OneY.Numeric.badAtLowerContext' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1498/1810] Replayed OneY.LowerCopyRoots
+info: OneY/LowerCopyRoots.lean:240:0: 'OneY.LowerCopy.Context.rootAt_lifted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyRoots.lean:241:0: 'OneY.LowerCopy.Context.rootAt_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyRoots.lean:242:0: 'OneY.LowerCopy.Context.rootAt_fill' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyRoots.lean:243:0: 'OneY.LowerCopy.Context.rootAt_low_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyRoots.lean:244:0: 'OneY.LowerCopy.Context.rootAt_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1499/1810] Replayed OneY.LowerCopyBlocker
+info: OneY/LowerCopyBlocker.lean:351:0: 'OneY.LowerCopy.Context.value_tail_eq_from_upperFixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBlocker.lean:352:0: 'OneY.LowerCopy.Context.good_blocker_path' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBlocker.lean:353:0: 'OneY.LowerCopy.Context.good_blocker_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBlocker.lean:354:0: 'OneY.LowerCopy.Context.restrictedParent_good_copy_of_blocker' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyBlocker.lean:355:0: 'OneY.LowerCopy.Context.restrictedParent_good_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBlocker.lean:356:0: 'OneY.LowerCopy.Context.restrictedParent_good_copy_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBlocker.lean:357:0: 'OneY.LowerCopy.Context.restrictedParent_bad_low_copy_numeric' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1500/1810] Replayed OneY.TerminalCopyTransport
+info: OneY/TerminalCopyTransport.lean:79:0: 'OneY.Numeric.badAtTerminalBase_fixed_of_good_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyTransport.lean:80:0: 'OneY.Numeric.badAtTerminalBase_upperFixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1501/1810] Replayed OneY.FrameCopy
+info: OneY/FrameCopy.lean:136:0: 'OneY.FrameCopy.parent_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/FrameCopy.lean:137:0: 'OneY.FrameCopy.ancestor_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1502/1810] Replayed OneY.TerminalCopyBottom
+info: OneY/TerminalCopyBottom.lean:97:0: 'OneY.TerminalCopy.Context.zero_refines_frameCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyBottom.lean:98:0: 'OneY.Numeric.badAtTerminalBase_order_of_common_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1503/1810] Replayed OneY.TerminalCopyBottomRecovery
+info: OneY/TerminalCopyBottomRecovery.lean:288:0: 'OneY.Numeric.badAtTerminal_external_after_blocker' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyBottomRecovery.lean:289:0: 'OneY.Numeric.badAtTerminal_external_nonroot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyBottomRecovery.lean:290:0: 'OneY.Numeric.badAtTerminalBase_none_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1504/1810] Replayed OneY.TerminalCopySeamComparison
+info: OneY/TerminalCopySeamComparison.lean:110:0: 'OneY.Numeric.badAtTerminalBase_seam_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1505/1810] Replayed OneY.TerminalCopyExternalSeam
+info: OneY/TerminalCopyExternalSeam.lean:160:0: 'OneY.Numeric.badAtTerminal_external_seam_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyExternalSeam.lean:161:0: 'OneY.Numeric.badAtTerminal_external_seam_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1506/1810] Replayed OneY.TerminalCopyExternal
+info: OneY/TerminalCopyExternal.lean:62:0: 'OneY.Numeric.badAtTerminal_restrictedParent_external' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyExternal.lean:63:0: 'OneY.Numeric.badAtTerminalBase_select_external' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1507/1810] Replayed OneY.TerminalCopyDepths
+info: OneY/TerminalCopyDepths.lean:126:0: 'OneY.TerminalCopy.Context.depth_low_of_root_ancestor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyDepths.lean:127:0: 'OneY.TerminalCopy.Context.depth_low_of_no_root_ancestor' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1508/1810] Replayed OneY.TerminalCopyUpperOrder
+info: OneY/TerminalCopyUpperOrder.lean:130:0: 'OneY.TerminalCopy.Context.depth_zero_lt_copy_of_common_frame' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/TerminalCopyUpperOrder.lean:131:0: 'OneY.Numeric.badAtTerminalBase_order_of_common_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyUpperOrder.lean:132:0: 'OneY.Numeric.badAtTerminalBase_upperOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1509/1810] Replayed OneY.TerminalCopyLinear
+info: OneY/TerminalCopyLinear.lean:40:0: 'OneY.FrameCopy.linear_forest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalCopyLinear.lean:41:0: 'OneY.Numeric.badAtTerminalBase_select_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1510/1810] Replayed OneY.Build
+info: OneY/Build.lean:71:0: 'OneY.Numeric.stopLayer_done' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Build.lean:72:0: 'OneY.Numeric.before_stopLayer_not_done' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Build.lean:73:0: 'OneY.Numeric.completeLayers_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1511/1810] Replayed OneY.RootSearch
+info: OneY/RootSearch.lean:100:0: 'OneY.Numeric.findBadRoot_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RootSearch.lean:101:0: 'OneY.Numeric.findBadRoot_none_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1512/1810] Replayed OneY.TowerReconstruction
+info: OneY/TowerReconstruction.lean:93:0: 'OneY.TowerReconstruction.assemble_positive' depends on axioms: [propext, Quot.sound]
+info: OneY/TowerReconstruction.lean:94:0: 'OneY.TowerReconstruction.assemble_originalGraphs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TowerReconstruction.lean:95:0: 'OneY.TowerReconstruction.assemble_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1513/1810] Replayed OneY.Expansion
+info: OneY/Expansion.lean:80:0: 'OneY.Numeric.expandedMountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Expansion.lean:81:0: 'OneY.Numeric.expandValues_legal' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1514/1810] Replayed OneY.ExpansionProperties
+info: OneY/ExpansionProperties.lean:102:0: 'OneY.Numeric.assemble_expandedGraphs_original' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionProperties.lean:103:0: 'OneY.Numeric.expandValues_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1515/1810] Replayed OneY.TowerCopyAssembly
+info: OneY/TowerCopyAssembly.lean:73:0: 'OneY.Numeric.assemble_expanded_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TowerCopyAssembly.lean:74:0: 'OneY.Numeric.assemble_expanded_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TowerCopyAssembly.lean:75:0: 'OneY.Numeric.assemble_expanded_sequence_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1516/1810] Replayed OneY.Prefix
+info: OneY/Prefix.lean:160:0: 'OneY.Numeric.Row.AgreesBelow.rows' depends on axioms: [propext, Quot.sound]
+info: OneY/Prefix.lean:161:0: 'OneY.Numeric.Row.AgreesBelow.topValue' depends on axioms: [propext, Quot.sound]
+info: OneY/Prefix.lean:162:0: 'OneY.Numeric.sequence_take_layers_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1517/1810] Replayed OneY.TerminalTowerRebuild
+info: OneY/TerminalTowerRebuild.lean:109:0: 'OneY.Numeric.badAtTerminalRooted_layers_mountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalTowerRebuild.lean:110:0: 'OneY.Numeric.reconstructedValues_active_zero_layers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/TerminalTowerRebuild.lean:111:0: 'OneY.Numeric.reconstructedValues_active_zero_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1518/1810] Replayed OneY.RootIndexed.Diagram
+info: OneY/RootIndexed/Diagram.lean:93:0: 'OneY.RootIndexed.mountainDiagram' depends on axioms: [propext, Quot.sound]
+info: OneY/RootIndexed/Diagram.lean:94:0: 'OneY.RootIndexed.diagram_relations_iff' depends on axioms: [propext, Quot.sound]
+ℹ [1519/1810] Replayed OneY.RootIndexed.Prefix
+info: OneY/RootIndexed/Prefix.lean:59:0: 'OneY.RootIndexed.sequenceDiagram_take_isPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RootIndexed/Prefix.lean:60:0: 'OneY.RootIndexed.sequence_representation_take' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1520/1810] Replayed OneY.RootIndexed.CopyCoordinates
+info: OneY/RootIndexed/CopyCoordinates.lean:99:0: 'OneY.RootIndexed.moveAtom_copyAtom' depends on axioms: [propext, Quot.sound]
+ℹ [1521/1810] Replayed OneY.RootIndexed.TerminalRoots
+info: OneY/RootIndexed/TerminalRoots.lean:59:0: 'OneY.TerminalCopy.Context.rootAt_low_last_lt_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1522/1810] Replayed OneY.RootIndexed.CopyDiagram
+info: OneY/RootIndexed/CopyDiagram.lean:193:0: 'OneY.RootIndexed.copyControlRoot_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RootIndexed/CopyDiagram.lean:194:0: 'OneY.RootIndexed.copyDiagram_initial_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RootIndexed/CopyDiagram.lean:195:0: 'OneY.RootIndexed.copyNeeds_levels' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1523/1810] Replayed OneY.ReconstructionComparisonPrefix
+info: OneY/ReconstructionComparisonPrefix.lean:152:0: 'OneY.Reconstruction.numericRow_rows_agreesBelow' depends on axioms: [propext, Quot.sound]
+info: OneY/ReconstructionComparisonPrefix.lean:153:0: 'OneY.Reconstruction.keyLEFrom_iff_value_le_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1524/1810] Replayed OneY.LowerCopyBadBlocker
+info: OneY/LowerCopyBadBlocker.lean:294:0: 'OneY.LowerCopy.Context.parent_succ_rowCopy' depends on axioms: [propext, Quot.sound]
+info: OneY/LowerCopyBadBlocker.lean:295:0: 'OneY.LowerCopy.Context.keyLE_succ_rowCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBadBlocker.lean:296:0: 'OneY.LowerCopy.Context.bad_blocker_path' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBadBlocker.lean:297:0: 'OneY.LowerCopy.Context.restrictedParent_bad_copy_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBadBlocker.lean:298:0: 'OneY.LowerCopy.Context.restrictedParent_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1525/1810] Replayed OneY.LowerCopyCanonical
+info: OneY/LowerCopyCanonical.lean:193:0: 'OneY.LowerCopy.Context.restrictedParent_source_next_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyCanonical.lean:194:0: 'OneY.LowerCopy.Context.restrictedParent_copied_some_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyCanonical.lean:195:0: 'OneY.LowerCopy.Context.restrictedParent_next_of_higher_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyCanonical.lean:196:0: 'OneY.LowerCopy.Context.restrictedParent_next_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyCanonical.lean:197:0: 'OneY.LowerCopy.Context.restrictedParent_next_numeric_of_extracted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1526/1810] Replayed OneY.LowerCopyBottom
+info: OneY/LowerCopyBottom.lean:98:0: 'OneY.LowerCopy.Context.zero_forest_eq_frameCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBottom.lean:99:0: 'OneY.LowerCopy.Context.zero_refines_frameCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBottom.lean:100:0: 'OneY.LowerCopy.Context.keyLE_bottom_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1527/1810] Replayed OneY.LowerCopyBottomRecovery
+info: OneY/LowerCopyBottomRecovery.lean:292:0: 'OneY.LowerCopy.Context.bottom_value_le_copy_of_common_parent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyBottomRecovery.lean:293:0: 'OneY.LowerCopy.Context.restrictedParent_bottom_bad_of_blocker' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyBottomRecovery.lean:294:0: 'OneY.LowerCopy.Context.restrictedParent_bottom_good_of_blocker' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyBottomRecovery.lean:295:0: 'OneY.LowerCopy.Context.restrictedParent_bottom_some' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBottomRecovery.lean:296:0: 'OneY.LowerCopy.Context.restrictedParent_bottom_none' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyBottomRecovery.lean:297:0: 'OneY.LowerCopy.Context.restrictedParent_bottom_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1528/1810] Replayed OneY.LowerCopyTransport
+info: OneY/LowerCopyTransport.lean:132:0: 'OneY.LowerCopy.Context.value_copy_of_good_base_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyTransport.lean:133:0: 'OneY.LowerCopy.Context.depth_zero_lt_copy_of_common_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyTransport.lean:134:0: 'OneY.LowerCopy.Context.value_copy_le_of_common_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1529/1810] Replayed OneY.LowerCopyTopForest
+info: OneY/LowerCopyTopForest.lean:58:0: 'OneY.LowerCopy.Context.topForest_parent_encode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyTopForest.lean:59:0: 'OneY.LowerCopy.Context.topForest_eq_frameCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1530/1810] Replayed OneY.LowerCopyRebuild
+info: OneY/LowerCopyRebuild.lean:113:0: 'OneY.LowerCopy.Context.copiedBase_mountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyRebuild.lean:114:0: 'OneY.LowerCopy.Context.copiedBase_rawExtract' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyRebuild.lean:115:0: 'OneY.LowerCopy.Context.copiedBase_rootsOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1531/1810] Replayed OneY.LowerCopyLayerTransport
+info: OneY/LowerCopyLayerTransport.lean:34:0: 'OneY.Numeric.badAtLowerCopiedBase_upperFixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyLayerTransport.lean:35:0: 'OneY.Numeric.badAtLowerCopiedBase_upperOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1532/1810] Replayed OneY.LowerCopyPseudoSeam
+info: OneY/LowerCopyPseudoSeam.lean:72:0: 'OneY.LowerCopy.Context.seam_intermediate_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyPseudoSeam.lean:73:0: 'OneY.LowerCopy.Context.seam_intermediate_height_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1533/1810] Replayed OneY.LowerCopyPseudoHigh
+info: OneY/LowerCopyPseudoHigh.lean:109:0: 'OneY.LowerCopy.Context.lifted_ancestor_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyPseudoHigh.lean:110:0: 'OneY.LowerCopy.Context.pseudo_parent_lifted' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1534/1810] Replayed OneY.LowerCopyPseudoOutside
+info: OneY/LowerCopyPseudoOutside.lean:107:0: 'OneY.LowerCopy.Context.outside_ancestor_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyPseudoOutside.lean:108:0: 'OneY.LowerCopy.Context.pseudo_parent_outside_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1535/1810] Replayed OneY.FirstMatch
+warning: OneY/FirstMatch.lean:66:30: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hTest] at hp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: OneY/FirstMatch.lean:114:0: 'OneY.ParentForest.firstMatch_skipTo' depends on axioms: [propext, Quot.sound]
+info: OneY/FirstMatch.lean:115:0: 'OneY.Pseudo.parent_eq_firstMatch' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1536/1810] Replayed OneY.LowerCopyPseudoLow
+info: OneY/LowerCopyPseudoLow.lean:163:0: 'OneY.LowerCopy.Context.firstMatch_copy_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyPseudoLow.lean:164:0: 'OneY.LowerCopy.Context.pseudo_parent_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1537/1810] Replayed OneY.SingleContraction
+info: OneY/SingleContraction.lean:73:0: 'OneY.Numeric.select_eq_single_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1538/1810] Replayed OneY.LowerCopyPseudo
+info: OneY/LowerCopyPseudo.lean:134:0: 'OneY.LowerCopy.Context.pseudo_parent_parentCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyPseudo.lean:135:0: 'OneY.LowerCopy.Context.pseudo_select_eq_frameCopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1539/1810] Replayed OneY.LowerCopyTopBound
+info: OneY/LowerCopyTopBound.lean:88:0: 'OneY.LowerCopy.Context.contractedSelectionGood_of_upper_transport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyTopBound.lean:89:0: 'OneY.LowerCopy.Context.extractedHeightDecrease_of_upper_selections' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneY/LowerCopyTopBound.lean:90:0: 'OneY.LowerCopy.Context.pseudoTopBound_of_upper_selections' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1540/1810] Replayed OneY.LowerCopyLayerTopBound
+info: OneY/LowerCopyLayerTopBound.lean:76:0: 'OneY.Numeric.badAtTerminalBase_lowerTopBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerCopyLayerTopBound.lean:77:0: 'OneY.Numeric.badAtLowerCopiedBase_lowerTopBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1541/1810] Replayed OneY.RootIndexed.LowerAtoms
+info: OneY/RootIndexed/LowerAtoms.lean:99:0: 'OneY.RootIndexed.lower_rowAtom_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RootIndexed/LowerAtoms.lean:100:0: 'OneY.RootIndexed.copiedFrom_copyCase' depends on axioms: [propext, Quot.sound]
+ℹ [1542/1810] Replayed OneY.RootIndexed.VirtualNeeds
+info: OneY/RootIndexed/VirtualNeeds.lean:83:0: 'OneY.RootIndexed.copyNeeds_virtual' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1543/1810] Replayed OneY.RootIndexed.OrdinaryAtoms
+info: OneY/RootIndexed/OrdinaryAtoms.lean:59:0: 'OneY.RootIndexed.ordinary_rowAtom_source' depends on axioms: [propext, Quot.sound]
+info: OneY/RootIndexed/OrdinaryAtoms.lean:60:0: 'OneY.RootIndexed.terminal_rowAtom_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1544/1810] Replayed OneY.RootIndexed.SpliceGeometry
+info: OneY/RootIndexed/SpliceGeometry.lean:127:0: 'OneY.RootIndexed.actual_splice_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1545/1810] Replayed OneY.RootIndexed.ActualScheme
+info: OneY/RootIndexed/ActualScheme.lean:109:0: 'OneY.RootIndexed.actualBlockScheme' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RootIndexed/ActualScheme.lean:110:0: 'OneY.RootIndexed.copied_diagrams_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1552/1810] Replayed OneYTruth.SchemaTests
+info: OneYTruth/SchemaTests.lean:100:0: 'OneYTruth.SchemaTests.queryTests_subset_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SchemaTests.lean:101:0: 'OneYTruth.SchemaTests.realize_check_iff_schemas' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1553/1810] Replayed OneYTruth.InternalIterationHistory
+info: OneYTruth/InternalIterationHistory.lean:168:0: 'OneYTruth.InternalIteration.IsHistory.value_eq_iterate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalIterationHistory.lean:169:0: 'OneYTruth.InternalIteration.satisfies_historyAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1554/1810] Replayed OneYTruth.InternalIterationFamily
+info: OneYTruth/InternalIterationFamily.lean:142:0: 'OneYTruth.InternalIteration.family_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalIterationFamily.lean:143:0: 'OneYTruth.InternalIteration.queryAt_isSigmaOne' depends on axioms: [propext, Quot.sound]
+ℹ [1555/1810] Replayed OneYTruth.IterationFamilyCertificate
+info: OneYTruth/IterationFamilyCertificate.lean:91:0: 'OneYTruth.InternalIteration.IsFamilyCertificate.family_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/IterationFamilyCertificate.lean:92:0: 'OneYTruth.InternalIteration.satisfies_familyCertificateAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1557/1810] Replayed OneYTruth.InternalFullHistory
+info: OneYTruth/InternalFullHistory.lean:131:0: 'OneYTruth.InternalIteration.fullHistory_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalFullHistory.lean:132:0: 'OneYTruth.InternalIteration.exists_internal_familyCertificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1559/1810] Replayed OneYTruth.ScopeSyntax
+warning: OneYTruth/ScopeSyntax.lean:81:2: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [1562/1810] Replayed OneYTruth.NaturalTagCertificate
+info: OneYTruth/NaturalTagCertificate.lean:66:0: 'OneYTruth.NaturalTagCertificate.satisfies_sixTags' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1564/1810] Replayed OneYTruth.FiniteTupleSplit
+info: OneYTruth/FiniteTupleSplit.lean:77:0: 'OneYTruth.FiniteLabelAssembly.reflect_tuple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1590/1810] Replayed OneY.ExpansionRebuildPrefix
+info: OneY/ExpansionRebuildPrefix.lean:127:0: 'OneY.Numeric.expandValues_of_badRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionRebuildPrefix.lean:128:0: 'OneY.RootIndexed.reconstructedValues_diagram_isPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionRebuildPrefix.lean:129:0: 'OneY.RootIndexed.reconstructedValues_active_zero_diagram_isPrefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1591/1810] Replayed OneY.LowerTowerInputs
+info: OneY/LowerTowerInputs.lean:138:0: 'OneY.Numeric.lowerTower_prefix_and_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerTowerInputs.lean:139:0: 'OneY.Numeric.lowerTower_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1592/1810] Replayed OneY.LowerTowerRebuild
+info: OneY/LowerTowerRebuild.lean:175:0: 'OneY.Numeric.lowerTowerBase_rawExtract_next' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerTowerRebuild.lean:176:0: 'OneY.Numeric.lowerTowerRooted_layers_mountain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerTowerRebuild.lean:177:0: 'OneY.Numeric.lowerTowerRooted_select_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/LowerTowerRebuild.lean:178:0: 'OneY.Numeric.assemble_expanded_sequence_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1593/1810] Replayed OneY.ExpansionCanonical
+info: OneY/ExpansionCanonical.lean:131:0: 'OneY.Numeric.expandValues_layers_of_badRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionCanonical.lean:132:0: 'OneY.Numeric.expandValues_height_of_badRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionCanonical.lean:133:0: 'OneY.Numeric.expandValues_parent_of_badRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionCanonical.lean:134:0: 'OneY.RootIndexed.expandValues_diagram_of_badRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionCanonical.lean:135:0: 'OneY.RootIndexed.expandValues_representation_of_badRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1594/1810] Replayed OneY.RootIndexed.ExpansionWellFounded
+info: OneY/RootIndexed/ExpansionWellFounded.lean:155:0: 'OneY.RootIndexed.expand_lastRepresentation_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/RootIndexed/ExpansionWellFounded.lean:156:0: 'OneY.RootIndexed.actual_expansion_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1595/1810] Replayed OneY.ExpansionOrder
+info: OneY/ExpansionOrder.lean:165:0: 'OneY.Numeric.lowerTowerValues_first_seam_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionOrder.lean:166:0: 'OneY.Numeric.expandValues_nested_take' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionOrder.lean:167:0: 'OneY.Numeric.expandValues_first_seam_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/ExpansionOrder.lean:168:0: 'OneY.Numeric.expandValues_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1596/1810] Replayed OneY.Dynamics
+info: OneY/Dynamics.lean:295:0: 'OneY.Numeric.path_endpoints_comparable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Dynamics.lean:296:0: 'OneY.Numeric.descendants_exprLt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Dynamics.lean:297:0: 'OneY.Numeric.descendants_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Dynamics.lean:298:0: 'OneY.Numeric.expand_seed_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Dynamics.lean:299:0: 'OneY.Numeric.generated_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneY/Dynamics.lean:300:0: 'OneY.Numeric.expansion_chain_reaches_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1616/1810] Replayed OneYTruth.RootComparison
+info: OneYTruth/RootComparison.lean:56:0: 'OneYTruth.RootSemantics.R_iff_truth_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/RootComparison.lean:57:0: 'OneYTruth.RootSemantics.realize_comparison_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1618/1810] Replayed OneYTruth.EndpointRelation
+info: OneYTruth/EndpointRelation.lean:97:0: 'OneYTruth.EndpointComparison.named_comparison_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/EndpointRelation.lean:98:0: 'OneYTruth.EndpointComparison.diagonal_comparison_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1638/1810] Replayed OneYTruth.AdequacyTests
+info: OneYTruth/AdequacyTests.lean:108:0: 'OneYTruth.AdequacyTests.adequate_iff_tests' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/AdequacyTests.lean:109:0: 'OneYTruth.AdequacyTests.realize_check_iff_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1639/1810] Replayed OneYTruth.PureFOSchemas
+info: OneYTruth/PureFOSchemas.lean:99:0: 'OneYTruth.RootSemantics.Adequate.pureFOSchemas' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1642/1810] Replayed OneYTruth.PureSigmaBounded
+info: OneYTruth/PureSigmaBounded.lean:109:0: 'OneYTruth.PureSigmaBounded.exists_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1643/1810] Replayed OneYTruth.PureSchemaRestriction
+info: OneYTruth/PureSchemaRestriction.lean:45:0: 'OneYTruth.PureSchemaRestriction.collection' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1656/1810] Replayed OneYTruth.StageCoding
+info: OneYTruth/StageCoding.lean:150:0: 'OneYTruth.ExternalTower.stageSet_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/StageCoding.lean:151:0: 'OneYTruth.ExternalTower.satisfies_earlierFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/StageCoding.lean:152:0: 'OneYTruth.ExternalTower.codedEarlier_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/StageCoding.lean:153:0: 'OneYTruth.ExternalTower.stagePredecessors_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1657/1810] Replayed OneYTruth.StageRecursionDomain
+info: OneYTruth/StageRecursionDomain.lean:157:0: 'OneYTruth.ExternalTower.stage_wellFoundedSetLike' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/StageRecursionDomain.lean:158:0: 'OneYTruth.ExternalTower.localRecursionDomain_mem_L_stage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/StageRecursionDomain.lean:159:0: 'OneYTruth.ExternalTower.satisfies_stageRelationFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1658/1810] Replayed OneYTruth.StageRecursionL
+info: OneYTruth/StageRecursionL.lean:388:0: 'OneYTruth.ExternalTower.StageStepPresentation.localSolution_graph_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneYTruth/StageRecursionL.lean:389:0: 'OneYTruth.ExternalTower.StageStepPresentation.stageLocalGraph_mem_L' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneYTruth/StageRecursionL.lean:390:0: 'OneYTruth.ExternalTower.StageStepPresentation.stageGraph_mem_L' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneYTruth/StageRecursionL.lean:391:0: 'OneYTruth.ExternalTower.StageStepPresentation.recursionValue_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1659/1810] Replayed OneYTruth.GraphInputTower
+info: OneYTruth/GraphInputTower.lean:113:0: 'OneYTruth.ExternalTower.codedTruth_graphInputStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/GraphInputTower.lean:114:0: 'OneYTruth.ExternalTower.graph_mem_L_of_stepPresentation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1660/1810] Replayed OneYTruth.StageStepFormula
+info: OneYTruth/StageStepFormula.lean:76:0: 'OneYTruth.ExternalTower.stageStepPresentationOfFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1670/1810] Replayed OneYTruth.SigmaNodeConstruction
+info: OneYTruth/SigmaNodeConstruction.lean:80:0: 'OneYTruth.SigmaComparison.sigmaNodes_eq_filtered_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaNodeConstruction.lean:81:0: 'OneYTruth.SigmaComparison.sigmaNodes_mem_L_of_sigmaCodes' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1671/1810] Replayed OneYTruth.DeltaSyntaxGrammar
+info: OneYTruth/DeltaSyntaxGrammar.lean:130:0: 'OneYTruth.DeltaSyntaxGrammar.satisfies_ruleFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1672/1810] Replayed OneYTruth.DeltaSyntaxSoundness
+info: OneYTruth/DeltaSyntaxSoundness.lean:82:0: 'OneYTruth.DeltaSyntaxGrammar.rawRule_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1673/1810] Replayed OneYTruth.DeltaSyntaxStages
+info: OneYTruth/DeltaSyntaxStages.lean:82:0: 'OneYTruth.DeltaSyntaxGrammar.stages_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/DeltaSyntaxStages.lean:83:0: 'OneYTruth.DeltaSyntaxGrammar.mem_allStages_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1674/1810] Replayed OneYTruth.DeltaSyntaxCodes
+info: OneYTruth/DeltaSyntaxCodes.lean:91:0: 'OneYTruth.DeltaSyntaxGrammar.deltaCodes_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1675/1810] Replayed OneYTruth.SigmaSyntaxGrammar
+info: OneYTruth/SigmaSyntaxGrammar.lean:75:0: 'OneYTruth.SigmaSyntaxGrammar.satisfies_ruleFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1676/1810] Replayed OneYTruth.SigmaSyntaxCodes
+info: OneYTruth/SigmaSyntaxCodes.lean:150:0: 'OneYTruth.SigmaSyntaxGrammar.sigmaCodes_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaSyntaxCodes.lean:151:0: 'OneYTruth.SigmaSyntaxGrammar.sigmaNodes_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1677/1810] Replayed OneYTruth.SigmaNodeBounds
+info: OneYTruth/SigmaNodeBounds.lean:89:0: 'OneYTruth.SigmaComparison.sigmaNodes_mem_ambient' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaNodeBounds.lean:90:0: 'OneYTruth.SigmaComparison.ordinal_sigmaNodes_mem_ambient' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1685/1810] Replayed OneYTruth.DirectSchemaFormula
+warning: OneYTruth/DirectSchemaFormula.lean:71:26: This simp argument is unused:
+  Satisfies
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [collectionFormula, satisfies_boundedAll, satisfies_imp, satisfies_scopeTwoAt,
+    satisfies_collectionTotality, satisfies_collectionBound]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [1686/1810] Replayed OneYTruth.DirectSchemaCorrect
+info: OneYTruth/DirectSchemaCorrect.lean:121:0: 'OneYTruth.DirectSchema.mixedCheckFormula_isDeltaZero' depends on axioms: [propext]
+info: OneYTruth/DirectSchemaCorrect.lean:122:0: 'OneYTruth.DirectSchema.realize_check_iff_schemas' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1687/1810] Replayed OneYTruth.SchemaBundle
+info: OneYTruth/SchemaBundle.lean:125:0: 'OneYTruth.SchemaBundle.realize_iff_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1688/1810] Replayed OneYTruth.InternalUniformIteration
+info: OneYTruth/InternalUniformIteration.lean:65:0: 'OneYTruth.InternalIteration.uniformUnion_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1689/1810] Replayed OneYTruth.InternalCodeUniverse
+info: OneYTruth/InternalCodeUniverse.lean:65:0: 'OneYTruth.InternalCodeUniverse.codeUniverse_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalCodeUniverse.lean:66:0: 'OneYTruth.InternalCodeUniverse.listCodes_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1691/1810] Replayed OneYTruth.InternalBoundedIteration
+info: OneYTruth/InternalBoundedIteration.lean:115:0: 'OneYTruth.InternalBoundedIteration.allStages_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1692/1810] Replayed OneYTruth.AssignmentGrammar
+info: OneYTruth/AssignmentGrammar.lean:162:0: 'OneYTruth.AssignmentGrammar.allStages_eq_sequenceCodes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/AssignmentGrammar.lean:163:0: 'OneYTruth.AssignmentGrammar.assignmentCodes_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1693/1810] Replayed OneYTruth.BoundedGrammarCertificate
+info: OneYTruth/BoundedGrammarCertificate.lean:57:0: 'OneYTruth.InternalBoundedIteration.realize_grammarQueryAt_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1695/1810] Replayed OneYTruth.AssignmentCertificate
+info: OneYTruth/AssignmentCertificate.lean:73:0: 'OneYTruth.AssignmentGrammar.realize_assignmentQuery_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/AssignmentCertificate.lean:74:0: 'OneYTruth.AssignmentGrammar.assignmentQuery_isSigmaOne' depends on axioms: [propext, Quot.sound]
+info: OneYTruth/AssignmentCertificate.lean:75:0: 'OneYTruth.AssignmentGrammar.assignmentQuery_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1698/1810] Replayed OneYTruth.InternalSyntaxCodes
+info: OneYTruth/InternalSyntaxCodes.lean:80:0: 'OneYTruth.InternalSyntaxCodes.syntaxCodes_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalSyntaxCodes.lean:81:0: 'OneYTruth.InternalSyntaxCodes.sigmaCodes_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1700/1810] Replayed OneYTruth.InternalAssignmentLookup
+info: OneYTruth/InternalAssignmentLookup.lean:122:0: 'OneYTruth.AssignmentLookup.lookupSet_mem_LStageZF' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalAssignmentLookup.lean:123:0: 'OneYTruth.AssignmentLookup.realize_lookupQuery_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalAssignmentLookup.lean:124:0: 'OneYTruth.AssignmentLookup.lookupQuery_isSigmaOne' depends on axioms: [propext, Quot.sound]
+info: OneYTruth/InternalAssignmentLookup.lean:125:0: 'OneYTruth.AssignmentLookup.lookupQuery_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1703/1810] Replayed OneYTruth.TowerRestrictionCertificate
+warning: OneYTruth/TowerRestrictionCertificate.lean:22:84: This simp argument is unused:
+  snoc_castSucc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [predicate, Satisfies, satisfies_componentEqAt, satisfies_rename, snoc_last]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [1704/1810] Replayed OneYTruth.InternalStageDomain
+info: OneYTruth/InternalStageDomain.lean:88:0: 'OneYTruth.ExternalTower.stageLocalDomain_mem_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1705/1810] Replayed OneYTruth.InternalRecursionEnvironment
+info: OneYTruth/InternalRecursionEnvironment.lean:66:0: 'OneYTruth.ExternalTower.recursionEnvironment_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1706/1810] Replayed OneYTruth.InternalLocalSolutionFormula
+info: OneYTruth/InternalLocalSolutionFormula.lean:43:0: 'OneYTruth.ExternalTower.satisfies_localSolutionFormula_carrier_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1707/1810] Replayed OneYTruth.InternalStagePresentation
+info: OneYTruth/InternalStagePresentation.lean:147:0: 'OneYTruth.ExternalTower.InternalStagePresentation.localDomain_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1709/1810] Replayed OneYTruth.InternalStageRecursion
+info: OneYTruth/InternalStageRecursion.lean:221:0: 'OneYTruth.ExternalTower.InternalStagePresentation.stageLocalGraph_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: OneYTruth/InternalStageRecursion.lean:222:0: 'OneYTruth.ExternalTower.InternalStagePresentation.stageGraph_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1710/1810] Replayed OneYTruth.InternalStageStepFormula
+info: OneYTruth/InternalStageStepFormula.lean:107:0: 'OneYTruth.ExternalTower.graph_mem_of_internal_stepFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1712/1810] Replayed OneYTruth.LookupSourceCertificate
+info: OneYTruth/LookupSourceCertificate.lean:129:0: 'OneYTruth.LookupSourceCertificate.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/LookupSourceCertificate.lean:130:0: 'OneYTruth.LookupSourceCertificate.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/LookupSourceCertificate.lean:131:0: 'OneYTruth.LookupSourceCertificate.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1714/1810] Replayed OneYTruth.SigmaNodeCertificate
+info: OneYTruth/SigmaNodeCertificate.lean:81:0: 'OneYTruth.SigmaNodeCertificate.sigmaNodes_eq_sep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaNodeCertificate.lean:82:0: 'OneYTruth.SigmaNodeCertificate.realize_iff_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaNodeCertificate.lean:83:0: 'OneYTruth.SigmaNodeCertificate.mixedFormula_isDeltaZero' depends on axioms: [propext, Quot.sound]
+⚠ [1715/1810] Replayed OneYTruth.AtomicTruthCorrect
+warning: OneYTruth/AtomicTruthCorrect.lean:84:17: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fields, follows_codedNode_tag, natCode_inj, Nat.reduceEqDiff, true_and, false_and, or_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/AtomicTruthCorrect.lean:148:29: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fields, follows_codedNode_tag, natCode_inj, Nat.reduceEqDiff, true_and, false_and, false_or]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1717/1810] Replayed OneYTruth.PredecessorGraphQuery
+warning: OneYTruth/PredecessorGraphQuery.lean:42:20: This simp argument is unused:
+  follows_pair
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Follows]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1719/1810] Replayed OneYTruth.GraphInputFormula
+warning: OneYTruth/GraphInputFormula.lean:27:4: This simp argument is unused:
+  snoc_last
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [namedFormula, Satisfies, satisfies_tripleEqAt, satisfies_readAt, snoc_castSucc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/GraphInputFormula.lean:27:15: This simp argument is unused:
+  snoc_castSucc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [namedFormula, Satisfies, satisfies_tripleEqAt, satisfies_readAt, snoc_last]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/GraphInputFormula.lean:41:4: This simp argument is unused:
+  snoc_last
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [diagonalFormula, Satisfies, satisfies_chainEqAt, satisfies_readAt, snoc_castSucc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/GraphInputFormula.lean:41:15: This simp argument is unused:
+  snoc_castSucc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [diagonalFormula, Satisfies, satisfies_chainEqAt, satisfies_readAt, snoc_last]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [1721/1810] Replayed OneYTruth.GraphInputConstructible
+info: OneYTruth/GraphInputConstructible.lean:77:0: 'OneYTruth.ExternalTower.graphInputStep_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/GraphInputConstructible.lean:78:0: 'OneYTruth.ExternalTower.graph_mem_L_of_stepFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1722/1810] Replayed OneYTruth.UniformFromGraph
+info: OneYTruth/UniformFromGraph.lean:102:0: 'OneYTruth.ExternalTower.uniformSet_mem_L_of_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1729/1810] Replayed OneYTruth.ActualTowerConstructible
+info: OneYTruth/ActualTowerConstructible.lean:47:0: 'OneYTruth.ExternalTower.graph_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualTowerConstructible.lean:48:0: 'OneYTruth.RootSemantics.ambientTruth_mem_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1730/1810] Replayed OneYTruth.ActualExpansion
+info: OneYTruth/ActualExpansion.lean:33:0: 'OneYTruth.RootSemantics.actual_expansion_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1731/1810] Replayed OneYTruth.ActualDynamics
+info: OneYTruth/ActualDynamics.lean:31:0: 'OneYTruth.RootSemantics.actual_generated_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualDynamics.lean:32:0: 'OneYTruth.RootSemantics.actual_expansion_chain_reaches_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1733/1810] Replayed OneYTruth.DirectAdequacy
+info: OneYTruth/DirectAdequacy.lean:68:0: 'OneYTruth.DirectAdequacy.mixedFormula_isDeltaZero' depends on axioms: [propext, Quot.sound]
+info: OneYTruth/DirectAdequacy.lean:69:0: 'OneYTruth.DirectAdequacy.realize_iff_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1735/1810] Replayed OneYTruth.SyntaxCertificates
+info: OneYTruth/SyntaxCertificates.lean:151:0: 'OneYTruth.SyntaxCertificates.syntaxQuery_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SyntaxCertificates.lean:152:0: 'OneYTruth.SyntaxCertificates.sigmaQuery_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SyntaxCertificates.lean:153:0: 'OneYTruth.SyntaxCertificates.realize_sigmaQuery_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SyntaxCertificates.lean:154:0: 'OneYTruth.SyntaxCertificates.sigmaQuery_isSigmaOne' depends on axioms: [propext, Quot.sound]
+⚠ [1745/1810] Replayed OneYTruth.TowerSigmaSemantics
+warning: OneYTruth/TowerSigmaSemantics.lean:52:42: This simp argument is unused:
+  snoc_last
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [matrix, Satisfies, satisfies_successorAt, satisfies_productAt, satisfies_coversAt,
+    satisfies_boundedAll, satisfies_rename, snoc_castSucc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/TowerSigmaSemantics.lean:52:52: This simp argument is unused:
+  snoc_castSucc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [matrix, Satisfies, satisfies_successorAt, satisfies_productAt, satisfies_coversAt,
+    satisfies_boundedAll, satisfies_rename, snoc_last]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [1747/1810] Replayed OneYTruth.ActualInternalTower
+info: OneYTruth/ActualInternalTower.lean:65:0: 'OneYTruth.ExternalTower.graph_mem_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1748/1810] Replayed OneYTruth.InternalUniformTower
+info: OneYTruth/InternalUniformTower.lean:62:0: 'OneYTruth.ExternalTower.uniformSet_mem_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1749/1810] Replayed OneYTruth.InternalGraphRestrictions
+info: OneYTruth/InternalGraphRestrictions.lean:75:0: 'OneYTruth.ExternalTower.predecessorGraph_mem_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1751/1810] Replayed OneYTruth.TowerSigmaSoundness
+warning: OneYTruth/TowerSigmaSoundness.lean:26:20: `Ordinal.toZFSet_succ` has been deprecated: Use `Ordinal.toZFSet_add_one` instead
+
+Note: The updated constant has a different type:
+  ∀ (o : Ordinal.{u_1}), (o + 1).toZFSet = insert o.toZFSet o.toZFSet
+instead of
+  ∀ (o : Ordinal.{u_1}), (Order.succ o).toZFSet = insert o.toZFSet o.toZFSet
+⚠ [1752/1810] Replayed OneYTruth.TowerSigmaComplete
+warning: OneYTruth/TowerSigmaComplete.lean:52:45: `Ordinal.toZFSet_succ` has been deprecated: Use `Ordinal.toZFSet_add_one` instead
+
+Note: The updated constant has a different type:
+  ∀ (o : Ordinal.{u_1}), (o + 1).toZFSet = insert o.toZFSet o.toZFSet
+instead of
+  ∀ (o : Ordinal.{u_1}), (Order.succ o).toZFSet = insert o.toZFSet o.toZFSet
+⚠ [1753/1810] Replayed OneYTruth.TowerPointCertificate
+warning: OneYTruth/TowerPointCertificate.lean:74:35: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [towerMap, Fin.snoc, Fin.castLT]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/TowerPointCertificate.lean:77:26: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Fin.snoc, Fin.castLT]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [1754/1810] Replayed OneYTruth.FixedTowerSources
+info: OneYTruth/FixedTowerSources.lean:112:0: 'OneYTruth.FixedTowerSources.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/FixedTowerSources.lean:113:0: 'OneYTruth.FixedTowerSources.actual_query' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1755/1810] Replayed OneYTruth.ActualTowerQuery
+info: OneYTruth/ActualTowerQuery.lean:99:0: 'OneYTruth.ActualTowerQuery.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualTowerQuery.lean:100:0: 'OneYTruth.ActualTowerQuery.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualTowerQuery.lean:101:0: 'OneYTruth.ActualTowerQuery.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1756/1810] Replayed OneYTruth.ActualTruthQuery
+info: OneYTruth/ActualTruthQuery.lean:100:0: 'OneYTruth.ActualTruthQuery.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualTruthQuery.lean:101:0: 'OneYTruth.ActualTruthQuery.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualTruthQuery.lean:102:0: 'OneYTruth.ActualTruthQuery.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1757/1810] Replayed OneYTruth.OrdinalStageHistory
+info: OneYTruth/OrdinalStageHistory.lean:154:0: 'OneYTruth.OrdinalStageHistory.Checks.eq_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/OrdinalStageHistory.lean:155:0: 'OneYTruth.OrdinalStageHistory.canonical_mem_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1758/1810] Replayed OneYTruth.OrdinalHistoryRaw
+info: OneYTruth/OrdinalHistoryRaw.lean:119:0: 'OneYTruth.OrdinalStageHistory.RawChecks.toChecks' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1759/1810] Replayed OneYTruth.OrdinalHistoryFormula
+info: OneYTruth/OrdinalHistoryFormula.lean:190:0: 'OneYTruth.OrdinalStageHistory.satisfies_historyFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1760/1810] Replayed OneYTruth.OrdinalHistoryRecovery
+info: OneYTruth/OrdinalHistoryRecovery.lean:80:0: 'OneYTruth.OrdinalStageHistory.historyFormula_top_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/OrdinalHistoryRecovery.lean:81:0: 'OneYTruth.OrdinalStageHistory.exists_internal_historyFormula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1761/1810] Replayed OneYTruth.OrdinalHistoryWitnessBound
+info: OneYTruth/OrdinalHistoryWitnessBound.lean:115:0: 'OneYTruth.OrdinalStageHistory.exists_uniform_Def_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1762/1810] Replayed OneYTruth.OrdinalStageQuery
+info: OneYTruth/OrdinalStageQuery.lean:115:0: 'OneYTruth.OrdinalStageHistory.stageQuery_isSigmaOne' depends on axioms: [propext, Quot.sound]
+info: OneYTruth/OrdinalStageQuery.lean:116:0: 'OneYTruth.OrdinalStageHistory.stageQuery_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/OrdinalStageQuery.lean:117:0: 'OneYTruth.OrdinalStageHistory.stageQuery_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1763/1810] Replayed OneYTruth.PureSatisfactionMatrix
+warning: OneYTruth/PureSatisfactionMatrix.lean:94:37: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [atomicMap, constructible_snoc_eq, Fin.snoc, Fin.castLT, AtomicTruthFormula.parameters, M, hOmega, hZero,
+    hA, hLookup, h1, h2, h3, h4, hat, empty_range, namedGraph_eq_empty, diagonalGraph_eq_empty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [1764/1810] Replayed OneYTruth.SigmaGrammarSourceCertificate
+info: OneYTruth/SigmaGrammarSourceCertificate.lean:154:0: 'OneYTruth.SigmaGrammarSourceCertificate.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaGrammarSourceCertificate.lean:155:0: 'OneYTruth.SigmaGrammarSourceCertificate.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaGrammarSourceCertificate.lean:156:0: 'OneYTruth.SigmaGrammarSourceCertificate.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1765/1810] Replayed OneYTruth.SyntaxSourceCertificate
+info: OneYTruth/SyntaxSourceCertificate.lean:195:0: 'OneYTruth.SyntaxSourceCertificate.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SyntaxSourceCertificate.lean:196:0: 'OneYTruth.SyntaxSourceCertificate.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SyntaxSourceCertificate.lean:197:0: 'OneYTruth.SyntaxSourceCertificate.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1767/1810] Replayed OneYTruth.InternalPureSatisfaction
+warning: OneYTruth/InternalPureSatisfaction.lean:43:61: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AtomicTruthFormula.parameters, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.cons_val_three,
+    Matrix.cons_val_succ, Matrix.cons_val_fin_one, empty_range, namedGraph_eq_empty, diagonalGraph_eq_empty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/InternalPureSatisfaction.lean:44:6: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AtomicTruthFormula.parameters, Matrix.cons_val_zero, Matrix.cons_val_two, Matrix.cons_val_three,
+    Matrix.cons_val_succ, Matrix.cons_val_fin_one, empty_range, namedGraph_eq_empty, diagonalGraph_eq_empty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/InternalPureSatisfaction.lean:44:26: This simp argument is unused:
+  Matrix.cons_val_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AtomicTruthFormula.parameters, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_three,
+    Matrix.cons_val_succ, Matrix.cons_val_fin_one, empty_range, namedGraph_eq_empty, diagonalGraph_eq_empty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/InternalPureSatisfaction.lean:44:46: This simp argument is unused:
+  Matrix.cons_val_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AtomicTruthFormula.parameters, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,
+    Matrix.cons_val_succ, Matrix.cons_val_fin_one, empty_range, namedGraph_eq_empty, diagonalGraph_eq_empty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/InternalPureSatisfaction.lean:45:6: This simp argument is unused:
+  Matrix.cons_val_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AtomicTruthFormula.parameters, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,
+    Matrix.cons_val_three, Matrix.cons_val_fin_one, empty_range, namedGraph_eq_empty, diagonalGraph_eq_empty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/InternalPureSatisfaction.lean:45:27: This simp argument is unused:
+  Matrix.cons_val_fin_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AtomicTruthFormula.parameters, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,
+    Matrix.cons_val_three, Matrix.cons_val_succ, empty_range, namedGraph_eq_empty, diagonalGraph_eq_empty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/InternalPureSatisfaction.lean:59:0: automatically included section variable(s) unused in theorem `OneYTruth.PureSatisfactionSource.actual_body`:
+  hOmega
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hOmega in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: OneYTruth/InternalPureSatisfaction.lean:106:0: 'OneYTruth.PureSatisfactionSource.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalPureSatisfaction.lean:107:0: 'OneYTruth.PureSatisfactionSource.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalPureSatisfaction.lean:108:0: 'OneYTruth.PureSatisfactionSource.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1768/1810] Replayed OneYTruth.PureDefFormula
+info: OneYTruth/PureDefFormula.lean:109:0: 'OneYTruth.PureDefCertificate.mixedFormula_isDeltaZero' depends on axioms: [propext, Quot.sound]
+info: OneYTruth/PureDefFormula.lean:110:0: 'OneYTruth.PureDefCertificate.realize_formula_iff_DefZF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1769/1810] Replayed OneYTruth.PureDefSource
+info: OneYTruth/PureDefSource.lean:103:0: 'OneYTruth.PureDefSource.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/PureDefSource.lean:104:0: 'OneYTruth.PureDefSource.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/PureDefSource.lean:105:0: 'OneYTruth.PureDefSource.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1770/1810] Replayed OneYTruth.BoundedDefSource
+info: OneYTruth/BoundedDefSource.lean:54:0: 'OneYTruth.BoundedDefSource.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/BoundedDefSource.lean:55:0: 'OneYTruth.BoundedDefSource.complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1771/1810] Replayed OneYTruth.InternalActualTruth
+info: OneYTruth/InternalActualTruth.lean:28:0: 'OneYTruth.ExternalTower.truth_mem_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/InternalActualTruth.lean:29:0: 'OneYTruth.ExternalTower.truth_LStage_mem_of_adequate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1772/1810] Replayed OneYTruth.InternalSourceSets
+info: OneYTruth/InternalSourceSets.lean:73:0: 'OneYTruth.InternalSourceSets.sourceSets_mem_LStageZF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1773/1810] Replayed OneYTruth.SigmaNodeSourceCertificate
+info: OneYTruth/SigmaNodeSourceCertificate.lean:121:0: 'OneYTruth.SigmaNodeSourceCertificate.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaNodeSourceCertificate.lean:122:0: 'OneYTruth.SigmaNodeSourceCertificate.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SigmaNodeSourceCertificate.lean:123:0: 'OneYTruth.SigmaNodeSourceCertificate.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1774/1810] Replayed OneYTruth.SourceEndpointComparison
+info: OneYTruth/SourceEndpointComparison.lean:106:0: 'OneYTruth.SourceEndpointComparison.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SourceEndpointComparison.lean:107:0: 'OneYTruth.SourceEndpointComparison.query_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SourceEndpointComparison.lean:108:0: 'OneYTruth.SourceEndpointComparison.namedComparison_isSigmaOne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1775/1810] Replayed OneYTruth.SourceEndpointRelation
+info: OneYTruth/SourceEndpointRelation.lean:125:0: 'OneYTruth.SourceEndpointComparison.namedComparison_sound_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SourceEndpointRelation.lean:126:0: 'OneYTruth.SourceEndpointComparison.namedComparison_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SourceEndpointRelation.lean:127:0: 'OneYTruth.SourceEndpointComparison.diagonalComparison_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1777/1810] Replayed OneYTruth.FiniteLabelAssembly
+info: OneYTruth/FiniteLabelAssembly.lean:119:0: 'OneYTruth.FiniteLabelAssembly.representation_of_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1778/1810] Replayed OneYTruth.FiniteTupleDecoding
+info: OneYTruth/FiniteTupleDecoding.lean:77:0: 'OneYTruth.FiniteLabelAssembly.assemble_from_carrier_tuple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1779/1810] Replayed OneYTruth.FiniteDiagramMatrix
+info: OneYTruth/FiniteDiagramMatrix.lean:91:0: 'OneYTruth.FiniteLabelAssembly.realize_diagramFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1780/1810] Replayed OneYTruth.FiniteAmbientTuple
+info: OneYTruth/FiniteAmbientTuple.lean:72:0: 'OneYTruth.FiniteLabelAssembly.ambientTuple_facts' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1781/1810] Replayed OneYTruth.FiniteMetadataLayout
+warning: OneYTruth/FiniteMetadataLayout.lean:33:10: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [labelSlots, fullAmbient, ambientTuple]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OneYTruth/FiniteMetadataLayout.lean:34:10: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [labelSlots, fullAmbient, ambientTuple]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: OneYTruth/FiniteMetadataLayout.lean:90:0: 'OneYTruth.FiniteLabelAssembly.fullAmbient_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/FiniteMetadataLayout.lean:91:0: 'OneYTruth.FiniteLabelAssembly.fixed_full_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1782/1810] Replayed OneYTruth.FiniteQuerySemantics
+info: OneYTruth/FiniteQuerySemantics.lean:83:0: 'OneYTruth.FiniteLabelAssembly.QuerySound.decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1783/1810] Replayed OneYTruth.ActualQueryMetadata
+info: OneYTruth/ActualQueryMetadata.lean:100:0: 'OneYTruth.ActualDiagramQueries.metadata_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1784/1810] Replayed OneYTruth.SchemaSyntaxGraph
+info: OneYTruth/SchemaSyntaxGraph.lean:177:0: 'OneYTruth.SchemaSyntaxGraph.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SchemaSyntaxGraph.lean:178:0: 'OneYTruth.SchemaSyntaxGraph.graph_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1785/1810] Replayed OneYTruth.SchemaSyntaxCertificate
+info: OneYTruth/SchemaSyntaxCertificate.lean:118:0: 'OneYTruth.SchemaSyntaxCertificate.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1786/1810] Replayed OneYTruth.SchemaSyntaxCertificateInternal
+info: OneYTruth/SchemaSyntaxCertificateInternal.lean:97:0: 'OneYTruth.SchemaSyntaxCertificate.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1787/1810] Replayed OneYTruth.SchemaBundleProjection
+info: OneYTruth/SchemaBundleProjection.lean:164:0: 'OneYTruth.SchemaBundleProjection.satisfies_iff_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1788/1810] Replayed OneYTruth.SchemaBundleZip
+info: OneYTruth/SchemaBundleZip.lean:124:0: 'OneYTruth.SchemaBundleZip.local_iff_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SchemaBundleZip.lean:125:0: 'OneYTruth.SchemaBundleZip.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1789/1810] Replayed OneYTruth.SchemaBundleZipInternal
+info: OneYTruth/SchemaBundleZipInternal.lean:117:0: 'OneYTruth.SchemaBundleZip.witnessValues_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SchemaBundleZipInternal.lean:118:0: 'OneYTruth.SchemaBundleZip.indexedBundle_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1790/1810] Replayed OneYTruth.SchemaBundleZipFormula
+info: OneYTruth/SchemaBundleZipFormula.lean:90:0: 'OneYTruth.SchemaBundleZip.satisfies_graphFormula_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1791/1810] Replayed OneYTruth.SchemaBundleUniformBound
+info: OneYTruth/SchemaBundleUniformBound.lean:102:0: 'OneYTruth.SchemaBundleZip.exists_uniform_field_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SchemaBundleUniformBound.lean:103:0: 'OneYTruth.SchemaBundleZip.exists_graphFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1792/1810] Replayed OneYTruth.SchemaBundleProjectionInternal
+info: OneYTruth/SchemaBundleProjectionInternal.lean:129:0: 'OneYTruth.SchemaBundleProjection.bundle_and_fieldBound_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1793/1810] Replayed OneYTruth.ActualAdequacyCertificate
+warning: OneYTruth/ActualAdequacyCertificate.lean:106:52: `Ordinal.toZFSet_succ` has been deprecated: Use `Ordinal.toZFSet_add_one` instead
+
+Note: The updated constant has a different type:
+  ∀ (o : Ordinal.{u_1}), (o + 1).toZFSet = insert o.toZFSet o.toZFSet
+instead of
+  ∀ (o : Ordinal.{u_1}), (Order.succ o).toZFSet = insert o.toZFSet o.toZFSet
+info: OneYTruth/ActualAdequacyCertificate.lean:138:0: 'OneYTruth.ActualAdequacyCertificate.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualAdequacyCertificate.lean:139:0: 'OneYTruth.ActualAdequacyCertificate.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1794/1810] Replayed OneYTruth.ActualAdequacyCertificateInternal
+warning: OneYTruth/ActualAdequacyCertificateInternal.lean:64:30: `Ordinal.toZFSet_succ` has been deprecated: Use `Ordinal.toZFSet_add_one` instead
+
+Note: The updated constant has a different type:
+  ∀ (o : Ordinal.{u_1}), (o + 1).toZFSet = insert o.toZFSet o.toZFSet
+instead of
+  ∀ (o : Ordinal.{u_1}), (Order.succ o).toZFSet = insert o.toZFSet o.toZFSet
+info: OneYTruth/ActualAdequacyCertificateInternal.lean:88:0: 'OneYTruth.ActualAdequacyCertificate.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1795/1810] Replayed OneYTruth.SourcePairComparison
+info: OneYTruth/SourcePairComparison.lean:98:0: 'OneYTruth.SourcePairComparison.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/SourcePairComparison.lean:99:0: 'OneYTruth.SourcePairComparison.realize_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1796/1810] Replayed OneYTruth.FiniteReflectionAssembly
+info: OneYTruth/FiniteReflectionAssembly.lean:87:0: 'OneYTruth.FiniteLabelAssembly.reflect_representation_of_queries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [1797/1810] Replayed OneYTruth.ActualReflectionMap
+info: OneYTruth/ActualReflectionMap.lean:47:0: 'OneYTruth.RootSemantics.R.closedMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualReflectionMap.lean:48:0: 'OneYTruth.RootSemantics.R.reflect_diagram_of_queries' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1798/1810] Replayed OneYTruth.ActualStageQuery
+info: OneYTruth/ActualStageQuery.lean:83:0: 'OneYTruth.ActualStageQuery.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualStageQuery.lean:84:0: 'OneYTruth.ActualStageQuery.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualStageQuery.lean:85:0: 'OneYTruth.ActualStageQuery.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1799/1810] Replayed OneYTruth.ActualStageTruthQuery
+info: OneYTruth/ActualStageTruthQuery.lean:88:0: 'OneYTruth.ActualStageTruthQuery.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualStageTruthQuery.lean:89:0: 'OneYTruth.ActualStageTruthQuery.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualStageTruthQuery.lean:90:0: 'OneYTruth.ActualStageTruthQuery.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1801/1810] Replayed OneYTruth.ActualEndpointRelation
+info: OneYTruth/ActualEndpointRelation.lean:78:0: 'OneYTruth.ActualEndpointQuery.namedComparison_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualEndpointRelation.lean:79:0: 'OneYTruth.ActualEndpointQuery.diagonalComparison_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualEndpointRelation.lean:80:0: 'OneYTruth.ActualEndpointQuery.namedComparison_sound_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualEndpointRelation.lean:81:0: 'OneYTruth.ActualEndpointQuery.namedComparison_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualEndpointRelation.lean:82:0: 'OneYTruth.ActualEndpointQuery.diagonalComparison_iff_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1802/1810] Replayed OneYTruth.ActualNeedAdapter
+info: OneYTruth/ActualNeedAdapter.lean:120:0: 'OneYTruth.ActualNeedAdapter.formula_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualNeedAdapter.lean:121:0: 'OneYTruth.ActualNeedAdapter.formula_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualNeedAdapter.lean:122:0: 'OneYTruth.ActualNeedAdapter.formula_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1803/1810] Replayed OneYTruth.ActualAdequateQuery
+info: OneYTruth/ActualAdequateQuery.lean:75:0: 'OneYTruth.ActualAdequateQuery.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualAdequateQuery.lean:76:0: 'OneYTruth.ActualAdequateQuery.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualAdequateQuery.lean:77:0: 'OneYTruth.ActualAdequateQuery.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1804/1810] Replayed OneYTruth.ActualRelationQuery
+info: OneYTruth/ActualRelationQuery.lean:165:0: 'OneYTruth.ActualRelationQuery.query_isSigmaOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualRelationQuery.lean:166:0: 'OneYTruth.ActualRelationQuery.query_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualRelationQuery.lean:167:0: 'OneYTruth.ActualRelationQuery.realize_query_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1805/1810] Replayed OneYTruth.ActualDomainAtomAdapter
+info: OneYTruth/ActualDomainAtomAdapter.lean:140:0: 'OneYTruth.ActualDomainAtomAdapter.domain_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualDomainAtomAdapter.lean:141:0: 'OneYTruth.ActualDomainAtomAdapter.domain_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualDomainAtomAdapter.lean:142:0: 'OneYTruth.ActualDomainAtomAdapter.atom_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualDomainAtomAdapter.lean:143:0: 'OneYTruth.ActualDomainAtomAdapter.atom_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1806/1810] Replayed OneYTruth.ActualDiagramQueries
+info: OneYTruth/ActualDiagramQueries.lean:110:0: 'OneYTruth.ActualDiagramQueries.family_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualDiagramQueries.lean:111:0: 'OneYTruth.ActualDiagramQueries.family_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1807/1810] Replayed OneYTruth.ActualFiniteReflection
+info: OneYTruth/ActualFiniteReflection.lean:29:0: 'OneYTruth.RootSemantics.actual_finiteReflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1808/1810] Replayed OneYTruth.ActualWellOrdering
+info: OneYTruth/ActualWellOrdering.lean:33:0: 'OneYTruth.WellOrdering.expansion_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualWellOrdering.lean:34:0: 'OneYTruth.WellOrdering.generated_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualWellOrdering.lean:35:0: 'OneYTruth.WellOrdering.descendants_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: OneYTruth/ActualWellOrdering.lean:36:0: 'OneYTruth.WellOrdering.expansion_chain_reaches_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [1809/1810] Built OneYTruth (26s)
+Build completed successfully (1810 jobs).

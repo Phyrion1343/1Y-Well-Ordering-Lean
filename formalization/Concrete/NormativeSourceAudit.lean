@@ -1,0 +1,25 @@
+import OneYTruth.OrdinalTupleCertificate
+import OneYTruth.BoundedDefSource
+import OneYTruth.ActualStageQuery
+import OneYTruth.SourcePairComparison
+import OneYTruth.FixedTowerSources
+import OneYTruth.ActualRelationQuery
+import OneYTruth.ActualEndpointRelation
+
+#print axioms OneYTruth.OrdinalTupleCertificate.realize_in_stage
+#print axioms OneYTruth.PureDefCertificate.realize_formula_iff_DefZF
+#print axioms OneYTruth.PureSatisfactionSource.query_sound
+#print axioms OneYTruth.PureSatisfactionSource.realize_query_iff
+#print axioms OneYTruth.PureDefSource.query_sound
+#print axioms OneYTruth.PureDefSource.realize_query_iff
+#print axioms OneYTruth.PureSigmaBounded.exists_certificate
+#print axioms OneYTruth.BoundedDefSource.sound
+#print axioms OneYTruth.BoundedDefSource.complete
+#print axioms OneYTruth.ActualStageQuery.query_sound
+#print axioms OneYTruth.ActualStageQuery.realize_query_iff
+#print axioms OneYTruth.SourcePairComparison.realize_iff_R
+#print axioms OneYTruth.FixedTowerSources.query_sound
+#print axioms OneYTruth.ActualTowerQuery.realize_query_iff
+#print axioms OneYTruth.ActualRelationQuery.realize_query_iff
+#print axioms OneYTruth.ActualEndpointQuery.namedComparison_iff_R
+#print axioms OneYTruth.ActualEndpointQuery.diagonalComparison_iff_R

@@ -1,0 +1,17 @@
+name = "ZeroYBMS"
+version = "0.1.0"
+defaultTargets = ["ZeroY", "OneY"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "YesMetaZFC"
+path = "../research/BMS-Well-Ordering-Lean"
+
+[[lean_lib]]
+name = "ZeroY"
+
+[[lean_lib]]
+name = "OneY"

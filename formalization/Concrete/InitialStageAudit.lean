@@ -1,0 +1,81 @@
+import OneYTruth.InitialTruthStages
+import OneYTruth.AmbientCollection
+import OneYTruth.ConstructibleSubsetBound
+import OneYTruth.InitialStageClub
+import OneYTruth.AuxiliarySeparation
+import OneYTruth.InitialStageSchemas
+import OneYTruth.InitialRepresentations
+import OneYTruth.EndpointRelation
+import OneYTruth.ActualExpansion
+import OneYTruth.ActualDynamics
+import OneYTruth.AdequacyTests
+import OneYTruth.DirectSchemaCorrect
+import OneYTruth.DirectAdequacy
+import OneYTruth.StructuralDiagramCertificate
+import OneYTruth.CodeUniverseCertificate
+import OneYTruth.InternalIterationUnion
+import OneYTruth.SigmaFiniteConjunction
+import OneYTruth.AssignmentSourceCertificate
+import OneYTruth.FiniteWitnessReflection
+
+#print axioms OneYTruth.Auxiliary.countable_skolemHull
+#print axioms OneYTruth.Auxiliary.witness_mem_skolemHull
+#print axioms OneYTruth.InitialStage.countable_LStage
+#print axioms OneYTruth.InitialStage.exists_stage_bound
+#print axioms OneYTruth.InitialStage.exists_hull_bound
+#print axioms OneYTruth.InitialStage.limitStage_isElementary
+#print axioms OneYTruth.InitialStage.exists_elementary_LStage
+#print axioms OneYTruth.Auxiliary.realize_reduct_onSet
+#print axioms OneYTruth.InitialStage.exists_truth_elementary_LStage
+#print axioms OneYTruth.InitialStage.collection_bound
+#print axioms OneYTruth.InitialStage.ambient_hasCollection
+#print axioms OneYTruth.CountableSetHull.exists_countable_elementary_hull
+#print axioms OneYTruth.InitialStage.collapse_stage_lt_omega_one
+#print axioms OneYTruth.InitialStage.constructible_subset_mem_ambient
+#print axioms OneYTruth.InitialStage.elementary_of_cofinal
+#print axioms OneYTruth.InitialStage.elementaryStages_closed
+#print axioms OneYTruth.AuxiliaryCode.realize_translate
+#print axioms OneYTruth.AuxiliaryCode.exists_separation_ambient
+#print axioms OneYTruth.AuxiliaryCode.ambient_reduct_hasSeparation
+#print axioms OneYTruth.Auxiliary.realize_restrict
+#print axioms OneYTruth.InitialStage.stage_auxCollection
+#print axioms OneYTruth.InitialStage.stage_auxSeparation
+#print axioms OneYTruth.InitialStage.stage_reduct_schemas
+#print axioms OneYTruth.satisfactionSet_trace
+#print axioms OneYTruth.ExternalTower.truth_trace
+#print axioms OneYTruth.ExternalTower.canonical_auxiliary_restrict
+#print axioms OneYTruth.RootSemantics.R.trans
+#print axioms OneYTruth.RootSemantics.R.weaken
+#print axioms OneYTruth.RootSemantics.R.lower_block
+#print axioms OneYTruth.RootSemantics.initialClub_adequate
+#print axioms OneYTruth.RootSemantics.exists_initial_representation
+#print axioms OneYTruth.sigmaOneMap_iff_closed
+#print axioms OneYTruth.RootSemantics.R_iff_truth_agree
+#print axioms OneYTruth.EndpointComparison.named_comparison_isDeltaZero
+#print axioms OneYTruth.EndpointComparison.diagonal_comparison_isDeltaZero
+#print axioms OneYTruth.EndpointComparison.named_comparison_iff_R
+#print axioms OneYTruth.EndpointComparison.diagonal_comparison_iff_R
+#print axioms OneYTruth.RootSemantics.actual_expansion_wellFounded
+#print axioms OneYTruth.RootSemantics.actual_generated_strictWellOrder
+#print axioms OneYTruth.RootSemantics.actual_expansion_chain_reaches_empty
+#print axioms OneYTruth.AdequacyTests.adequate_iff_tests
+#print axioms OneYTruth.DirectSchema.mixedCheckFormula_isDeltaZero
+#print axioms OneYTruth.DirectSchema.realize_check_iff_schemas
+#print axioms OneYTruth.BoundedOrdinal.satisfies_aboveOmegaLimitFormula
+#print axioms OneYTruth.DirectAdequacy.mixedFormula_isDeltaZero
+#print axioms OneYTruth.DirectAdequacy.realize_iff_adequate
+#print axioms OneYTruth.StructuralDiagramCertificate.mixedFormula_isDeltaZero
+#print axioms OneYTruth.StructuralDiagramCertificate.realize_iff_canonical
+#print axioms OneYTruth.InternalIteration.unionQueryAt_isSigmaOne
+#print axioms OneYTruth.InternalIteration.realize_unionQueryAt_iff
+#print axioms OneYTruth.CodeUniverseCertificate.query_isSigmaOne
+#print axioms OneYTruth.CodeUniverseCertificate.query_sound
+#print axioms OneYTruth.CodeUniverseCertificate.realize_query_iff
+#print axioms OneYTruth.exists_sigmaConjunction
+#print axioms OneYTruth.AssignmentSourceCertificate.query_isSigmaOne
+#print axioms OneYTruth.AssignmentSourceCertificate.query_sound
+#print axioms OneYTruth.AssignmentSourceCertificate.realize_query_iff
+#print axioms OneYTruth.ExternalTower.graph_mem_L
+#print axioms OneYTruth.RootSemantics.ambientTruth_mem_L
+#print axioms OneYTruth.existsSuffix_isSigmaOne
+#print axioms OneYTruth.SigmaOneMap.reflect_finiteWitnesses

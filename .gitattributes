@@ -1,0 +1,5 @@
+# 以下文件记录了确切 SHA256，Git 必须保留其原始字节。
+# 补丁内的空白上下文行是补丁语法；审计记录保留 Windows 行尾。
+*.patch -text -whitespace
+**/audit-output.txt -text whitespace=cr-at-eol
+**/OneYTruth-audit-output.txt -text whitespace=cr-at-eol
