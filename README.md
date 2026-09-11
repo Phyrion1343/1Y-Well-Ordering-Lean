@@ -74,6 +74,6 @@ elan toolchain link leanprover/lean4:v4.33.1 ./.tools/lean-4.33.1-windows
 
 良序模型复用 [EgoFakeFantasy/BMS-Well-Ordering-Lean](https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean) 的构造宇宙桥接，固定于 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`，并附有两个证明性能补丁。具体模型的其他依赖包括 constructible-universe 与 mathlib；准确来源和提交均见锁定记录。
 
-数学背景参见 Samuel Vargovčík 的 [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606) 以及 [Googology Wiki 的 0-Y 定义](https://wiki.googology.top/index.php/0-Y)。原论文、外部 HTML、依赖源码归档和本机诊断材料不包含在发布文件中。
+数学背景参见 Rachel Hunter 的 [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606) 以及 [Googology Wiki 的 0-Y 定义](https://wiki.googology.top/index.php/0-Y)。原论文、外部 HTML、依赖源码归档和本机诊断材料不包含在发布文件中。
 
 本仓库保留既有的 [Apache-2.0 许可证](LICENSE)；外部依赖保留各自的许可与来源信息。
