@@ -1,0 +1,18 @@
+{
+  "version": "1.2.0",
+  "packagesDir": ".lake/packages",
+  "packages": [
+    {
+      "type": "path",
+      "name": "batteries",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../batteries",
+      "configFile": "lakefile.toml"
+    }
+  ],
+  "name": "aesop",
+  "lakeDir": ".lake",
+  "fixedToolchain": false
+}

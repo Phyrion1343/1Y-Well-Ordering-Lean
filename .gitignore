@@ -4,8 +4,9 @@
 *.ilean
 *.olean.private
 *.olean.server
+/vendor/proofwidgets/widget/package-lock.json.hash
 
-# 本机参考材料、上游 checkout 和诊断产物；依赖由准备脚本恢复。
+# 本机参考材料与诊断产物；正式随附依赖放在 vendor/。
 research/*
 !research/formalization-bms-interface-audit.md
 !research/1y-well-ordering-proof.md

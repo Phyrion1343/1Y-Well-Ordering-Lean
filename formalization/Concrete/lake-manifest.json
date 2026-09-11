@@ -12,7 +12,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "configFile": "lakefile.toml",
-      "dir": ".lake/packages/plausible"
+      "dir": "../../vendor/plausible"
     },
     {
       "type": "path",
@@ -21,7 +21,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "configFile": "lakefile.toml",
-      "dir": ".lake/packages/LeanSearchClient"
+      "dir": "../../vendor/LeanSearchClient"
     },
     {
       "type": "path",
@@ -30,7 +30,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "configFile": "lakefile.toml",
-      "dir": ".lake/packages/importGraph"
+      "dir": "../../vendor/importGraph"
     },
     {
       "type": "path",
@@ -39,7 +39,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "configFile": "lakefile.lean",
-      "dir": ".lake/packages/proofwidgets"
+      "dir": "../../vendor/proofwidgets"
     },
     {
       "type": "path",
@@ -48,7 +48,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "configFile": "lakefile.toml",
-      "dir": ".lake/packages/aesop"
+      "dir": "../../vendor/aesop"
     },
     {
       "type": "path",
@@ -57,7 +57,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "configFile": "lakefile.toml",
-      "dir": ".lake/packages/Qq"
+      "dir": "../../vendor/Qq"
     },
     {
       "type": "path",
@@ -66,7 +66,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "configFile": "lakefile.toml",
-      "dir": ".lake/packages/batteries"
+      "dir": "../../vendor/batteries"
     },
     {
       "type": "path",
@@ -75,7 +75,7 @@
       "manifestFile": "lake-manifest.json",
       "inherited": true,
       "configFile": "lakefile.toml",
-      "dir": ".lake/packages/Cli"
+      "dir": "../../vendor/Cli"
     },
     {
       "dir": "..",
@@ -87,7 +87,7 @@
       "name": "ZeroYBMS"
     },
     {
-      "dir": "../../research/BMS-Well-Ordering-Lean",
+      "dir": "../../vendor/bms",
       "scope": "",
       "configFile": "lakefile.toml",
       "inherited": false,
@@ -96,7 +96,7 @@
       "name": "YesMetaZFC"
     },
     {
-      "dir": "../../.tools/mathlib4-eba3d887fc52c98627f4b81507c0efc3096e91b9",
+      "dir": "../../vendor/mathlib",
       "scope": "",
       "configFile": "lakefile.lean",
       "inherited": false,
@@ -105,7 +105,7 @@
       "name": "mathlib"
     },
     {
-      "dir": "../../.tools/cu-7f5a7d03",
+      "dir": "../../vendor/cu",
       "scope": "",
       "configFile": "lakefile.lean",
       "inherited": false,
@@ -114,7 +114,7 @@
       "name": "«lean-constructible-universe»"
     },
     {
-      "dir": "../../research/BMS-Well-Ordering-Lean/ConstructibleBridge",
+      "dir": "../../vendor/bms/ConstructibleBridge",
       "scope": "",
       "configFile": "lakefile.lean",
       "inherited": false,

@@ -1,108 +1,111 @@
 {
   "packages": [
     {
-      "directory": "../../.tools/mathlib4-eba3d887fc52c98627f4b81507c0efc3096e91b9",
-      "archive": "../../.tools/mathlib4-eba3d887.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "4e3cdbcf79835eadae53699d6914de1357c575ec3e4cb52e9de4db4149e23532",
+      "directory": "../../vendor/mathlib",
+      "sourceKind": "vendored source",
       "commit": "eba3d887fc52c98627f4b81507c0efc3096e91b9",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover-community/mathlib4",
-      "name": "mathlib"
+      "name": "mathlib",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "4e3cdbcf79835eadae53699d6914de1357c575ec3e4cb52e9de4db4149e23532"
     },
     {
-      "directory": ".lake/packages/LeanSearchClient",
-      "archive": "../../.tools/LeanSearchClient-0498c7c0.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "671b02a9357028a95c1c7861b775a65d838e3c09c5778855b165cd3e2f41b9ba",
+      "directory": "../../vendor/LeanSearchClient",
+      "sourceKind": "vendored source",
       "commit": "0498c7c070c143a3bf7379f4d99a2c63bb9d9715",
       "sourceToolchain": "leanprover/lean4:v4.32.0",
       "repository": "https://github.com/leanprover-community/LeanSearchClient",
-      "name": "LeanSearchClient"
+      "name": "LeanSearchClient",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "671b02a9357028a95c1c7861b775a65d838e3c09c5778855b165cd3e2f41b9ba"
     },
     {
-      "directory": ".lake/packages/importGraph",
-      "archive": "../../.tools/importGraph-18a90119a5d316358fde6c86e0ca24e59212e32c.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "7fbae98021e2d7ff51e863290155017f44612bdd560ff0d7e6857741668b2462",
+      "directory": "../../vendor/importGraph",
+      "sourceKind": "vendored source",
       "commit": "18a90119a5d316358fde6c86e0ca24e59212e32c",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover-community/import-graph",
-      "name": "importGraph"
+      "name": "importGraph",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "7fbae98021e2d7ff51e863290155017f44612bdd560ff0d7e6857741668b2462"
     },
     {
-      "directory": ".lake/packages/proofwidgets",
-      "archive": "../../.tools/proofwidgets-b1436dc749e722c9920036b52cdc43b3451d0b69.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "2a114ad245567644bc58fc0222c992aa6ad13e023e38bbb48f5f2818fbe7b54e",
+      "directory": "../../vendor/proofwidgets",
+      "sourceKind": "vendored source",
       "commit": "b1436dc749e722c9920036b52cdc43b3451d0b69",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover-community/ProofWidgets4",
-      "name": "proofwidgets"
+      "name": "proofwidgets",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "2a114ad245567644bc58fc0222c992aa6ad13e023e38bbb48f5f2818fbe7b54e"
     },
     {
-      "directory": ".lake/packages/Cli",
-      "archive": "../../.tools/Cli-da07ca808b6718cb2aed14dba154e5a08b8f8ecf.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "8eff0100e360f2ce68176f5ec598f3b50a808b1694946cfc80153e35b881eb9f",
+      "directory": "../../vendor/Cli",
+      "sourceKind": "vendored source",
       "commit": "da07ca808b6718cb2aed14dba154e5a08b8f8ecf",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover/lean4-cli",
-      "name": "Cli"
+      "name": "Cli",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "8eff0100e360f2ce68176f5ec598f3b50a808b1694946cfc80153e35b881eb9f"
     },
     {
-      "directory": ".lake/packages/aesop",
-      "archive": "../../.tools/archives/aesop.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "3932e866b421737740fc338d8c0d6d0aaea202c36470b4c8267ff574c0d12627",
+      "directory": "../../vendor/aesop",
+      "sourceKind": "vendored source",
       "commit": "57d3325be72a842920813bcb40f96a6f7393c185",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover-community/aesop",
-      "name": "aesop"
+      "name": "aesop",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "3932e866b421737740fc338d8c0d6d0aaea202c36470b4c8267ff574c0d12627"
     },
     {
-      "directory": ".lake/packages/Qq",
-      "archive": "../../.tools/archives/Qq.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "46aa40a3df1422d648f4a1d99f8b79018f57dc101ee24b501ca8a3b4962d01fd",
+      "directory": "../../vendor/Qq",
+      "sourceKind": "vendored source",
       "commit": "ee41917ae11d38479fb8fb24745f7ca4bf0a784d",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover-community/quote4",
-      "name": "Qq"
+      "name": "Qq",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "46aa40a3df1422d648f4a1d99f8b79018f57dc101ee24b501ca8a3b4962d01fd"
     },
     {
-      "directory": ".lake/packages/batteries",
-      "archive": "../../.tools/archives/batteries.tar.gz",
-      "sourceKind": "official GitHub commit archive",
-      "sha256": "03a294b567cfd30f5850fa7f0e45406ade4684586d251ee33e02e56a9f44f902",
+      "directory": "../../vendor/batteries",
+      "sourceKind": "vendored source",
       "commit": "2c810760f0a0c4536b397dbe30ca9b2f2f467366",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover-community/batteries",
-      "name": "batteries"
+      "name": "batteries",
+      "upstreamSourceKind": "official GitHub commit archive",
+      "upstreamArchiveSha256": "03a294b567cfd30f5850fa7f0e45406ade4684586d251ee33e02e56a9f44f902"
     },
     {
-      "directory": ".lake/packages/plausible",
-      "sourceKind": "git checkout",
+      "directory": "../../vendor/plausible",
+      "sourceKind": "vendored source",
       "commit": "b1c4a69a7e247ab7df20460212001673d74f08c0",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/leanprover-community/plausible",
-      "name": "plausible"
+      "name": "plausible",
+      "upstreamSourceKind": "git checkout"
     },
     {
-      "directory": "../../research/BMS-Well-Ordering-Lean",
-      "sourceKind": "git checkout",
+      "directory": "../../vendor/bms",
+      "sourceKind": "vendored source",
       "commit": "bae7e3d741f24a56d80da9b99c1345562cd10c2d",
       "sourceToolchain": "leanprover/lean4:v4.33.1",
       "repository": "https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean",
-      "name": "YesMetaZFC and bms-constructible-bridge"
+      "name": "YesMetaZFC and bms-constructible-bridge",
+      "upstreamSourceKind": "git checkout"
     },
     {
-      "directory": "../../.tools/cu-7f5a7d03",
-      "sourceKind": "git checkout",
+      "directory": "../../vendor/cu",
+      "sourceKind": "vendored source",
       "commit": "7f5a7d03d63d9769172f17350bbe8303996e5b53",
       "sourceToolchain": "leanprover/lean4:v4.33.0-rc1",
       "repository": "https://github.com/05-02-07/lean-constructible-universe",
-      "name": "lean-constructible-universe"
+      "name": "lean-constructible-universe",
+      "upstreamSourceKind": "git checkout"
     }
   ],
   "dependencyResolution": "Lake path manifest; commits recorded here and archive SHA256 verified",

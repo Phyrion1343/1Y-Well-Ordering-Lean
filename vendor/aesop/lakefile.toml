@@ -1,0 +1,19 @@
+# Modified for the 1-Y bundled distribution: use local dependencies without automatic downloads.
+name = "aesop"
+defaultTargets = ["Aesop"]
+testDriver = "AesopTest"
+precompileModules = false # We would like to turn this on, but it breaks the Mathlib cache.
+platformIndependent = true
+
+[[require]]
+name = "batteries"
+scope = "leanprover-community"
+path = "../batteries"
+
+[[lean_lib]]
+name = "Aesop"
+
+[[lean_lib]]
+name = "AesopTest"
+globs = ["AesopTest.+"]
+leanOptions = {linter.unusedVariables = false}

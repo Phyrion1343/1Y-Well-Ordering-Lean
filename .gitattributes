@@ -3,3 +3,6 @@
 *.patch -text -whitespace
 **/audit-output.txt -text whitespace=cr-at-eol
 **/OneYTruth-audit-output.txt -text whitespace=cr-at-eol
+
+# Preserve exact vendored source bytes for SHA256 verification.
+vendor/** -text linguist-vendored

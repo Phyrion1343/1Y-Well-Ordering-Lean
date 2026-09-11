@@ -1,0 +1,90 @@
+{
+  "version": "1.2.0",
+  "packagesDir": ".lake/packages",
+  "packages": [
+    {
+      "type": "path",
+      "name": "mathlib",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../mathlib",
+      "configFile": "lakefile.lean"
+    },
+    {
+      "type": "path",
+      "name": "plausible",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../plausible",
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "name": "LeanSearchClient",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../LeanSearchClient",
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "name": "importGraph",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../importGraph",
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "name": "proofwidgets",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../proofwidgets",
+      "configFile": "lakefile.lean"
+    },
+    {
+      "type": "path",
+      "name": "aesop",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../aesop",
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "name": "Qq",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../Qq",
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "name": "batteries",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../batteries",
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "name": "Cli",
+      "scope": "",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../Cli",
+      "configFile": "lakefile.toml"
+    }
+  ],
+  "name": "«lean-constructible-universe»",
+  "lakeDir": ".lake",
+  "fixedToolchain": false
+}

@@ -49,9 +49,9 @@ Wiki 的有限端点约定与完整坏部约定不同。[Wiki.lean](ZeroY/Wiki.l
 
 ## 工具链与构建
 
-Lean 固定为 `leanprover/lean4:v4.33.1`。便携运行时位于仓库的 `.tools/lean-4.33.1-windows`；初次准备依赖和登记 elan 工具链的步骤见 [根目录说明](../README.md)。
+Lean 固定为 `leanprover/lean4:v4.33.1`。可以使用 PATH 中已安装的 Lean，或把便携运行时安装到仓库的 `.tools/lean-4.33.1-windows`；安装编译器和登记 elan 工具链的步骤见 [根目录说明](../README.md)。
 
-核心上游固定为提交 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`；构建脚本检查版本和提交。核心只导入所需 BMS 模块，不需要 mathlib。
+核心上游固定为提交 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`；源码直接随附在 `../vendor/bms`，构建脚本核验逐文件哈希及编译器版本，不要求独立 Git checkout。核心只导入所需 BMS 模块，不需要 mathlib；完整具体模型的 mathlib 等依赖同样已随附。
 
 在工作区根目录运行：
 
@@ -62,12 +62,12 @@ Lean 固定为 `leanprover/lean4:v4.33.1`。便携运行时位于仓库的 `.too
 在 `formalization` 目录运行公理审计：
 
 ```powershell
-../.tools/lean-4.33.1-windows/bin/lake.exe env lean Audit.lean
+lake --keep-toolchain --no-cache env lean Audit.lean
 ```
 
-核心总入口最新一次 `lake --wfail build` 通过 66 个任务；43 个关键声明的 `#print axioms` 检查退出 0，仅依赖 Lean 标准公理 `propext`、`Classical.choice`、`Quot.sound` 的子集，无 `sorryAx`、原生计算公理或自定义公理。完整输出保存在 [audit-output.txt](audit-output.txt)。
+2026-09-12，当前核心构建脚本通过 191 个任务；43 个关键声明的 `#print axioms` 检查退出 0，并逐项核对名称、数量及公理白名单，仅依赖 Lean 标准公理 `propext`、`Classical.choice`、`Quot.sound` 的子集，无 `sorryAx`、原生计算公理或自定义公理。完整输出保存在 [audit-output.txt](audit-output.txt)。
 
-完整具体模型从锁定源码构建通过 1576 个任务，另有 14 项公理审计通过，依赖也仅为上述三个标准公理。在工作区根目录运行：
+当前具体工程联合构建 0-Y 与 1-Y，通过 2015 个任务，另有 14 项及 153 项公理审计通过，依赖也仅为上述三个标准公理。在工作区根目录运行：
 
 ```powershell
 ./formalization/Concrete/build.ps1

@@ -12,6 +12,8 @@
 
 集合满意度替换后的完整入口通过 1814 项构建，见[构建记录](../../research/one-y-truth-zfc-build.log)。发布审计清单已去重，并补入集合语义翻译定理；当前 153 个不同声明的结果见 [OneYTruth-audit-output.txt](OneYTruth-audit-output.txt)。
 
+2026-09-12，自包含源码发布的联合目标 `ZeroYConcrete OneYTruth` 构建通过 2015 项任务，14 项与 153 项公理审计均通过。本次从无证明编译产物的目录开始，经过续建完成；默认单线程运行成功。完整过程和无 Git 的 ZIP 检查见 [验证记录](../VALIDATION.md)。
+
 `ZeroYConcrete.lean` 把上游构造宇宙证明生成的
 `reflectionData_l.wellOrderingModel.representationDescentSystem`
 代入主工程的良序、无无限下降链及任意选指标轨迹终止定理。这里的最终定理不要求调用者提供降界系统。
@@ -23,15 +25,9 @@ mathlib 源码声明的是 `4.33.0-rc1`；因此本目录使用所需依赖的�
 不使用该候选版本的 `.olean` 缓存。`dependencies-lock.json` 保存各依赖的
 准确提交、源码归档 SHA256、来源和本地路径。
 
-constructible-universe 的固定提交放在较短路径 `.tools/cu-7f5a7d03`，
-以免 Windows 在为长模块名写入 `.olean.server` 及临时文件时触及路径限制。
-短路径 checkout 使用同一固定源码；证明产物由本机 Lean 4.33.1 生成。
+完整依赖源码随仓库放在 `../../vendor/`，无需另外克隆 BMS 或任何其他源码仓库。`lakefile` 与 `lake-manifest.json` 的构建依赖全部使用仓库内相对路径；依赖自身的 Lake 配置也已改为本地路径，并取消 mathlib 自动下载缓存的更新钩子。源码中的 Lean 证明定义和定理没有因此改变。
 
-`lake-manifest.json` 使用本地路径固定依赖。源码来自相应提交的官方 GitHub
-归档或真实 Git checkout，没有为归档伪造 Git 元数据。
-先在仓库根目录运行 `./formalization/prepare-dependencies.ps1` 恢复依赖，
-再保留该 manifest 并运行本目录的 `./build.ps1`。重新运行 `lake update` 会重新解析
-上游的 Git 依赖，可能触发大型仓库的重复下载。
+`../prepare-dependencies.ps1` 现在只在本地核验 `vendor/source-manifest.json` 中的逐文件 SHA256，以及两个项目的本地路径清单。没有下载、解压、`git apply` 或独立 Git HEAD 要求；GitHub ZIP 解压目录同样适用。
 
 桥接库基于 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`，另附两个文件的
 本地证明脚本性能补丁。`StageStableBetweenFormula.lean` 使用同步内核检查，
@@ -44,18 +40,14 @@ constructible-universe 的固定提交放在较短路径 `.tools/cu-7f5a7d03`，
 准确 diff 及改动前后 SHA256 保存在 `patches/`，
 `dependencies-lock.json` 也记录了此补丁；原始源码可由基线提交恢复。
 本机的原文件字节备份不发布。修改后的证明须由本机 Lean 重新检查。
-依赖恢复脚本会自动应用两份补丁；手动准备新的上游 checkout 时，应在上游仓库根目录应用
-`formalization/Concrete/patches/stage-stable-between-performance.patch` 与
-`formalization/Concrete/patches/stage-stable-to-universe-performance.patch`。
+随附 BMS 源码已应用这两份补丁，文件哈希纳入本地源码清单；构建时不再应用补丁。补丁文件及其基线记录仍保留供复核。
 同步诊断确认两个方向通过内核后，原公开包装仍会消耗大量内存；
 把该包装改为通用公式上的语义引理后，完整源文件正常退出。
 这不是逐战术性能剖析；最终结果以完整 Lake 构建和下面的公理审计为准。
 
 ## 编译与审计
 
-初次克隆后，先按 [仓库根目录说明](../../README.md) 安装工具链并恢复全部锁定依赖。
-依赖不会随仓库提交；已有依赖可在仓库根目录运行
-`./formalization/prepare-dependencies.ps1 -CheckOnly` 检查。
+下载或克隆后，先按 [仓库根目录说明](../../README.md) 安装 Lean 4.33.1。全部锁定依赖源码已随仓库提交，构建脚本会自动进行本地核验。也可在本目录单独运行 `../prepare-dependencies.ps1 -CheckOnly`。
 
 在本目录的 PowerShell 终端执行：
 
@@ -73,7 +65,7 @@ constructible-universe 的固定提交放在较短路径 `.tools/cu-7f5a7d03`，
 仅打开上一层 `formalization` 时，主工程的依赖环境不包含构造宇宙桥接库。
 
 `LEAN_NUM_THREADS` 只控制当前进程及子进程的并行度，避免源码构建占用过多资源。
-脚本默认使用 1 个线程：本机约 16GB 内存，末段两个大型反射模块同时编译会造成
+脚本支持 `-LeanBin` 指定编译器，也可使用便携工具链或 PATH 中的 Lean 4.33.1。脚本默认使用 1 个线程：本机约 16GB 内存，末段两个大型反射模块同时编译会造成
 严重换页；串行编译更稳妥。内存足够的机器可显式传入 `-Threads 6`。
 本机构建日志按目标保存在 `.lake/build-source.log`、`.lake/OneYTruth-build-source.log` 或 `.lake/all-build-source.log`，不提交到仓库。`Audit.lean` 检查具体模型本身和
 13 个最终定理的实际公理依赖；应在总构建成功后运行。

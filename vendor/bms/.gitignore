@@ -1,0 +1,6 @@
+/.lake
+/ConstructibleBridge/.lake
+/tmp
+/.codex-*
+/knowledge/metamath-foundations/renders/**/*.png
+**/__pycache__/

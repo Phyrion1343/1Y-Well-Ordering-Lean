@@ -8,7 +8,7 @@ relaxedAutoImplicit = false
 
 [[require]]
 name = "YesMetaZFC"
-path = "../research/BMS-Well-Ordering-Lean"
+path = "../vendor/bms"
 
 [[lean_lib]]
 name = "ZeroY"

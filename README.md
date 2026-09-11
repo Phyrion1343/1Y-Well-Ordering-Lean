@@ -12,7 +12,7 @@
 
 最终四个无参数 Lean 定理位于 [ActualWellOrdering.lean](formalization/Concrete/OneYTruth/ActualWellOrdering.lean)。[实际展开证明](research/1y-well-ordering-proof.md)解释形式化结构，[ZFC 数学论证](research/1y-zfc-well-ordering-proof.md)给出集合论证明。
 
-1-Y 最新完整入口构建通过 1814 项，153 个不同声明的公理审计均通过，仅使用 `propext`、`Classical.choice`、`Quot.sound` 的子集。见[验证记录](formalization/VALIDATION.md)及[审计输出](formalization/Concrete/OneYTruth-audit-output.txt)。构建任务总数包括已编译依赖的复用。
+2026-09-12，使用随附依赖源码的 0-Y 与 1-Y 联合构建通过 2015 项任务；0-Y 的 14 项及 1-Y 的 153 项公理审计均通过，仅使用 `propext`、`Classical.choice`、`Quot.sound` 的子集。见[验证记录](formalization/VALIDATION.md)及[1-Y 审计输出](formalization/Concrete/OneYTruth-audit-output.txt)。本次从没有证明编译产物的目录开始，经过续建完成；具体过程与 ZIP 检查分别记录在验证说明中。
 
 [离线 1-Y 展开器](1-Y展开器.html)可直接用浏览器打开；[算法与界面说明](y1/README.md)记录规则、计算预算和测试方法。
 
@@ -37,43 +37,61 @@
 
 2026-09-10，核心构建通过 66 个任务，包含具体模型的完整构建通过 1576 个任务；合计 57 项关键声明的公理依赖审计通过，仅依赖 `propext`、`Classical.choice`、`Quot.sound` 的子集，无 `sorryAx` 或自定义公理。57 项包含具体模型和辅助定义，不是 57 个独立数学定理。
 
-## 在 Windows 上复现
+## 构建：无需另外克隆依赖仓库
 
-准备 Git、PowerShell 7、`curl.exe` 和 `tar.exe`。在本仓库根目录执行：
+本仓库的 `vendor/` 已直接包含完整构建所需的 **11 个依赖源码仓库**，包括 BMS 良序形式化、构造宇宙库、mathlib 及其传递依赖。它们是普通文件，不是 Git 子模块；使用 **Download ZIP** 解压也可以构建。源码版本仍按 [依赖锁](formalization/Concrete/dependencies-lock.json) 固定，逐文件 SHA256 见 [源码清单](vendor/source-manifest.json)。
+
+仍需安装 **Lean 4.33.1** 编译器。已有该版本的 Lean / elan 时，可以直接使用下面的构建命令；Windows 用户也可先在仓库根目录运行官方便携工具链安装脚本（此安装步骤需要联网，以及 `curl.exe`、`tar.exe`）：
 
 ```powershell
 ./formalization/prepare-toolchain.ps1
-./formalization/prepare-dependencies.ps1
-./formalization/build.ps1
+```
+
+在仓库根目录的 PowerShell 终端执行：
+
+```powershell
 ./formalization/Concrete/build.ps1
 ```
 
-便携 Lean 安装在仓库的 `.tools` 中。依赖准备脚本按 [锁定记录](formalization/Concrete/dependencies-lock.json) 恢复源码，并应用两个保持公开陈述不变的上游证明性能补丁。下载归档会检查 SHA256。源码依赖和构建产物不提交到本仓库。
-
-具体工程的构建脚本默认构建两套具体证明，并分别执行 0-Y 的 14 项与 1-Y 的 153 项公理白名单审计。只验证 1-Y 时，可运行：
+该命令先在本地核验随附源码，再构建 0-Y 与 1-Y 的具体证明，最后分别执行 14 项、153 项公理白名单审计。**依赖验证和源码构建不需要联网，也不要求任何依赖目录带有 `.git`。** 只验证 1-Y 可用：
 
 ```powershell
 ./formalization/Concrete/build.ps1 -Target OneYTruth
 ```
 
-核心 0-Y 的 43 项审计在 `formalization` 目录运行：
+脚本可使用仓库内的便携 Lean、PATH 中的 Lean，或用 `-LeanBin "你的 Lean 4.33.1/bin 路径"` 明确指定。默认单线程；首次从源码构建需要较多时间和内存，后续构建会复用本地产物。
+
+只核验依赖源码、构建核心库或检查核心 0-Y 的 43 项公理审计时：
 
 ```powershell
-../.tools/lean-4.33.1-windows/bin/lake.exe env lean Audit.lean
+./formalization/prepare-dependencies.ps1 -CheckOnly
+./formalization/build.ps1
+# 在 formalization 目录中，用 Lean 4.33.1 的 lake 执行：
+lake --keep-toolchain --no-cache env lean Audit.lean
 ```
 
-在 VS Code 中打开 `formalization/Concrete` 文件夹，再打开 `OneYTruth/ActualWellOrdering.lean` 或 `ZeroYConcrete.lean`，以使用完整依赖环境。若 Lean 扩展通过 elan 管理工具链，可在仓库根目录将便携运行时登记为同名工具链：
+不使用 PowerShell 时，安装 Lean 4.33.1 后可在 `formalization/Concrete` 目录直接执行：
+
+```sh
+lake --keep-toolchain --no-cache build ZeroYConcrete OneYTruth
+lake --keep-toolchain env lean Audit.lean
+lake --keep-toolchain env lean OneYTruthAudit.lean
+```
+
+这组命令会输出公理依赖；PowerShell 构建脚本另外自动检查名称、数量和公理白名单。当前完整构建验证平台为 Windows；其他系统的完整构建尚未验证。
+
+在 VS Code 中打开 `formalization/Concrete` 文件夹，再打开 `OneYTruth/ActualWellOrdering.lean` 或 `ZeroYConcrete.lean`。使用便携运行时和 elan 的 Windows 用户，可在仓库根目录登记工具链：
 
 ```powershell
 elan toolchain link leanprover/lean4:v4.33.1 ./.tools/lean-4.33.1-windows
 ```
 
-完整依赖的首次源码构建需要较多内存和时间；具体工程默认单线程，后续构建复用本地缓存。本次验证使用 Windows 与 Lean 4.33.1；其他系统的安装路径尚未验证。发布整理没有删除缓存重编，也没有重新测试从全新网络下载全部依赖到完成构建的全过程。恢复脚本的已验证范围见 [验证记录](formalization/VALIDATION.md)。
+依赖已经固定，无需运行 `lake update`。具体构建与核验记录见 [VALIDATION.md](formalization/VALIDATION.md)。第三方来源、许可证和本地构建配置改动见 [vendor/README.md](vendor/README.md)。
 
 ## 上游工作
 
-良序模型复用 [EgoFakeFantasy/BMS-Well-Ordering-Lean](https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean) 的构造宇宙桥接，固定于 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`，并附有两个证明性能补丁。具体模型的其他依赖包括 constructible-universe 与 mathlib；准确来源和提交均见锁定记录。
+良序模型复用 [EgoFakeFantasy/BMS-Well-Ordering-Lean](https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean) 的构造宇宙桥接，固定于 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`，并附有两个证明性能补丁。具体模型的其他依赖包括 constructible-universe 与 mathlib；源码随附在 `vendor/`，准确来源和提交均见锁定记录。
 
-数学背景参见 Rachel Hunter 的 [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606) 以及 [Googology Wiki 的 0-Y 定义](https://wiki.googology.top/index.php/0-Y)。原论文、外部 HTML、依赖源码归档和本机诊断材料不包含在发布文件中。
+数学背景参见 Rachel Hunter 的 [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606) 以及 [Googology Wiki 的 0-Y 定义](https://wiki.googology.top/index.php/0-Y)。外部参考 HTML、依赖编译缓存和本机诊断材料不包含在发布文件中。
 
-本仓库保留既有的 [Apache-2.0 许可证](LICENSE)；外部依赖保留各自的许可与来源信息。
+本项目自身保留既有的 [Apache-2.0 许可证](LICENSE)；`vendor/` 内第三方文件按其各自的许可与来源说明提供，详见 [第三方说明](vendor/THIRD-PARTY-NOTICES.md)。

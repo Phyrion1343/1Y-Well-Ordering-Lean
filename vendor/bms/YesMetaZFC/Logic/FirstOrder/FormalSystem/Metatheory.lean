@@ -1,0 +1,147 @@
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureRosserDelta0
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureCompletedStage
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureStageTwoSemantics
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureRoundOneSpecifications
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.DefinitionContracts
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.FormalSystem
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.Project
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.SyntaxCoding
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.SyntaxNumeralCoding
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.StructuralCorrectness
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.WeakenBoundStructuralCorrectness
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.FormulaStructuralCorrectness
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.AbstractFreeTopFormulaCorrectness
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.QuineEncoding.OccurrenceStructuralCorrectness
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.CodeDomain
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ProofSequenceCodeConstruction
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.Hierarchy
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.Core
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.FiniteSequenceGraph
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.FiniteSequenceDomain
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.FiniteSequenceBounds
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.SuccessorCodeDomain
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.Delta0Support
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicQuantifier
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicSchemaClosure
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicForallPrefix
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.FixedAxiomTable
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicCertificateTable
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicFixedTable
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicLogicalCertificate
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicSchemaCertificate
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicSchemaLine
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicVerifier
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicRosserAssembly
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicGraph
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicProofCertificate
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicLogicalTranscript
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.Delta1ProofPresentation
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.SequenceCondition
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.SequenceConditionInversion
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.NatSequenceInversion
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.SequenceInversion
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.FiniteSequenceSemantics
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.FiniteSequenceDomainSemantics
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.FiniteSequenceSupportTheory
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicSyntaxSemantics
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicSyntaxCarrier
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicQuineCarrier
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicQuineFormulaCarrier
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicProofRows
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicProofTerminal
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicProofSupport
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.PairingInversionDirect
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.StructuredCertificateCondition
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.StructuralSequenceConditionInversion
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicCheckedLine
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicCheckedSequence
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicTheoryLine
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicForallGeneralization
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicFirstOrderLogicalLine
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.IntrinsicFixedRows
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.IntrinsicCheckedWitness
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.StructuredWitness
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.Rosser
+import YesMetaZFC.SetTheory.Ord.PrimePowerSequence
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.NatDecode
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.NatEncode
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaConclusion
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaQuotationAudit
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaEnvelope
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaTerm
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaBody
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaRenameInstances
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaBodyDerives
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaRenameDerives
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaTemplateDerives
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaClosure
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.NatPacketLink
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaJoinInstances
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaPacketSpec
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SchemaKernelInstances
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.BaseAxiomPacketSpec
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.SupportParameterDerives
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.SupportRealization
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.ReducedAxiomPacket
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.ReducedProofPresentation
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.ReducedRosser
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureRelationFunctions
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureMappingSpecifications
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureCoordinateSpecifications
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureMappingOperations
+import YesMetaZFC.Logic.FirstOrder.FormalSystem.Metatheory.ProofT.ZFC.PureRosserTransfer
+
+/-!
+# 一阶形式系统编码元理论入口
+
+该入口导出内在 quotation、结构语法正确性、对象证明图及抽象 Rosser 终局。
+`AxiomPresentation` 与 `ProofCertificate` 已在完整支撑公理理论上实例化，
+提供显式公理证书及与普通 Hilbert 推导等价的结构证书。
+`intrinsic_zfc_nat_decode` 已提供实际可计算的自然数正向解码，
+`intrinsic_zfc_nat_check_sound` 将接受结果重放为原理论中的普通 `Derives`。
+
+`intrinsic_zfc_nat_encode` 与 `intrinsic_zfc_nat_decode_encode` 已完成逆向编码和
+完整证书往返；`intrinsic_zfc_derives_iff_nat_certificate` 给出自然数入口的完备性。
+完整等价公理基的对象表示已由下述 ReducedAxiomPacket 完成；整棵证明树的对象图
+及其正负表示合同仍待完成。现有 ZFC 对象 verifier
+只装配 ZFC 固定公理和 schema，不能据其名称推断其已覆盖整个支撑理论。
+
+`IntrinsicQuotation.quote` 保留当前全部公式构造子，并有宿主往返、单射及对象码不等
+证明。公共 `Delta1ProofPresentation` 与 `RosserPresentation` 使用此码。
+旧 Hilbert quotation 与当前自然数检查器不相容，具体反例见 `SchemaQuotationAudit`。
+`SchemaConclusion` 已完成分离、收集、替换三类已解析实例的结论比较正负表示；
+`SchemaEnvelope` 已表示任意原始树的模式外壳，`SchemaTerm` 已表示正文项的
+作用域检查，二者均有真实正负对象推导。`SchemaBody` 已证明整个正文识别的
+可靠性、完备性与拒绝判准；`SchemaRename` 已证明有限表递归和类型化重命名
+对成功与失败结果的交换律，并连接实际六个模式位置和新 quotation。
+`SchemaBodyDerives`、`SchemaRenameDerives` 进一步给出统一 Delta0 对象图的真实正负推导，
+覆盖任意原始树、任意候选输出和六个实际模式位置。`SchemaTemplateDerives` 已完成
+三类固定装配模板的同一带标签 Delta0 公式及正负推导，并逐节点连接实际核心构造。
+`SchemaClosure` 已完成任意层数的新码全称闭合图；`NatPacketLink` 已将实际版本一
+包解码器连接到对象树码，两者均有统一 Delta0 公式及正负普通推导。`SchemaTable`
+已表示六个重命名位置的参数表生成；`SchemaJoin` 的四元图在对象层量化七个中间码，
+从任意原始正文直接连接三类实际 Project 闭句，并给出正负推导。
+`KernelQuotation` 已完成 Project 树码到当前内核 quotation 的转换，`SchemaPacket`
+已把模式外壳、传输包和内部四元图连接成固定二元图。`BaseAxiomPacket` 进一步并入
+八条固定公理，给出任意包和候选自然数的正负普通推导，其 `presentation` 是
+`Delta1AxiomPresentation intrinsic_zfc_theory intrinsic_zfc_axiom_theory` 的具体实例。
+基础公理成员关系的可靠性、完备性与正负表示均已填入。
+`SupportParameterDerives` 已完成十一类参数化支撑公理的证书合法性正负表示，
+包含当前内核全部函数项及 indexed 外壳，并精确对齐原公理分支的接受、拒绝结果。
+`SupportRealization` 已完成十一类固定模板的完整项代入、任意自由上下文的全称闭合，
+原始码装配逐节点等于原证书的实际结论，并连接当前 quotation 和内层参数外壳的版本一包。
+任意成功装配的闭句均在对应原族理论中有普通 Hilbert 推导。
+
+`SupportAssembly.sentence_of_closedTemplate` 证明每类参数公理均由一份闭模板导出。
+`SupportAxiomBasis` 沿完整原理论结构证明
+有限生成性，`ReducedAxioms.basis` 去重后含 119 条原公理。
+`ReducedAxioms.derives_iff` 对任意上下文证明等价公理基与原理论具有同一普通推导。
+`ReducedAxiomPacket.presentation` 已给出整个等价公理基的具体 Delta1AxiomPresentation，
+包含原 ZFC 基础分支、支撑有限表、实际自然数包解码以及当前 quotation 上的正负推导。
+它表示等价公理基的成员关系，不声称表示原参数证书逐字装配关系；后者不再阻塞本路线。
+完整证明树表示完成后，`ReducedAxioms.liftProofPresentation` 可直接恢复原目标理论接口。
+
+`Delta0ProofGraph` 记录对象图的量词分类，`RosserPresentation` 在证明表示、
+有限比较装配和给定的固定点证明上推出抽象不完备结论。具体固定点构造与
+ZFC Rosser 终局尚未在当前架构中闭合。
+-/
