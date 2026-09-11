@@ -341,6 +341,6 @@ $$\rho(B_n(A))<\rho(A)\qquad(n\in\mathbb N).$$
 
 1. 初始实现参考为 BMS 展开器、0-Y 展开器和互转程序。本文最终采用独立定义的数学算法；外部程序不作为证明前提，也未包含在仓库中。
 2. [Googology Wiki：0-Y](https://wiki.googology.top/index.php/0-Y)，页面最后编辑 2026-02-25。本文不把其中“等价”的描述当作已证定理；页面也明确注明此前尚无严格证明。
-3. Samuel Vargovčík, [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606)。本文读取的 PDF 为 v2；复用定义 1.1、祖先复制引理 2.5 及 BM4 良序结论。
+3. Rachel Hunter, [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606)。本文读取的 PDF 为 v2；复用定义 1.1、祖先复制引理 2.5 及 BM4 良序结论。
 4. [BMS-Well-Ordering-Lean](https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean)，本次基线提交 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`，另有两个不改变公开定理陈述、公式定义与假设的本地证明性能补丁。已重建本工程导入的 BMS 核心模块、`ConstructibleBridge.FinalAssembly` 及其依赖，并审计新增关键声明、具体模型和最终定理；准确补丁与锁定源码信息见 [具体模型说明](formalization/Concrete/README.md)。
 5. 仓库中的 [Lean 公理审计清单](formalization/Audit.lean) 与 [具体模型公理审计清单](formalization/Concrete/Audit.lean)；实际运行结果见 [验证记录](formalization/VALIDATION.md)。辅助样例见 [Examples.lean](formalization/Examples.lean)，有限样例不承担全称命题的证明。
