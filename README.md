@@ -1,76 +1,78 @@
-# 0-Y / BMS 与 1-Y：展开、良序性及 Lean 形式化
+# 0-Y / BMS and 1-Y: Expansion, Well-Ordering, and Lean Formalization
 
-本项目包含 0-Y 与 BM4（Bashicu Matrix System）的对应、良序性证明，以及实际 1-Y 展开的良基性与标准生成集良序证明。Lean 工具链固定为 4.33.1；展开算法独立定义，HTML 展开器用于展示和实验。
+**English** | [简体中文](README.zh-CN.md)
 
-## 1-Y 的已证明结论
+This project contains the correspondence between 0-Y and BM4 (the Bashicu Matrix System), well-ordering proofs, and proofs of well-foundedness for the actual 1-Y expansion and well-ordering of its standard generated set. The Lean toolchain is pinned to 4.33.1. The expansion algorithm is defined independently; the HTML expander is provided for visualization and experimentation.
 
-- 任意首项为 1 的有限正整数序列，无论逐步选择什么有限复制次数，实际 1-Y 展开最终到达空序列。
-- 从标准种子 `(1,m)`、`m≥2` 生成的序列集合按字典序良序；任意固定起点的后代集也按字典序良序。
-- 提取保留祖先关系；形式化包括轮廓提升、参考填充及完整数值重建。
+## Proven results for 1-Y
 
-**1-Y 的实际展开良基性与标准生成集良序性已在 Lean 4 类型论中完成形式化证明，并通过内核核验。** 仓库另附通常数学意义的 ZFC 论证；相应证明向一阶 ZFC 演算的完整形式化迁移与机器核验尚未完成。
+- Every finite sequence of positive integers beginning with 1 reaches the empty sequence under the actual 1-Y expansion, for arbitrary choices of finite copy counts at each step.
+- The set of sequences generated from the standard seeds `(1,m)`, `m≥2`, is well-ordered lexicographically. The descendant set of any fixed starting sequence is also well-ordered lexicographically.
+- Extraction preserves ancestor relations. The formalization includes contour lifting, reference-edge filling, and complete numerical reconstruction.
 
-最终四个无参数 Lean 定理位于 [ActualWellOrdering.lean](formalization/Concrete/OneYTruth/ActualWellOrdering.lean)。[实际展开证明](research/1y-well-ordering-proof.md)解释形式化结构，[ZFC 数学论证](research/1y-zfc-well-ordering-proof.md)给出集合论证明。
+**The well-foundedness of the actual 1-Y expansion and the well-ordering of its standard generated set have been formally proved in Lean 4's type theory and verified by the kernel.** The repository also includes a ZFC argument in ordinary mathematical form. The full formal translation of that argument into a first-order ZFC derivation, together with its machine verification, has not yet been completed.
 
-2026-09-12，使用随附依赖源码的 0-Y 与 1-Y 联合构建通过 2015 项任务；0-Y 的 14 项及 1-Y 的 153 项公理审计均通过，仅使用 `propext`、`Classical.choice`、`Quot.sound` 的子集。见[验证记录](formalization/VALIDATION.md)及[1-Y 审计输出](formalization/Concrete/OneYTruth-audit-output.txt)。本次从没有证明编译产物的目录开始，经过续建完成；具体过程与 ZIP 检查分别记录在验证说明中。
+The four final Lean theorems with no explicit parameters are in [ActualWellOrdering.lean](formalization/Concrete/OneYTruth/ActualWellOrdering.lean). The [actual expansion proof](research/1y-well-ordering-proof.md) explains the formalization's structure, and the [ZFC mathematical argument](research/1y-zfc-well-ordering-proof.md) gives the set-theoretic proof.
 
-[离线 1-Y 展开器](1-Y展开器.html)可直接用浏览器打开；[算法与界面说明](y1/README.md)记录规则、计算预算和测试方法。
+On 2026-09-12, the combined 0-Y and 1-Y build using the bundled dependency sources completed successfully with 2,015 build tasks. All 14 axiom audits for 0-Y and all 153 for 1-Y passed, using only subsets of `propext`, `Classical.choice`, and `Quot.sound`. See the [validation record](formalization/VALIDATION.md) and [1-Y audit output](formalization/Concrete/OneYTruth-audit-output.txt). This build started in a directory without compiled proof artifacts and was completed through resumed builds. The validation record documents the process and the separate ZIP checks.
 
-## 0-Y / BMS 的已证明结论
+The [offline 1-Y expander](1-Y展开器.html) can be opened directly in a browser. The [algorithm and interface documentation](y1/README.md) describes the rules, computation budgets, and testing methods.
 
-- 对所有合法 0-Y 表达式，先编码再解码恢复原式。
-- BMS 矩阵可逆，当且仅当满足深度正规性与阻挡条件 S。矩阵的共同尾零行视为同一表示。
-- 全部合法 0-Y 式与全部可逆 BMS 矩阵序同构，包括非标准式；编码还保持并反映展开路径。
-- 标准生成集以及任意固定合法起点的展开后代集按字典序良序。
-- 从任意合法起点出发，无论逐步如何选择自然数指标，展开最终到达空式。
-- 完整坏部与 Wiki 有限端点两种展开约定的可达闭包相同；两者都有上述良序性和终止性。
+## Proven results for 0-Y / BMS
 
-**全体合法表达式的字典序不良基。** 例如 `(1,2) > (1,1,2) > (1,1,1,2) > …`。这一反例也已形式化；良序结论的范围是标准生成集或固定起点的后代集。
+- Encoding and then decoding recovers every valid 0-Y expression.
+- A BMS matrix is invertible if and only if it satisfies depth regularity and blocking condition S. Matrices differing only by common trailing zero rows are treated as the same representation.
+- All valid 0-Y expressions are order-isomorphic to all invertible BMS matrices, including nonstandard expressions. The encoding also preserves and reflects expansion paths.
+- The standard generated set and the expansion-descendant set of any fixed valid starting expression are well-ordered lexicographically.
+- From any valid starting expression, expansion reaches the empty expression for arbitrary choices of natural-number indices at each step.
+- The full-bad-part convention and the Wiki's finite-endpoint convention have the same reachability closure. Both have the well-ordering and termination properties above.
 
-## 0-Y / BMS 阅读入口
+**The lexicographic order on all valid expressions is not well-founded.** For example, `(1,2) > (1,1,2) > (1,1,1,2) > …`. This counterexample has also been formalized. The well-ordering results apply to the standard generated set or the descendant set of a fixed starting expression.
 
-- [完整数学证明](0Y-BMS-equivalence-proof.md)：定义、可逆充要条件及普通数学论证。
-- [形式化说明](formalization/README.md)：各结论对应的 Lean 声明。
-- [最终具体模型定理](formalization/Concrete/ZeroYConcrete.lean)：13 个最终定理，使用已构造的模型，无需调用者额外提供降界系统。
-- [实际验证记录](formalization/VALIDATION.md)：构建结果、公理审计和依赖说明。
-- [上游接口与非标准推广审计](research/formalization-bms-interface-audit.md)。
+## Reading guide for 0-Y / BMS
 
-2026-09-10，核心构建通过 66 个任务，包含具体模型的完整构建通过 1576 个任务；合计 57 项关键声明的公理依赖审计通过，仅依赖 `propext`、`Classical.choice`、`Quot.sound` 的子集，无 `sorryAx` 或自定义公理。57 项包含具体模型和辅助定义，不是 57 个独立数学定理。
+- [Complete mathematical proof](0Y-BMS-equivalence-proof.md): definitions, necessary and sufficient conditions for invertibility, and the ordinary mathematical argument.
+- [Formalization guide](formalization/README.md): the Lean declarations corresponding to each result.
+- [Final concrete-model theorems](formalization/Concrete/ZeroYConcrete.lean): 13 final theorems using an already constructed model, without requiring the caller to supply an additional descent-bound system.
+- [Validation record](formalization/VALIDATION.md): build results, axiom audits, and dependency information.
+- [Audit of the upstream interface and extension to nonstandard expressions](research/formalization-bms-interface-audit.md).
 
-## 构建：无需另外克隆依赖仓库
+On 2026-09-10, the core build completed successfully with 66 tasks, and the full build including the concrete model completed with 1,576 tasks. A total of 57 axiom-dependency audits of key declarations passed, depending only on subsets of `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or custom axioms. These 57 declarations include the concrete model and auxiliary definitions; they are not 57 independent mathematical theorems.
 
-本仓库的 `vendor/` 已直接包含完整构建所需的 **11 个依赖源码仓库**，包括 BMS 良序形式化、构造宇宙库、mathlib 及其传递依赖。它们是普通文件，不是 Git 子模块；使用 **Download ZIP** 解压也可以构建。源码版本仍按 [依赖锁](formalization/Concrete/dependencies-lock.json) 固定，逐文件 SHA256 见 [源码清单](vendor/source-manifest.json)。
+## Building without cloning additional dependency repositories
 
-仍需安装 **Lean 4.33.1** 编译器。已有该版本的 Lean / elan 时，可以直接使用下面的构建命令；Windows 用户也可先在仓库根目录运行官方便携工具链安装脚本（此安装步骤需要联网，以及 `curl.exe`、`tar.exe`）：
+The repository's `vendor/` directory contains the **11 dependency source repositories** needed for the full build, including the BMS well-ordering formalization, the constructible-universe library, mathlib, and its transitive dependencies. These are ordinary files, not Git submodules, so a copy obtained through **Download ZIP** can also be built. Source versions remain pinned by the [dependency lock file](formalization/Concrete/dependencies-lock.json), and per-file SHA256 hashes are listed in the [source manifest](vendor/source-manifest.json).
+
+You still need the **Lean 4.33.1** compiler. If that version is already available through Lean / elan, use the build commands below directly. Windows users can alternatively run the official portable-toolchain installation script from the repository root first. This installation step requires network access, `curl.exe`, and `tar.exe`:
 
 ```powershell
 ./formalization/prepare-toolchain.ps1
 ```
 
-在仓库根目录的 PowerShell 终端执行：
+From a PowerShell terminal at the repository root, run:
 
 ```powershell
 ./formalization/Concrete/build.ps1
 ```
 
-该命令先在本地核验随附源码，再构建 0-Y 与 1-Y 的具体证明，最后分别执行 14 项、153 项公理白名单审计。**依赖验证和源码构建不需要联网，也不要求任何依赖目录带有 `.git`。** 只验证 1-Y 可用：
+This command first verifies the bundled sources locally, then builds the concrete 0-Y and 1-Y proofs, and finally runs their respective 14 and 153 axiom-allowlist audits. **Dependency verification and source compilation require neither network access nor a `.git` directory in any dependency.** To verify only 1-Y:
 
 ```powershell
 ./formalization/Concrete/build.ps1 -Target OneYTruth
 ```
 
-脚本可使用仓库内的便携 Lean、PATH 中的 Lean，或用 `-LeanBin "你的 Lean 4.33.1/bin 路径"` 明确指定。默认单线程；首次从源码构建需要较多时间和内存，后续构建会复用本地产物。
+The script can use the portable Lean installation in the repository, Lean on `PATH`, or an explicitly supplied path via `-LeanBin "path/to/Lean 4.33.1/bin"`. It runs with one thread by default. The first build from source requires substantial time and memory; subsequent builds reuse local artifacts.
 
-只核验依赖源码、构建核心库或检查核心 0-Y 的 43 项公理审计时：
+To check the dependency sources only, build the core library, or run the 43 core 0-Y axiom audits:
 
 ```powershell
 ./formalization/prepare-dependencies.ps1 -CheckOnly
 ./formalization/build.ps1
-# 在 formalization 目录中，用 Lean 4.33.1 的 lake 执行：
+# From the formalization directory, using lake from Lean 4.33.1:
 lake --keep-toolchain --no-cache env lean Audit.lean
 ```
 
-不使用 PowerShell 时，安装 Lean 4.33.1 后可在 `formalization/Concrete` 目录直接执行：
+Without PowerShell, after installing Lean 4.33.1, run the following directly from `formalization/Concrete`:
 
 ```sh
 lake --keep-toolchain --no-cache build ZeroYConcrete OneYTruth
@@ -78,20 +80,20 @@ lake --keep-toolchain env lean Audit.lean
 lake --keep-toolchain env lean OneYTruthAudit.lean
 ```
 
-这组命令会输出公理依赖；PowerShell 构建脚本另外自动检查名称、数量和公理白名单。当前完整构建验证平台为 Windows；其他系统的完整构建尚未验证。
+These commands print the axiom dependencies. The PowerShell build script additionally checks declaration names, counts, and the axiom allowlist automatically. The full build has currently been verified on Windows; full builds on other systems have not yet been verified.
 
-在 VS Code 中打开 `formalization/Concrete` 文件夹，再打开 `OneYTruth/ActualWellOrdering.lean` 或 `ZeroYConcrete.lean`。使用便携运行时和 elan 的 Windows 用户，可在仓库根目录登记工具链：
+In VS Code, open the `formalization/Concrete` folder, then open `OneYTruth/ActualWellOrdering.lean` or `ZeroYConcrete.lean`. Windows users with the portable runtime and elan can register the toolchain from the repository root:
 
 ```powershell
 elan toolchain link leanprover/lean4:v4.33.1 ./.tools/lean-4.33.1-windows
 ```
 
-依赖已经固定，无需运行 `lake update`。具体构建与核验记录见 [VALIDATION.md](formalization/VALIDATION.md)。第三方来源、许可证和本地构建配置改动见 [vendor/README.md](vendor/README.md)。
+Dependencies are already pinned; there is no need to run `lake update`. See [VALIDATION.md](formalization/VALIDATION.md) for the build and verification record. Third-party sources, licenses, and local build-configuration changes are documented in [vendor/README.md](vendor/README.md).
 
-## 上游工作
+## Upstream work
 
-良序模型复用 [EgoFakeFantasy/BMS-Well-Ordering-Lean](https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean) 的构造宇宙桥接，固定于 `bae7e3d741f24a56d80da9b99c1345562cd10c2d`，并附有两个证明性能补丁。具体模型的其他依赖包括 constructible-universe 与 mathlib；源码随附在 `vendor/`，准确来源和提交均见锁定记录。
+The well-ordering model reuses the constructible-universe bridge from [EgoFakeFantasy/BMS-Well-Ordering-Lean](https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean), pinned to `bae7e3d741f24a56d80da9b99c1345562cd10c2d`, with two proof-performance patches. Other dependencies of the concrete model include constructible-universe and mathlib. Their sources are bundled in `vendor/`; exact origins and commits are recorded in the lock file.
 
-数学背景参见 Rachel Hunter 的 [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606) 以及 [Googology Wiki 的 0-Y 定义](https://wiki.googology.top/index.php/0-Y)。外部参考 HTML、依赖编译缓存和本机诊断材料不包含在发布文件中。
+For mathematical background, see Rachel Hunter's [Well-Orderedness of the Bashicu Matrix System](https://arxiv.org/abs/2307.04606) and the [Googology Wiki definition of 0-Y](https://wiki.googology.top/index.php/0-Y). External reference HTML files, compiled dependency caches, and local diagnostic materials are not included in the release.
 
-本项目自身保留既有的 [Apache-2.0 许可证](LICENSE)；`vendor/` 内第三方文件按其各自的许可与来源说明提供，详见 [第三方说明](vendor/THIRD-PARTY-NOTICES.md)。
+The project itself retains the existing [Apache-2.0 license](LICENSE). Third-party files in `vendor/` are provided under their respective licenses and source notices; see the [third-party notices](vendor/THIRD-PARTY-NOTICES.md).
